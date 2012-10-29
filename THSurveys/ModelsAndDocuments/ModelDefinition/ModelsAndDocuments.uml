@@ -1,0 +1,1249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e8dc2c4c-8600-403e-8ab6-0779874609f1"
+  name="ModelsAndDocuments" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="57efed98-8f1c-4816-becc-a6eca13633b6">
+      <profileInstance
+        Id="29c02c8b-c75d-4839-b9fc-77729e04f4eb"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="bdadf85d-527b-4f65-a22b-40a0de5b08b9"
+        name="Administrator"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Administrator or Moderator for System</description>
+        <targetEnds>
+          <association
+            Id="81103558-424e-4067-bb22-0c825e01f190"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Approve Survey"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1fcfc4a8-4634-468f-b597-f21e03c03e48"
+              LastKnownName="Approve Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7988b0cc-b0cb-4dcf-8c5b-a1b1b7b0ebd9"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ae046c26-0a7d-4df8-941f-692d061433b2"
+                  name="Approve Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="65634e6e-b3d9-4eec-b9e6-a21aaedb4ace"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="View Surveys"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b45975a3-9da1-4309-b3c1-cdf86efca7d8"
+              LastKnownName="View Surveys"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f357e967-3aa8-4c09-85f0-ee5f10181828"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e3f7a41-848e-4803-90a2-7c80f4d58edf"
+                  name="View Surveys"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b63599f3-2b74-43c8-ab27-734125b93496"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="LogOff"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fcc3eb9a-753c-4e4a-af79-7b4a30ded862"
+              LastKnownName="LogOff"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bcc8bcbc-5180-4900-9422-fcb88c0ca629"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="59908c84-72d1-4924-9f75-cc4bc750d792"
+                  name="LogOff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e5b2e355-b988-4377-8e76-49647ea8e27f"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Member responsible for creating Surveys</description>
+        <targetEnds>
+          <association
+            Id="94f694dc-e5c6-4c1a-90fe-94201054806a"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Register"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f5b64dea-f12a-475c-b83b-4cff8e4fd7d3"
+              LastKnownName="Register"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="62a0b076-591d-4755-9566-02487d9a7709"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79eec871-16ef-4786-b78c-c76fe478afbf"
+                  name="Register"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f365d69e-9d99-4a26-bff6-570a95995b30"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Request Approval"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0d569bc4-66ef-47b5-be5a-932a665ff5a3"
+              LastKnownName="Request Approval"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="316bad1d-b89e-4655-89d0-5bb01f715bea"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b6f2794a-0f63-402e-82e9-e34f3a64893c"
+                  name="Request Approval"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bfde009f-453d-4909-baaa-3d9a8e1d835b"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Create Survey"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="60588d24-2c27-474a-b310-69337eb4e629"
+              LastKnownName="Create Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="965a326e-e5a5-4a0c-9b55-0ec98d2f234e"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72eff1db-ddb9-4ced-8bfc-3ad0f4acc695"
+                  name="Create Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a5c96f73-91f0-4a84-8846-02b589747a69"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Update Survey"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5cb3ffb8-3f6a-4885-89ef-6343188823d7"
+              LastKnownName="Update Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="24cc9f4a-0a72-4565-9a31-c09486a3fb24"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="064ed513-bde1-4c63-b3e7-6ea7121ac780"
+                  name="Update Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="253e59bb-c595-4176-b0fa-78244fa34030"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="View Surveys"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b45975a3-9da1-4309-b3c1-cdf86efca7d8"
+              LastKnownName="View Surveys"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0e26756d-1a87-4dd9-9c24-7e0e3d8243ad"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="62dd633c-4178-4e17-a52f-6351bec8637b"
+                  name="View Surveys"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0bad13bd-29ba-4270-ab8f-bb4f698fb728"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="View Results"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6d6b755a-32ef-4c39-a305-6c707ced17fe"
+              LastKnownName="View Results"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2855bf4-c250-4a65-8a04-e093ecfbee4f"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="acec347d-ccf2-4340-8855-8e1b6fda11e1"
+                  name="View Results"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9806220b-fe20-4d40-93e8-176dedbdfebe"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="LogOff"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fcc3eb9a-753c-4e4a-af79-7b4a30ded862"
+              LastKnownName="LogOff"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b910776a-0283-4f73-baab-e2b83e9279a9"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac7ed662-a3de-4dc1-af88-bd4816f69d54"
+                  name="LogOff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="57377c10-cdb0-47f8-ac5f-b73361a681b5"
+        name="Participant"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Person who takes the survey</description>
+        <targetEnds>
+          <association
+            Id="39da5b78-10c3-45cc-90bc-53ab75e7d38a"
+            isDerived="false"
+            sourceEndRoleName="Participant"
+            targetEndRoleName="Take Survey"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="66693354-13d6-4e0a-98db-c26d34ded962"
+              LastKnownName="Take Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e010c431-0314-4bbe-ba68-063ef873afd8"
+                  name="Participant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aef6bd8e-c85f-46e2-b24c-b18ad1b9bff6"
+                  name="Take Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="59b257fd-34cf-48af-9396-dde1071420e4"
+        name="LogOn"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Log on to Survey system</description>
+        <suppliersInternal>
+          <dependency
+            Id="366c982b-369a-4feb-95da-df6b386f1d2d">
+            <useCaseMoniker
+              Id="60588d24-2c27-474a-b310-69337eb4e629"
+              LastKnownName="Create Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </dependency>
+          <dependency
+            Id="7f07e2fd-9ce0-4c85-a8d4-9139cede55f7">
+            <useCaseMoniker
+              Id="5cb3ffb8-3f6a-4885-89ef-6343188823d7"
+              LastKnownName="Update Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </dependency>
+          <dependency
+            Id="4d5b2639-0758-482c-88f9-02646f944f8f">
+            <useCaseMoniker
+              Id="b45975a3-9da1-4309-b3c1-cdf86efca7d8"
+              LastKnownName="View Surveys"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </dependency>
+          <dependency
+            Id="c0662490-6809-406e-863c-e1d138211f05">
+            <useCaseMoniker
+              Id="1fcfc4a8-4634-468f-b597-f21e03c03e48"
+              LastKnownName="Approve Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </dependency>
+          <dependency
+            Id="6e286b2b-7e32-4807-8b5d-e2fba1825b13">
+            <useCaseMoniker
+              Id="0d569bc4-66ef-47b5-be5a-932a665ff5a3"
+              LastKnownName="Request Approval"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </dependency>
+          <dependency
+            Id="234c9b34-16a0-4894-b8e6-6e644dca40b8">
+            <useCaseMoniker
+              Id="6d6b755a-32ef-4c39-a305-6c707ced17fe"
+              LastKnownName="View Results"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f5b64dea-f12a-475c-b83b-4cff8e4fd7d3"
+        name="Register"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Register a Member on the Survey System</description>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fcc3eb9a-753c-4e4a-af79-7b4a30ded862"
+        name="LogOff"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Log off the Survey System</description>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b45975a3-9da1-4309-b3c1-cdf86efca7d8"
+        name="View Surveys"
+        isAbstract="false"
+        isLeaf="false">
+        <description>View surveys set up within the system</description>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="60588d24-2c27-474a-b310-69337eb4e629"
+        name="Create Survey"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Create the Survey</description>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5cb3ffb8-3f6a-4885-89ef-6343188823d7"
+        name="Update Survey"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Add Questions and Update a Survey</description>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0d569bc4-66ef-47b5-be5a-932a665ff5a3"
+        name="Request Approval"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Submit a survey for Approval by Moderator</description>
+        <extendedCases>
+          <extend
+            Id="02c4a6e8-7ff2-4c51-ad5e-8794df415d40">
+            <useCaseMoniker
+              Id="1fcfc4a8-4634-468f-b597-f21e03c03e48"
+              LastKnownName="Approve Survey"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7a0ce314-33f4-4986-bb91-342cdedea2d1"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1fcfc4a8-4634-468f-b597-f21e03c03e48"
+        name="Approve Survey"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Approve a Survey and Publish it.</description>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="66693354-13d6-4e0a-98db-c26d34ded962"
+        name="Take Survey"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Complete a Survey, by Participant</description>
+        <extendedCases>
+          <extend
+            Id="4674774c-b1c1-4903-b48b-8955ecba201a">
+            <useCaseMoniker
+              Id="59b257fd-34cf-48af-9396-dde1071420e4"
+              LastKnownName="LogOn"
+              LastKnownLocation="ModelsAndDocuments.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6d6b755a-32ef-4c39-a305-6c707ced17fe"
+        name="View Results"
+        isAbstract="false"
+        isLeaf="false">
+        <description>View Results of all Survey responses by Participants</description>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9710a5b5-9048-4acb-8859-22f4ed89f958"
+        name="Survey"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>The Survey</description>
+        <ownedAttributesInternal>
+          <property
+            Id="6dec5c5b-d0cc-4d7b-98ab-1514dbaa9c31"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Identifier of the Survey</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="952b13ff-cc48-4e69-94aa-558962a93a52"
+            name="Title"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The title for the Survey</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5837c686-2e6d-4c12-9a4b-e99a433776a0"
+            name="Owner"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The Owner of the Survey, only Id that can make changes</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="07bec066-32f2-4596-8b9e-fdd56020c0ef"
+            name="StatusDate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Date / Time that the status of the Survey changed</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f39c8854-3e07-4195-8c27-cddf6317215b"
+            name="Status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The Status of the Survey</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="cecf80a6-9b7c-468e-b684-b3c5ed128af7"
+                LastKnownName="SurveyStatusEnum"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bc84fb2a-27a0-4c9b-93df-192675634370"
+            name="Questions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The Survey questions</description>
+            <lowerValueInternal>
+              <literalString
+                Id="b3ef7f26-5c17-45fb-9ea4-5204a68b2123"
+                name="Lower"
+                value="1" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="e490e7f0-8e09-4e4c-b2c2-569a050818af"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ae343eb4-094d-48d8-b05a-c387ae3967ca"
+                LastKnownName="Questions"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c464bbd0-7761-4742-b5a3-de8f3fe31e23"
+            name="IsTemplate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>True, indicates the survey is used as a Template only</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+            <defaultValue>
+              <literalBoolean
+                Id="1cd5abe2-0478-4e96-aecb-453adbaba680"
+                name="DefaultValue"
+                value="false" />
+            </defaultValue>
+          </property>
+          <property
+            Id="6d014696-39f4-4c10-8425-68846ba795ad"
+            name="Respondents"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="83f58d1c-b574-4114-924b-a86c7d93386d"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="8b0d9459-931b-4f7f-b8c4-59db176875c7"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c6178faf-bab9-41a6-8314-46cbfb0e835e"
+                LastKnownName="Respondent"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="cecf80a6-9b7c-468e-b684-b3c5ed128af7"
+        name="SurveyStatusEnum"
+        isAbstract="false"
+        isLeaf="false">
+        <description>DEfines the various status for a survey</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="2869166e-97b5-42a3-a74c-852c3cf513d7"
+            name="Incomplete">
+            <description>The current Survey is still being worked on.</description>
+            <specification>
+              <literalInteger
+                Id="d7456f6c-d17c-41d3-8ed5-2dcd12d63d25"
+                name="Integer"
+                value="0" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="416da4fa-e067-406f-80e8-6accd0ef5e69"
+            name="Approval">
+            <description>The Survey is waiting for Approval</description>
+            <specification>
+              <literalInteger
+                Id="323292ff-1495-4380-bff7-3d08b45f7849"
+                name="Integer"
+                value="1" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="7cd2b369-64b8-460b-b83d-963bd44cf3c7"
+            name="Live">
+            <description>The Survey is approved and available for Respondents to complete</description>
+            <specification>
+              <literalInteger
+                Id="40a3cfd9-db1b-4230-b37b-3816d7f6772b"
+                name="Integer"
+                value="2" />
+            </specification>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ae343eb4-094d-48d8-b05a-c387ae3967ca"
+        name="Questions"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>The Questions contained in a survey</description>
+        <ownedAttributesInternal>
+          <property
+            Id="7f034c4b-478d-43c3-ab3f-851783467757"
+            name="SequenceNumber"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The Number for the question</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0b5a0ef8-a447-47df-a5ec-dccf04864532"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1e5ad545-be56-4fb6-8919-2ab8e761ac18"
+            name="Text"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The text for the question</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eac8b882-ed30-4d4a-9163-5eb78cd8c721"
+            name="AvailableResponses"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="9542a82e-28a9-4715-ada8-3875c36b04ee"
+                name="Lower"
+                value="1" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="f81c9ef9-fce2-4491-a570-3c86f6117b67"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7b686628-4c48-42e7-823f-541cb3c891b5"
+                LastKnownName="AvailableResponse"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="27e92edd-714c-4965-9773-addffc19e350"
+            name="ActualResponses"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="235b4cca-c585-4ca7-bc38-844bfcfe3840"
+                name="Lower"
+                value="1" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="beab9b21-035d-49f6-8e8e-e70073f8267e"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="085820fa-6ff0-4c17-b055-a5fe2b57108b"
+                LastKnownName="ActualResponses"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7b686628-4c48-42e7-823f-541cb3c891b5"
+        name="AvailableResponse"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>The response available for a specific question</description>
+        <ownedAttributesInternal>
+          <property
+            Id="47e8208b-2596-43b2-a79e-4bda7b21d7e4"
+            name="ResponseNumber"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The Scale of the response</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="46717261-5f03-4147-b2b1-3fb6e5a192a1"
+            name="Text"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The description associated with the response level</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="085820fa-6ff0-4c17-b055-a5fe2b57108b"
+        name="ActualResponses"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="b76b0d81-f2f4-4bed-96bd-2fff490e3929"
+            name="ResponseNumber"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The number of the selected response</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ba2b4d9f-c5f6-4e0f-821c-7c41087efc65"
+            name="QuestionId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e81083bb-40d0-4bef-841d-66cbc2dc14e4"
+        name="LikertTemplate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="9d05fca4-6b93-4759-a71e-1cc8257e58fc"
+            name="Title"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The title of the #Response Template</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3cfab437-4516-4a6d-998d-060d4b5919b6"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>The unique identifier of the Response Template</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c6178faf-bab9-41a6-8314-46cbfb0e835e"
+        name="Respondent"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="df9ed0aa-d274-4279-ad56-30ce21db8065"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6f843519-052a-47b8-8d81-c0662f697def"
+            name="DateTaken"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d77a6592-a08f-41f2-bb57-1f69e053fb74"
+            name="Responses"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="085820fa-6ff0-4c17-b055-a5fe2b57108b"
+                LastKnownName="ActualResponses"
+                LastKnownLocation="ModelsAndDocuments.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9e931fec-4823-4bed-a2b2-83624a4500f8"
+        LastKnownName="Core"
+        LastKnownLocation="Package_1553.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="66e0c5af-4f7a-42c5-899f-075d0347f8e3"
+        LastKnownName="System"
+        LastKnownLocation="Package2_1553.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

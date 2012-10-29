@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e645ab33-94e7-4500-8276-6f0bed830626" name="Main" linkedPackageId="3a7ab3ba-bb8f-4dfc-83d1-f06b347fe406" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <description>Main Use Case Diagram for Survey System</description>
+  <profileInstances>
+    <packageHasProfileInstances Id="43ebf34c-7df3-4059-99d1-1a23c10d1303">
+      <profileInstance Id="a591350a-741d-4f07-9d56-4108271cd971" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="017e505c-dcc1-4859-b850-29989cc2b8e7">
+      <profileInstance Id="402de07b-f38a-4d9d-afc8-ec28ceb4cccd" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="d2cee5dc-e4f7-43d2-8ee9-51eb2949c1ae" name="Administrator" isAbstract="false" isLeaf="false">
+        <description>Administrator or Moderator for System</description>
+        <elementDefinition Id="bdadf85d-527b-4f65-a22b-40a0de5b08b9" />
+        <targetEnds>
+          <association Id="991ffb51-7af5-4c14-a622-bc848cdafd43" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Approve Survey" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a25bfbac-a69d-4dc2-9467-b9db049ea328" LastKnownName="Approve Survey" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a3d498b-0c4e-42fd-a74f-0067dbe331a6" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7988b0cc-b0cb-4dcf-8c5b-a1b1b7b0ebd9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a0d775e5-d623-4d8a-a79a-440f1e0c324a" name="Approve Survey" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ae046c26-0a7d-4df8-941f-692d061433b2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="81103558-424e-4067-bb22-0c825e01f190" />
+          </association>
+          <association Id="b5901fca-271b-4d91-987f-3a995fb767a6" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="View Surveys" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="479b4ced-eaa6-4b7f-8880-2d5959c37bdf" LastKnownName="View Surveys" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="77b9a54b-732c-40d2-a8f5-af6535533b54" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f357e967-3aa8-4c09-85f0-ee5f10181828" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d91708f0-aecd-4cd7-83b1-f9bd8c13bc38" name="View Surveys" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8e3f7a41-848e-4803-90a2-7c80f4d58edf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="65634e6e-b3d9-4eec-b9e6-a21aaedb4ace" />
+          </association>
+          <association Id="2522030a-d820-4b8f-9970-018550c879be" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="LogOff" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="755ca0b6-2cd9-4978-8df8-00a887318dda" LastKnownName="LogOff" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="740022a9-c76f-4872-88b9-8803064f24fb" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bcc8bcbc-5180-4900-9422-fcb88c0ca629" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d6bf87e-d735-435d-b833-5d2d97dcc4db" name="LogOff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="59908c84-72d1-4924-9f75-cc4bc750d792" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b63599f3-2b74-43c8-ab27-734125b93496" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="d87fca42-a7c3-4f27-bf7c-3a68989339e9" name="User" isAbstract="false" isLeaf="false">
+        <description>Member responsible for creating Surveys</description>
+        <elementDefinition Id="e5b2e355-b988-4377-8e76-49647ea8e27f" />
+        <targetEnds>
+          <association Id="b2ab47f5-9023-4dab-84f8-6a0a26843696" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Register" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5f65ac38-7adf-4c0d-981e-7bc64cf43c81" LastKnownName="Register" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eecd20c8-06b5-4066-aa8e-5382534db0e5" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="62a0b076-591d-4755-9566-02487d9a7709" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bb8ad805-3841-4c00-8723-b1062a6dc891" name="Register" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="79eec871-16ef-4786-b78c-c76fe478afbf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="94f694dc-e5c6-4c1a-90fe-94201054806a" />
+          </association>
+          <association Id="e7404290-3241-4a08-a34c-cc26da9b17ed" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Request Approval" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3e080f9b-c4c6-462e-bb73-e5bf66339f69" LastKnownName="Request Approval" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92786e15-c9b4-49f2-9768-58d3ef449539" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="316bad1d-b89e-4655-89d0-5bb01f715bea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="196d736d-5604-4743-a135-935ed78f8d8d" name="Request Approval" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b6f2794a-0f63-402e-82e9-e34f3a64893c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f365d69e-9d99-4a26-bff6-570a95995b30" />
+          </association>
+          <association Id="200c78a7-9f92-4eb2-a8f6-27ec6e9eeb6b" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Create Survey" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dce39546-3b58-4d68-929d-8ca1d1058a32" LastKnownName="Create Survey" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d58c16e9-a068-464a-aee6-6bd7cd32ce8d" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="965a326e-e5a5-4a0c-9b55-0ec98d2f234e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ccf0da8-26cc-4e41-841e-07e35ceea2e3" name="Create Survey" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="72eff1db-ddb9-4ced-8bfc-3ad0f4acc695" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bfde009f-453d-4909-baaa-3d9a8e1d835b" />
+          </association>
+          <association Id="cae3fd30-beda-4d4f-a98f-074492e92349" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Update Survey" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f0ca5893-97fc-454c-9e81-9f2ae93e3b9b" LastKnownName="Update Survey" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ae6723f-7aa5-4082-a02a-dac0ab319c1d" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="24cc9f4a-0a72-4565-9a31-c09486a3fb24" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e51f4cd1-94b6-4927-bf6b-a1da319596be" name="Update Survey" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="064ed513-bde1-4c63-b3e7-6ea7121ac780" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a5c96f73-91f0-4a84-8846-02b589747a69" />
+          </association>
+          <association Id="feecef9d-0b9f-48a0-9fa9-7b81417cf589" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Surveys" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="479b4ced-eaa6-4b7f-8880-2d5959c37bdf" LastKnownName="View Surveys" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4fcdb818-736a-4890-a467-394178d71210" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0e26756d-1a87-4dd9-9c24-7e0e3d8243ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="317b9b1f-ee16-497c-9aec-c5b57b1a1ce6" name="View Surveys" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="62dd633c-4178-4e17-a52f-6351bec8637b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="253e59bb-c595-4176-b0fa-78244fa34030" />
+          </association>
+          <association Id="b4ccdb9b-5ee2-43ea-a67d-ea05df6ae227" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Results" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8847e35e-107e-44d6-bc9e-529957ff22f1" LastKnownName="View Results" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="de706b28-f5c6-414c-8ee0-2c7547864704" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e2855bf4-c250-4a65-8a04-e093ecfbee4f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f056f9e-30f6-4457-9829-75a853c0b635" name="View Results" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="acec347d-ccf2-4340-8855-8e1b6fda11e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0bad13bd-29ba-4270-ab8f-bb4f698fb728" />
+          </association>
+          <association Id="9e2aa12b-95af-4ced-8121-6054946000f8" isDerived="false" sourceEndRoleName="User" targetEndRoleName="LogOff" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="755ca0b6-2cd9-4978-8df8-00a887318dda" LastKnownName="LogOff" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d26df2f6-2e54-41c6-8364-415debcb7825" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b910776a-0283-4f73-baab-e2b83e9279a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6545a875-b54d-4575-931a-759015d37ff9" name="LogOff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac7ed662-a3de-4dc1-af88-bd4816f69d54" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9806220b-fe20-4d40-93e8-176dedbdfebe" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b8986aac-ff13-4168-aa74-eaaa449318ba" name="Participant" isAbstract="false" isLeaf="false">
+        <description>Person who takes the survey</description>
+        <elementDefinition Id="57377c10-cdb0-47f8-ac5f-b73361a681b5" />
+        <targetEnds>
+          <association Id="0ad347af-1871-4768-9af2-1928d6f3b11b" isDerived="false" sourceEndRoleName="Participant" targetEndRoleName="Take Survey" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7c1ffc05-5635-4925-a764-408e5cfeaebb" LastKnownName="Take Survey" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="82752fef-243a-41ee-8fbd-cdfc6d9923ff" name="Participant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e010c431-0314-4bbe-ba68-063ef873afd8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4fa262d-3df2-468c-b7bd-ad9106fb6f38" name="Take Survey" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aef6bd8e-c85f-46e2-b24c-b18ad1b9bff6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="39da5b78-10c3-45cc-90bc-53ab75e7d38a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="97d89320-c6e7-42c3-bb5d-74ac644b3519" name="LogOn" isAbstract="false" isLeaf="false">
+        <description>Log on to Survey system</description>
+        <elementDefinition Id="59b257fd-34cf-48af-9396-dde1071420e4" />
+        <suppliersInternal>
+          <dependency Id="f34058d5-426f-4013-aad5-98f0258d2b8f">
+            <useCaseMoniker Id="dce39546-3b58-4d68-929d-8ca1d1058a32" LastKnownName="Create Survey" />
+            <elementDefinition Id="366c982b-369a-4feb-95da-df6b386f1d2d" />
+          </dependency>
+          <dependency Id="e00bf114-c8fb-4421-8309-cf773c20d7f1">
+            <useCaseMoniker Id="f0ca5893-97fc-454c-9e81-9f2ae93e3b9b" LastKnownName="Update Survey" />
+            <elementDefinition Id="7f07e2fd-9ce0-4c85-a8d4-9139cede55f7" />
+          </dependency>
+          <dependency Id="cf3197d9-e4a3-4cea-ba7f-92cfdeca8d0a">
+            <useCaseMoniker Id="479b4ced-eaa6-4b7f-8880-2d5959c37bdf" LastKnownName="View Surveys" />
+            <elementDefinition Id="4d5b2639-0758-482c-88f9-02646f944f8f" />
+          </dependency>
+          <dependency Id="3fd2a579-3d01-4532-a9ae-a7ccca0db652">
+            <useCaseMoniker Id="a25bfbac-a69d-4dc2-9467-b9db049ea328" LastKnownName="Approve Survey" />
+            <elementDefinition Id="c0662490-6809-406e-863c-e1d138211f05" />
+          </dependency>
+          <dependency Id="9ad995c1-6107-4382-9905-667272e55523">
+            <useCaseMoniker Id="3e080f9b-c4c6-462e-bb73-e5bf66339f69" LastKnownName="Request Approval" />
+            <elementDefinition Id="6e286b2b-7e32-4807-8b5d-e2fba1825b13" />
+          </dependency>
+          <dependency Id="1904c523-12c6-48f5-b667-bdfa5fd2c24d">
+            <useCaseMoniker Id="8847e35e-107e-44d6-bc9e-529957ff22f1" LastKnownName="View Results" />
+            <elementDefinition Id="234c9b34-16a0-4894-b8e6-6e644dca40b8" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5f65ac38-7adf-4c0d-981e-7bc64cf43c81" name="Register" isAbstract="false" isLeaf="false">
+        <description>Register a Member on the Survey System</description>
+        <elementDefinition Id="f5b64dea-f12a-475c-b83b-4cff8e4fd7d3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="755ca0b6-2cd9-4978-8df8-00a887318dda" name="LogOff" isAbstract="false" isLeaf="false">
+        <description>Log off the Survey System</description>
+        <elementDefinition Id="fcc3eb9a-753c-4e4a-af79-7b4a30ded862" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="479b4ced-eaa6-4b7f-8880-2d5959c37bdf" name="View Surveys" isAbstract="false" isLeaf="false">
+        <description>View surveys set up within the system</description>
+        <elementDefinition Id="b45975a3-9da1-4309-b3c1-cdf86efca7d8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dce39546-3b58-4d68-929d-8ca1d1058a32" name="Create Survey" isAbstract="false" isLeaf="false">
+        <description>Create the Survey</description>
+        <elementDefinition Id="60588d24-2c27-474a-b310-69337eb4e629" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f0ca5893-97fc-454c-9e81-9f2ae93e3b9b" name="Update Survey" isAbstract="false" isLeaf="false">
+        <description>Add Questions and Update a Survey</description>
+        <elementDefinition Id="5cb3ffb8-3f6a-4885-89ef-6343188823d7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3e080f9b-c4c6-462e-bb73-e5bf66339f69" name="Request Approval" isAbstract="false" isLeaf="false">
+        <description>Submit a survey for Approval by Moderator</description>
+        <elementDefinition Id="0d569bc4-66ef-47b5-be5a-932a665ff5a3" />
+        <extendedCases>
+          <extend Id="5c4a16f3-33d2-409e-9d97-8c897d3e05ae">
+            <useCaseMoniker Id="a25bfbac-a69d-4dc2-9467-b9db049ea328" LastKnownName="Approve Survey" />
+            <elementDefinition Id="02c4a6e8-7ff2-4c51-ad5e-8794df415d40" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a25bfbac-a69d-4dc2-9467-b9db049ea328" name="Approve Survey" isAbstract="false" isLeaf="false">
+        <description>Approve a Survey and Publish it.</description>
+        <elementDefinition Id="1fcfc4a8-4634-468f-b597-f21e03c03e48" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7c1ffc05-5635-4925-a764-408e5cfeaebb" name="Take Survey" isAbstract="false" isLeaf="false">
+        <description>Complete a Survey, by Participant</description>
+        <elementDefinition Id="66693354-13d6-4e0a-98db-c26d34ded962" />
+        <extendedCases>
+          <extend Id="c13eed6f-f975-4542-a6af-b76ce2006d70">
+            <useCaseMoniker Id="97d89320-c6e7-42c3-bb5d-74ac644b3519" LastKnownName="LogOn" />
+            <elementDefinition Id="4674774c-b1c1-4903-b48b-8955ecba201a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8847e35e-107e-44d6-bc9e-529957ff22f1" name="View Results" isAbstract="false" isLeaf="false">
+        <description>View Results of all Survey responses by Participants</description>
+        <elementDefinition Id="6d6b755a-32ef-4c39-a305-6c707ced17fe" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="3a7ab3ba-bb8f-4dfc-83d1-f06b347fe406" name="ModelsAndDocuments">
+    <elementDefinition Id="e8dc2c4c-8600-403e-8ab6-0779874609f1" />
+  </package>
+</useCaseModelRoot>

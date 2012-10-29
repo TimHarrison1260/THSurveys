@@ -1,0 +1,29 @@
+﻿@model IEnumerable<THSurveys.Models.SurveySummaryViewModel>
+@{
+    //ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <div>
+                    <h1>@ViewBag.Title.</h1>
+                </div>
+                <div>
+                    <h2>@ViewBag.Message</h2>
+                </div>
+            </hgroup>
+        </div>
+    </section>
+}
+
+@Html.ActionLink("Create Survey","Create")
+
+@Html.Partial("_SurveySummaryList", Model)
+
+
+@*        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>*@
