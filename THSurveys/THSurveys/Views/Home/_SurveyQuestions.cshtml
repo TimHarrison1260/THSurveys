@@ -1,0 +1,24 @@
+﻿@model IEnumerable<THSurveys.Models.Home.SurveyQuestionsViewModel>
+
+<table>
+ 
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.HiddenFor(modelItem => item.QuestionId)
+            @Html.DisplayFor(modelItem => item.SequenceNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            @Html.Partial("_QuestionResponses", item.Responses)
+        </td>
+    </tr>
+}
+
+</table>

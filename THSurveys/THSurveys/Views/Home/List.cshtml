@@ -1,0 +1,45 @@
+﻿@model THSurveys.Models.Home.HomeListViewModel
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                    <h1>@ViewBag.Title.</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<div>
+    <h5>@ViewBag.Message
+    @Html.DropDownListFor(model => model.CategoryId, Model.Categories, "All")
+        </h5>
+</div>
+
+<div id="summaryList" />
+@*    @Html.Partial("_SurveySummaryList", Model.Surveys)*@
+@*</div>*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#CategoryId').change(function() {
+            @*$('#sumaryList').load('@Url.Action("SurveyList", "Home", new { id = Model.CategoryId })');*@
+            /*
+            *   $.load dosn't work as a POST request is needed.  Therefore use Ajax method directly.
+            */
+            var selValue = this.selectedIndex;
+            var selItem = this[selValue].value;
+            var urlAction = '@Url.Action("SurveyList", "Home", new { id = "PLACEHOLDER" })'
+            var url = urlAction.replace("PLACEHOLDER", selItem);
+            $.ajax({
+                url: url,
+                type: 'POST',
+                success: function (result) {
+                    //  Load the result intothe summaryList element.
+                    $("#summaryList").html(result);
+                }
+            });
+
+        })
+    });
+</script>

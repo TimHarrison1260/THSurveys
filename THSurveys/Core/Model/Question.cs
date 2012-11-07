@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace Core.Model
 {
-    public class Question
+    public abstract class Question
     {
         /// <summary>
         /// Gets or sets the unique Id of the question.
@@ -32,28 +32,13 @@ namespace Core.Model
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or sets the Id of the survey the question belongs to.
+        /// Navigation property for Survey
         /// </summary>
-        /// <remarks>
-        /// This should set up a foreign key to the Survey Entity
-        /// </remarks>
-        public long SurveyId { get; set; }
+        public virtual Survey Survey { get; set; }
 
         /// <summary>
         /// Gets or sets the collection of available responses to this question
         /// </summary>
         public virtual ICollection<AvailableResponse> AvailableResponses { get; set; }
-
-        /// <summary>
-        /// Gets or sets the collection of actual responses to this question 
-        /// from each of the instances the survey has been taken.
-        /// </summary>
-        public virtual ICollection<ActualResponse> ActualResponses { get; set; }
-
-        /// <summary>
-        /// Navigation property for Survey
-        /// </summary>
-        public virtual Survey Survey { get; set; }
-
     }
 }

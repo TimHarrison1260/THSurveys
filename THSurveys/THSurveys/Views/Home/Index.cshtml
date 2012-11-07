@@ -18,24 +18,3 @@
 }
 
 @Html.Partial("_SurveySummaryList", Model)
-
-
-@*@foreach(var item in Model)
-{
-    <div style="width: 500px; margin-left: 50px">
-        <span style="width: 300px; margin-left: 10px">
-            @Html.DisplayFor(model => item.Title)
-        </span>
-        <span>
-            (
-            @Html.DisplayFor(model => item.Owner)
-            :
-            @Html.DisplayFor(model => item.StatusDate)
-            :
-            @Html.DisplayFor(model => item.Responses)
-            :
-            @Html.DisplayFor(model => item.Category)
-            )
-        </span>
-    </div>
-}*@

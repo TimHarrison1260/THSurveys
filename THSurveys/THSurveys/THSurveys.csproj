@@ -179,19 +179,33 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
-    <Compile Include="Filters\CreateSurveyMapAttribute.cs" />
+    <Compile Include="Filters\AjaxActionOnlyAttribute.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
-    <Compile Include="Filters\MapSurveyToCreateSurveyVMAttribute.cs" />
+    <Compile Include="Filters\MapQuestionToAddQuestionsListviewModelAttribute.cs" />
+    <Compile Include="Filters\MapResponseTemplateToResponsesViewModelAttribute.cs" />
+    <Compile Include="Filters\MapSurveyToApprovalListViewModelAttribute.cs" />
+    <Compile Include="Filters\MapSurveyToHomeSurveyListVMAttribute.cs" />
+    <Compile Include="Filters\MapSurveyTopTakeSurveyViewModelAttribute.cs" />
     <Compile Include="Filters\MapSurveyToSurveySummaryAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\RadioButtonExtensions.cs" />
     <Compile Include="Infrastructure\ModelBinders\CreateSurveyModelBinder.cs" />
+    <Compile Include="Infrastructure\ModelBinders\SurveyApprovalModelbinder.cs" />
+    <Compile Include="Infrastructure\ModelBinders\TakeSurveyModelbinder.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
-    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Account\AccountModels.cs" />
+    <Compile Include="Models\Home\HomeListViewModel.cs" />
+    <Compile Include="Models\Question\AddQuestionsListViewModel.cs" />
+    <Compile Include="Models\Question\AddQuestionsViewModel.cs" />
+    <Compile Include="Models\Question\LikertResponsesViewModel.cs" />
+    <Compile Include="Models\Survey\ApprovalListViewModel.cs" />
     <Compile Include="Models\Survey\CreateSurveyViewModel.cs" />
     <Compile Include="Models\Shared\SurveySummaryViewModel.cs" />
+    <Compile Include="Models\Home\TakeSurveyViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -310,11 +324,17 @@
     <Content Include="Views\Survey\Create.cshtml" />
     <Content Include="Views\Survey\Index.cshtml" />
     <Content Include="Views\Shared\_SurveySummaryList.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
+    <Content Include="Views\Question\Create.cshtml" />
+    <Content Include="Views\Question\_LikertResponses.cshtml" />
+    <Content Include="Views\Question\_AddQuestionsList.cshtml" />
+    <Content Include="Views\Survey\Approval.cshtml" />
+    <Content Include="Views\Home\TakeSurvey.cshtml" />
+    <Content Include="Views\Home\_SurveyQuestions.cshtml" />
+    <Content Include="Views\Home\_QuestionResponses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Account\" />
-    <Folder Include="Models\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

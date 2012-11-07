@@ -21,7 +21,7 @@
         <referencesInternal>
           <reference
             Id="163cc9bb-615a-4a51-b8f8-77d72d8c2ff5"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -201,72 +201,6 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="38d77c11-bb8e-45a6-bb5e-ff076d80a1aa"
-            isDerived="false"
-            sourceEndRoleName="ActualResponse"
-            targetEndRoleName="QuestionId"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-              LastKnownName="Int64"
-              LastKnownLocation="Package2_1553.uml" />
-            <description>Property QuestionId references type Int64.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a612f209-12b8-4af0-b794-70c02e28760e"
-                  name="ActualResponse"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="25a394ec-b442-4745-b6ad-e400c0c0845c"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="0a87271c-0f2e-445c-8223-132834e15a2d"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="29587c7c-257a-4749-88fb-5d3ac245b4a6"
-                  name="QuestionId"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c7ea4f36-455f-451a-904e-e2415397ece1"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="48bc2636-c7cf-4958-9d39-4668b676bcad"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="df75e860-614a-412c-a6ed-37df7d52579c"
             isDerived="false"
             sourceEndRoleName="ActualResponse"
@@ -398,6 +332,72 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="ed0fff5f-9de5-4ec1-945e-91b6e38ecb98"
+            isDerived="false"
+            sourceEndRoleName="ActualResponse"
+            targetEndRoleName="Question"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
+              LastKnownName="Int64"
+              LastKnownLocation="Package2_1553.uml" />
+            <description>Property Question references type Int64.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b9ffd2af-4183-47d6-bafb-1dba30564554"
+                  name="ActualResponse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6779a307-cf4b-4f7e-a27b-65d50b23e653"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e3f82d0a-02b4-4b83-8268-9753b1ef8ef2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a91a1f06-7af4-4700-b268-ac752fd2030a"
+                  name="Question"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5a91b829-0f43-43ea-832b-9e3a906827e0"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7266a486-ab70-4ef7-9495-8230f11bc3fa"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -413,7 +413,7 @@
             <referencesInternal>
               <reference
                 Id="dd6d746a-3c94-4323-82e9-b7909dcacc59"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -493,7 +493,7 @@
             <referencesInternal>
               <reference
                 Id="353bb537-a902-4444-94f8-d0548e1025e3"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DResponse"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DResponse"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -561,86 +561,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="f80f7b65-5f8c-4df7-afe0-232068f42b59"
-            name="QuestionId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="7e606385-1451-498a-bbf0-ddd54f939a2b"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DQuestionId"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="a446e580-95aa-4eda-af48-df146929cacb"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bf9e59dc-35a6-4de6-8528-74c24685edc6">
-                    <propertyInstance
-                      Id="623a6b95-9f0c-486d-b523-9a79532a3561"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b64e38d9-217b-4472-a279-b6dd26bc50a4">
-                    <propertyInstance
-                      Id="21f562ad-d370-4095-bbba-3ff433693974"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b1b1fe4a-51b4-45bc-b6be-b1c7996afe62">
-                    <propertyInstance
-                      Id="cd2a94e2-1734-4f21-b929-04a170f6c908"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="af5ef71c-8747-4d8d-829e-a84240ed2eb5">
-                    <propertyInstance
-                      Id="229aef18-d9d4-481b-922b-3e8e39db3aa7"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="01dc86f6-d649-440f-9f3f-a85b93b45607">
-                    <propertyInstance
-                      Id="a97f7cf6-9770-4d32-9067-6454631e0bf6"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5a622bd5-ca53-4f88-9de9-714ee96aae7f">
-                    <propertyInstance
-                      Id="27cc0b5d-a6ec-4c5e-b0bd-6b0c0404a17b"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f5eff59f-41eb-4190-8356-18b61c36c32a">
-                    <propertyInstance
-                      Id="45e95208-e3bb-402d-81e5-ca90b9b9b011"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-                LastKnownName="Int64"
-                LastKnownLocation="Package2_1553.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="b21d9f61-946b-4255-8cf7-a3d1fa611648"
             name="Respondent"
             isLeaf="false"
@@ -653,7 +573,7 @@
             <referencesInternal>
               <reference
                 Id="425eef39-a01c-417d-b974-62e23a9022f8"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DRespondent"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DRespondent"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -733,7 +653,7 @@
             <referencesInternal>
               <reference
                 Id="6ba85b51-f053-4608-b8cd-60b704386f00"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DRespondentId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DRespondentId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -800,10 +720,90 @@
                 LastKnownLocation="Package2_1553.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="4d1d451f-4da9-442d-adb8-176632f93c9f"
+            name="Question"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6304ca0b-b341-428c-b8b3-c9412187466e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3DQuestion"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aa6c7d78-07ff-4ec1-bfec-1feae28e7262"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="635fe071-4cd4-4d63-b7d4-46c26bb74eb1">
+                    <propertyInstance
+                      Id="4b374efb-f476-4af5-a35c-fb14bf4d8067"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df9f6347-6ba9-436b-adee-53f730a74782">
+                    <propertyInstance
+                      Id="0978025b-26ed-467e-9a94-b76beea9b33a"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dfa7182-f0a7-4eb4-be92-142be26c83b9">
+                    <propertyInstance
+                      Id="d94629fa-bc0c-4020-9405-f9922bdf6b19"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5fb12455-ee37-410e-8c59-2463cbe19c95">
+                    <propertyInstance
+                      Id="575af515-7941-4173-8d02-589ff4287e90"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cff1f6c-2937-4303-b66b-e041c7a7dc02">
+                    <propertyInstance
+                      Id="edf6e342-d7b6-43b4-8273-d192b4759bdb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c5f4f8e-916f-4d0b-9f0e-b4eea2663327">
+                    <propertyInstance
+                      Id="2df4fb6d-b8e5-4e5d-b033-20b5dc2fb809"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84c25fcd-e3e1-4a43-ac6e-c2f118432e59">
+                    <propertyInstance
+                      Id="75ce3d72-4cba-44f3-bef1-dffd3973c2a8"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
+                LastKnownName="Int64"
+                LastKnownLocation="Package2_1553.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="c548b313-ba72-4fbe-90c6-e64d3ed958c8"
+            Id="1e46203b-7dab-4896-bc64-3968f8fe9bde"
             name="ActualResponse"
             isLeaf="false"
             isStatic="false"
@@ -812,54 +812,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="5b52e388-1fa8-4611-b623-136aa9e65960"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3D.ctor"
+                Id="921721a1-d149-4e73-ad6e-7a71d9257921"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DActualResponse Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="abce8d26-e4c3-49aa-a037-20cde6a82ebe"
+                Id="7db0cc37-0c1a-4412-baa1-2f8913be9d65"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="776c305e-1061-4710-945b-2a46b0f84f05">
+                    Id="b779a266-c166-4498-a09c-ad994e1e5d93">
                     <propertyInstance
-                      Id="abf2a640-48fb-4913-a27b-6bbe724d8d6c"
+                      Id="145daec6-81ce-49f2-8a2f-180b1939ef0f"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="eadf1135-9b4c-47ad-b7fb-e49c62a965c4">
+                    Id="26144fcc-9655-408c-a4ec-8bbeff389f97">
                     <propertyInstance
-                      Id="a4ab5d46-3863-4a9c-86f0-eb4a7c8952db"
+                      Id="38bf23c1-3067-4bb3-99c2-7927106c64df"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="00273827-25a8-4d72-a2b5-8a14c93321b2">
+                    Id="290df240-f878-4214-b2d7-d9363ad4ca89">
                     <propertyInstance
-                      Id="4f91ac3a-653e-473e-99e8-fb281aa17a81"
+                      Id="64ca9926-a314-406f-8aa2-f64c1801eef4"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="81ed021b-a9eb-41eb-a849-67fed21b1ebb">
+                    Id="e308762c-8e35-42f7-8dba-b575b19d066c">
                     <propertyInstance
-                      Id="411605c5-e690-4bc0-b994-9f48a2cecef4"
+                      Id="7de41204-90a2-4389-a5f8-849b37f7ab6b"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f1278009-86be-4e55-8390-42dd8deeebab">
+                    Id="7ba44400-34fa-4994-bfb7-306b5aad33b5">
                     <propertyInstance
-                      Id="76b956c3-fc54-44d8-a9fb-0c8a0038f7dd"
+                      Id="5765fda6-2365-4098-aa6d-c5a46b7e9c52"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="63714092-a693-4125-aec9-446981445810">
+                    Id="4b29670f-f96c-4b03-9df0-ebb2b608b211">
                     <propertyInstance
-                      Id="c529db70-92c6-419a-bab9-38a9012fc423"
+                      Id="5ebd8764-83ea-405a-8bcd-aa9960518e26"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -880,7 +880,7 @@
         <referencesInternal>
           <reference
             Id="fccdc471-7247-4b24-aad4-5b409ae14f76"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -927,72 +927,6 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <targetEnds>
-          <association
-            Id="cbf699be-5222-4633-abd9-3914a9007d64"
-            isDerived="false"
-            sourceEndRoleName="Question"
-            targetEndRoleName="ActualResponses"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="34dbb687-1fd7-4f8a-9316-a4334f593eb8"
-              LastKnownName="ICollection&lt;ActualResponse‎&gt;"
-              LastKnownLocation="Package1_1554.uml" />
-            <description>Property ActualResponses references type ICollection&lt;ActualResponse‎&gt;.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="e57080c1-35c4-4c31-a75a-9b89f0ece4f8"
-                  name="Question"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="3231e119-ab40-486f-bec0-5a695299a3c3"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="38b09a60-0940-4f05-8e51-d2325f132513"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="9a9c6828-aa2e-425b-a02e-a97d915c2e1e"
-                  name="ActualResponses"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="756addc7-62cd-4423-b507-316d72fc6452"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="b1efb834-aa06-4217-9885-55547e1bfe1f"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="3358ee8a-86be-4bbd-aa5d-a47c489d824d"
             isDerived="false"
@@ -1257,154 +1191,8 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="ec583d9d-c0d8-4902-bfff-e4a2c5ec26c8"
-            isDerived="false"
-            sourceEndRoleName="Question"
-            targetEndRoleName="SurveyId"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-              LastKnownName="Int64"
-              LastKnownLocation="Package2_1553.uml" />
-            <description>Property SurveyId references type Int64.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a531e270-5b08-494a-a99f-75d78a405159"
-                  name="Question"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="48ba2ba6-69f6-46d9-a0bc-ea0b3d548f32"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="4ffc066b-9172-4001-8c81-2899c34108d0"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="33ed87b6-0fb8-4d1b-bf12-992f43eb230d"
-                  name="SurveyId"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="35c1da5a-67ba-463d-9651-bb002407f3cb"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="409dea35-0fc6-468a-92bb-bb518ea15824"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property
-            Id="9fb038a5-2126-4ac3-9f41-8d358cbd81c6"
-            name="ActualResponses"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="a6b61aab-cb16-4cd9-bf38-5b739829a763"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DActualResponses"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="8a3f1e36-b8dc-41e4-bcbd-949e1b28fd97"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a7109d2c-19c6-4372-b10c-5b5393f43423">
-                    <propertyInstance
-                      Id="bfc76f9e-1dc7-49dd-9815-0ff523719b83"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="98f7a9bd-670b-42e8-8a77-d70b65ad5bd6">
-                    <propertyInstance
-                      Id="d2b4b06b-abcb-4875-b5a7-0e69d0b58f89"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2f7f5ace-2704-4804-8216-15f18555f6f6">
-                    <propertyInstance
-                      Id="f6ac21b4-1c4a-43c6-96a6-4fffa786fc64"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b3f5b764-4370-4d9a-ba47-927017ae86b3">
-                    <propertyInstance
-                      Id="ac915864-443b-4d65-9fc8-85b8821d6b15"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="27271dcd-b2da-49b5-b927-cee61e39c306">
-                    <propertyInstance
-                      Id="231f6473-9860-4456-aaee-f9c54a9b1b26"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="85044626-7703-4d99-b5f8-57644a8020f6">
-                    <propertyInstance
-                      Id="7deec650-0e8b-4ced-a318-d5059f75e920"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1741a145-2861-43ed-858b-8f58e605a70f">
-                    <propertyInstance
-                      Id="3f2dd95d-f333-485d-a044-e3c10381ca9e"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="34dbb687-1fd7-4f8a-9316-a4334f593eb8"
-                LastKnownName="ICollection&lt;ActualResponse‎&gt;"
-                LastKnownLocation="Package1_1554.uml" />
-            </type_NamedElement>
-          </property>
           <property
             Id="71969049-56df-4d31-a68d-52f0d67b673b"
             name="AvailableResponses"
@@ -1418,7 +1206,7 @@
             <referencesInternal>
               <reference
                 Id="da491b7b-27c7-4d8b-99d1-aed3b1cd0c17"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DAvailableResponses"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DAvailableResponses"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1498,7 +1286,7 @@
             <referencesInternal>
               <reference
                 Id="55edfae9-6b5d-49d4-8924-66f983c53773"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DSequenceNumber"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DSequenceNumber"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1578,7 +1366,7 @@
             <referencesInternal>
               <reference
                 Id="cd6dcb7e-5591-4816-8e63-22eb30cf4463"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DSurvey"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DSurvey"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1658,7 +1446,7 @@
             <referencesInternal>
               <reference
                 Id="c7c690bb-ade6-4626-8701-816418ecf410"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DText"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DText"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1738,7 +1526,7 @@
             <referencesInternal>
               <reference
                 Id="bdc0ffc5-b6bb-4bad-a6da-8066586a7446"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DQuestionId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DQuestionId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1805,90 +1593,10 @@
                 LastKnownLocation="Package2_1553.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="aa1d8d91-63bb-4bd8-baf8-e8cbcf9dd678"
-            name="SurveyId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="3a68d8f4-d75a-41f3-87d0-60a7664cf471"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3DSurveyId"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="5f93eccf-6628-40a8-9b82-37d73f7e898a"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="62ba7b43-5189-4b9a-bd68-06c2f04b5783">
-                    <propertyInstance
-                      Id="0c0a9149-f1e2-41a9-bb2f-d3333b5ca085"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ddbd702b-f854-47ca-8ef4-9b24cb95ce60">
-                    <propertyInstance
-                      Id="9a5d814f-f72e-4c84-a45a-9cad965b24cb"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1873b93f-e268-4765-ad11-875ca936020c">
-                    <propertyInstance
-                      Id="fcc1eab8-62f3-428d-bb7c-b10668389de7"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5bc9eb02-bdc8-4395-9fb0-a048976e6b47">
-                    <propertyInstance
-                      Id="c3f91b7c-fb65-404c-a54e-7bf3ec84cc49"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="13f4866c-09ba-47b7-bc41-91f0b0ab2b2a">
-                    <propertyInstance
-                      Id="d74e2281-f8f7-43bc-b9d8-1d91356393f1"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="154418e4-9e2f-4222-8390-74a639e3147c">
-                    <propertyInstance
-                      Id="0d99570c-2973-41f3-8649-9833a8046682"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a3cbcfc4-650c-41bc-bd31-8bf04ce78689">
-                    <propertyInstance
-                      Id="402095a6-492e-4102-9275-f882f0a3ad47"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-                LastKnownName="Int64"
-                LastKnownLocation="Package2_1553.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="f6b86914-5b44-484c-b5cc-dea1c642d1bf"
+            Id="bbcd7508-96da-49bb-a22f-0bb53d742b0f"
             name="Question"
             isLeaf="false"
             isStatic="false"
@@ -1897,54 +1605,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="475d4ac9-869e-47ce-8a42-f904aeed2bbb"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3D.ctor"
+                Id="efcc2584-12ec-4cd5-80bf-f22fd5ef3004"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DQuestion Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="55a18611-9cd9-4f8c-ba31-e7f2d3815b3e"
+                Id="4a9181b4-1265-4864-9b2f-06ab50cda4d0"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ad0460f2-d0b5-40f4-a88e-3a2d5b1ab4f8">
+                    Id="eb227f30-320d-4e1b-9277-0a23a8129520">
                     <propertyInstance
-                      Id="bcdb6985-206e-460f-8c67-145c4b1f5849"
+                      Id="47c3eb26-d10a-4bef-8d72-f8660590d324"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="76041102-5638-4a87-b488-c00e104aa611">
+                    Id="c29ff035-e030-416e-813a-390525502389">
                     <propertyInstance
-                      Id="802d09b3-49eb-41dc-a359-b63cd49a2b4b"
+                      Id="e6a2d0c7-ff34-4191-b50d-8029e0bde42f"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c8a151a4-4c5b-40ad-aa8a-75ea8fdf9d13">
+                    Id="6deedcad-9d72-4527-87e0-76215683657f">
                     <propertyInstance
-                      Id="7dbdfd9f-96c0-4644-8597-235ddc096e79"
+                      Id="e0478874-e9e2-44df-8dc1-9b58c20f3079"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9d77fa5c-64df-4f05-9703-2fdcc234fc20">
+                    Id="6ef58824-7013-40aa-b70e-26f75dd25363">
                     <propertyInstance
-                      Id="a0620b5e-76a8-440f-9e56-4bb3df8a9a2d"
+                      Id="13a16d25-b9c0-4e72-a449-835cffb5c94b"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6b51b52f-60c5-423e-9ab3-34d34436a5f5">
+                    Id="de58ed13-8a4b-482b-b6ee-3ef4427e49bb">
                     <propertyInstance
-                      Id="2081204f-ab2e-4dee-b901-18442e71f889"
+                      Id="0da8c205-d505-4c81-be32-2bb8612a7017"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="eb205233-3f75-4ff9-918f-3fd87d1e1343">
+                    Id="e227aa31-7652-4af5-a50f-fe6c1e4a1687">
                     <propertyInstance
-                      Id="b10d8a27-98ff-4e25-ac7e-d6eaa955c9fc"
+                      Id="893cf753-574c-45c2-a442-e5267046e2ef"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -1965,7 +1673,7 @@
         <referencesInternal>
           <reference
             Id="404d17aa-2408-4e80-9429-00b94455e2a3"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -2079,7 +1787,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="eb904a23-9d6c-4fdd-86a1-3eb368cf4f73"
+            Id="61546d99-52b9-42ea-914f-b4085365741b"
             isDerived="false"
             sourceEndRoleName="LikertTemplate"
             targetEndRoleName="Responses"
@@ -2093,7 +1801,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="682e226b-3b0d-4079-8f7c-021cc457dee4"
+                  Id="835a9302-485c-4421-8082-cb7054a81e3b"
                   name="LikertTemplate"
                   isLeaf="false"
                   isStatic="false"
@@ -2105,13 +1813,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="09653c97-86ac-4ccf-967b-eab87270fc25"
+                      Id="76cccb78-245c-4a12-a080-44e6643445b7"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="8af6777d-6e92-4d11-8301-02d244be36a2"
+                      Id="6a256c5e-7a3d-4dba-a7e6-751ebdd23186"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -2119,7 +1827,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="3c2e54a8-e317-4cfd-8f8e-ca3f135b5f24"
+                  Id="82ddade5-d4c1-4089-8002-6861079fdae2"
                   name="Responses"
                   isLeaf="false"
                   isStatic="false"
@@ -2130,13 +1838,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="d945b26e-2640-49d0-bc15-8f50b0a42cfe"
+                      Id="7a9a5a90-3776-4997-b3a2-9b3072cf6c60"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="86bdc51f-60b2-4370-be54-9145970f921a"
+                      Id="f05abd72-a5e8-4777-abcd-544996cea79f"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -2159,7 +1867,7 @@
             <referencesInternal>
               <reference
                 Id="2cd16c75-4abf-4eb3-8dfd-d1df55d5b6e6"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3DId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3DId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2227,86 +1935,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="fad15a86-c342-4d8a-9e24-bc1ff5c191bb"
-            name="Responses"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="d82347b8-0312-44d5-97d8-4b48e60aee54"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3DResponses"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="daf53b46-3158-4aa9-b261-f17e7e4430e6"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="637a3bda-cbe8-44c7-be6f-3165fd0afb8c">
-                    <propertyInstance
-                      Id="f125013a-97fb-43f8-8772-5d13e37f3a45"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3d68c8b2-4487-4d7e-b136-53f35fe21767">
-                    <propertyInstance
-                      Id="5be74da1-16d2-42d4-a4d6-1be218540188"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="81be1234-15f0-4657-ae5c-382a6c8a81f3">
-                    <propertyInstance
-                      Id="535a7635-c381-4d6d-8b25-aa7bf8e890b2"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9f31051d-766f-43af-b27d-d6c9c9c806b1">
-                    <propertyInstance
-                      Id="25b23427-26cc-46c5-9b95-36fcd2a0063a"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="24fd38c9-435c-4d1b-883e-3aeff924de81">
-                    <propertyInstance
-                      Id="b12c05b1-1960-4b6b-8958-bda9c51a4c5c"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7bd7c166-fa6e-49f9-9c8f-4e89cd91473d">
-                    <propertyInstance
-                      Id="e7cc1809-3051-436b-8c45-5072ac935135"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7c50834f-c616-4624-85f9-6cdd8e309938">
-                    <propertyInstance
-                      Id="76c868b2-d0f1-4379-bbc5-c37d3b8a47d8"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="8e0b9f8c-6afd-4379-a63b-2d69e841f135"
-                LastKnownName="ICollection&lt;TemplateResponse‎&gt;"
-                LastKnownLocation="Package1_1554.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="18e2da94-f110-4a25-b45a-0f4654b8df1d"
             name="Title"
             isLeaf="false"
@@ -2319,7 +1947,7 @@
             <referencesInternal>
               <reference
                 Id="c9f50c33-e700-4d5b-9f1a-8a3425de083c"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3DTitle"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3DTitle"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2386,10 +2014,90 @@
                 LastKnownLocation="ModelsAndDocuments.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="7ed2c1ff-0151-4e26-86a0-6ff508ce193b"
+            name="Responses"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a1732743-2920-4983-8e6a-fc95cfaf36e6"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3DResponses"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ebceb2a5-d04c-4850-9039-37350f728df4"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d0e6b14-b70b-43a5-9239-a95a43584a58">
+                    <propertyInstance
+                      Id="c85a6b6a-4c30-4d00-bcf4-97a0e4b1a829"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b622a31-006d-4394-babd-afacf5371bc2">
+                    <propertyInstance
+                      Id="cc25364f-0f82-483f-9475-19cec2222596"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02b23d03-bc32-45fa-8646-5beba70b0e8c">
+                    <propertyInstance
+                      Id="f0416036-ce53-455f-b912-e134f5ada04e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12bf9359-b965-4e06-9bf6-43845cee0ae9">
+                    <propertyInstance
+                      Id="22736be9-75e5-4928-837b-d1dce9dff74e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0199d08e-7d37-4385-8746-525e32b0d912">
+                    <propertyInstance
+                      Id="da755032-5be8-461e-8df8-27be7f59ef08"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df38ef12-4099-4f78-a87a-67294d00b888">
+                    <propertyInstance
+                      Id="439327fa-8465-45c1-b9b7-a68f87b88548"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7108a937-5ef7-4f89-a0c0-ebcc2f779fc8">
+                    <propertyInstance
+                      Id="12fffccd-d0d1-4fbd-916d-213e594e07da"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="8e0b9f8c-6afd-4379-a63b-2d69e841f135"
+                LastKnownName="ICollection&lt;TemplateResponse‎&gt;"
+                LastKnownLocation="Package1_1554.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="fe925bb1-2813-4bea-bd77-f987f05c8a5c"
+            Id="ae8e67fe-f248-4d5b-91eb-2f86647fd735"
             name="LikertTemplate"
             isLeaf="false"
             isStatic="false"
@@ -2398,54 +2106,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="71a13a71-a84e-45a1-a173-af08c6daf54a"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3D.ctor"
+                Id="284d1896-1fce-4972-8e62-6603bcde38ed"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DLikertTemplate Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="8edc64ed-648b-4528-ac21-9e37103c5466"
+                Id="3d8a9b78-c9ee-4439-9c3c-5b9e5cd29f21"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="acc06d13-8784-4e24-9c10-078f129d9f7a">
+                    Id="353c4098-d37c-40f8-bb56-b972f9e2cdca">
                     <propertyInstance
-                      Id="9aff321d-6f89-4dd2-a062-bc91955d8776"
+                      Id="50bc2434-298a-46ce-bdf9-ebe7be94761d"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0c001bd5-0196-4fa5-8d69-85611b103c01">
+                    Id="b46cf61c-c882-4ff0-bc12-003f97738e09">
                     <propertyInstance
-                      Id="ac650b99-94ee-4e64-9e92-355aa55c11f1"
+                      Id="01910270-0ebe-4a1b-98df-f79ab52ee996"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="79777d99-ebc7-4dbf-bfee-f6040dfd95f8">
+                    Id="d0b06284-d030-4244-ae36-cde2adc00369">
                     <propertyInstance
-                      Id="4a3706a2-76c6-447f-bcb3-7ba08b1227a2"
+                      Id="1633fa49-188f-48b3-9336-0d48986fa7c8"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f38c66a2-987a-44c4-8078-99f50ad94171">
+                    Id="e27227fb-0d4b-4a75-9e25-9148b7ac1477">
                     <propertyInstance
-                      Id="25ea3c18-f0cd-4ecc-bf40-dc610927bb99"
+                      Id="5604b69b-7fc6-415a-98fe-3b7309cff99a"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="55368610-73ae-4b3c-b461-1d7b429fb7f6">
+                    Id="ae7c5c1d-3e4e-4e6d-92e2-ec8ab10442f3">
                     <propertyInstance
-                      Id="27953565-2f0f-42ff-9f7c-c0f25fd4dc41"
+                      Id="0887255a-fa10-4c17-812a-640e9191aee3"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="855ac807-8a0a-4742-919b-0d74006e69f9">
+                    Id="2ebd2ca4-5863-41a3-9a9e-653d823c54c6">
                     <propertyInstance
-                      Id="88734e61-8b6b-43d3-baac-eedb5f6488cd"
+                      Id="b730c3fe-53d9-442a-a4ed-b6c2e87acde9"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2466,7 +2174,7 @@
         <referencesInternal>
           <reference
             Id="18c4813a-054b-44a1-b62d-a9188a783036"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -2711,72 +2419,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="8ddd57cd-e699-412b-b92d-a46735a7eded"
-            isDerived="false"
-            sourceEndRoleName="TemplateResponse"
-            targetEndRoleName="LikertId"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-              LastKnownName="Int64"
-              LastKnownLocation="Package2_1553.uml" />
-            <description>Property LikertId references type Int64.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7a4c45e5-08af-441c-a572-96c388b296c3"
-                  name="TemplateResponse"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="72183797-e1f1-4558-b81a-607d3bd9acd0"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="59960f87-978e-480f-a920-298738d538b0"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="07ff469d-c866-49eb-94dd-a997696795f7"
-                  name="LikertId"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="9610ae68-2929-4b0d-a356-ea1656e08103"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="8f521622-ce46-4b57-b757-1b2a15f1b044"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -2792,7 +2434,7 @@
             <referencesInternal>
               <reference
                 Id="e3ae728a-db3c-49cb-a250-e038bbfb2cca"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2872,7 +2514,7 @@
             <referencesInternal>
               <reference
                 Id="7dd76539-6e3d-440d-86d9-0e1fd571e103"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DLikertScaleNumber"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DLikertScaleNumber"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2952,7 +2594,7 @@
             <referencesInternal>
               <reference
                 Id="261918a7-1057-4f67-a357-929c0533db95"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DLikertTemplate"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DLikertTemplate"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3032,7 +2674,7 @@
             <referencesInternal>
               <reference
                 Id="59aae6ca-4ffd-4f35-bf9b-0008648f56bd"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DText"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DText"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3099,90 +2741,10 @@
                 LastKnownLocation="ModelsAndDocuments.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="d3da3149-9df5-43b1-a621-f936967b5423"
-            name="LikertId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="25c12699-4957-4b65-b8c9-de033439f8a5"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3DLikertId"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="521bd1af-4212-4f61-bcea-3055f68c56a2"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="839f064b-5799-44fd-85f2-4e1d16eec533">
-                    <propertyInstance
-                      Id="8dd149de-bbfd-43d6-b5dd-b1deb3df7101"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bc965b35-8325-4109-b2a7-1f06eef2eea6">
-                    <propertyInstance
-                      Id="44048263-c227-483b-a233-e4916da952a2"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="beafa25f-c8ee-4e20-8c64-97ae396e135f">
-                    <propertyInstance
-                      Id="befa3f2c-2e89-43ff-bd2c-5e317c377cda"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d794c2ed-b1e4-4f69-8a85-f9603650ec06">
-                    <propertyInstance
-                      Id="b4757e96-b1c4-419e-a3a3-cf1d10a01506"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="09bde5f1-7129-445a-a4a6-74798a4affbb">
-                    <propertyInstance
-                      Id="c286c7cf-21d8-42da-a5d9-bb9973d0b7fd"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f4ac7925-160b-434a-b0c6-0c6ff3cb836c">
-                    <propertyInstance
-                      Id="12ef04a2-36ec-4b3b-ac28-56f699f2672c"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="390cbf38-a684-4083-a763-53b5b485a321">
-                    <propertyInstance
-                      Id="4a393555-f933-41c6-91a1-0b3f0a245bfa"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-                LastKnownName="Int64"
-                LastKnownLocation="Package2_1553.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="11f12ba2-38c0-46d6-a9ed-f4d938849fbe"
+            Id="ed512ed6-9192-4f41-a2f4-0b5e725f7aeb"
             name="TemplateResponse"
             isLeaf="false"
             isStatic="false"
@@ -3191,54 +2753,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="10aa328f-3c33-4551-b359-30e1c90e02f9"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3D.ctor"
+                Id="9053b219-e863-4c39-a125-e4d04a488397"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DTemplateResponse Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="1e34ca5e-1e3e-4c06-9591-ddd8a837b5f2"
+                Id="8f6ee59e-e6bd-4b42-bc23-fadba9b958ae"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ab0415b7-9e93-47d3-8a8c-be1ded41fdcd">
+                    Id="25ffac4e-2be4-40c4-be9f-bd5f7ee4023c">
                     <propertyInstance
-                      Id="b3e8cab1-6f89-4569-90ab-5aa1e026b6f1"
+                      Id="b08b8957-41f0-4eea-9ade-340f0d9a93d9"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="52c69cb3-6644-42d1-846d-e61396c83686">
+                    Id="2d2663b4-882d-44c4-b273-73fbe9628c16">
                     <propertyInstance
-                      Id="934699e6-806e-4e29-a924-b79ec04d326b"
+                      Id="3e836b27-f2ee-4abe-b9f9-7899cc2d23dc"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4b7d5683-ad67-4b92-bed8-8b0017146bf2">
+                    Id="ef155c71-741e-457f-b661-8d43a193cb7b">
                     <propertyInstance
-                      Id="22c731a5-362d-4ff8-94cc-fcb8300c0eb5"
+                      Id="be3218a9-7ba2-4028-a0e0-8a47b0a24a90"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9cc0ab71-43f2-4ffd-9bc4-7cc919e8ef99">
+                    Id="3a0f4096-b886-471e-a45b-a70631ec5639">
                     <propertyInstance
-                      Id="3338d58e-7e01-48de-830b-c46addca178f"
+                      Id="f83ab717-d434-476e-939e-3189657fffa8"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="04775e18-dfea-471a-b030-882b157d07db">
+                    Id="6a2a63ee-671e-4a03-9df1-99b590af36bb">
                     <propertyInstance
-                      Id="b901eb91-e817-40ac-a237-fed7f886a236"
+                      Id="24cecea1-c6fc-4eb9-b4a7-febc807d7595"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ff41e080-0911-43ee-b030-46da353edf1a">
+                    Id="d07ed156-8b62-4920-b4bf-078285c6c121">
                     <propertyInstance
-                      Id="d57f0a6a-f90a-4b52-974d-a8e5136fe701"
+                      Id="40b201f7-14b6-40e3-918a-999bd1a6d0f8"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -3259,7 +2821,7 @@
         <referencesInternal>
           <reference
             Id="add9d5b0-9283-4227-bccb-cc21884d9f8c"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -3504,138 +3066,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="2f9d3715-886c-4cf1-a04b-f6113a7340b2"
-            isDerived="false"
-            sourceEndRoleName="AvailableResponse"
-            targetEndRoleName="Text"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-              LastKnownName="Int64"
-              LastKnownLocation="Package2_1553.uml" />
-            <description>Property Text references type Int64.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="e6376cb3-49e2-47f0-a3a3-d9c3964a7594"
-                  name="AvailableResponse"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="3dd995a8-8940-4dcd-b86f-300ab3c14b03"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="14a25404-bdcf-4445-9682-587167d02448"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0a044f82-de88-4283-b458-af9a9e032034"
-                  name="Text"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="4e1c7700-296d-4e65-bd96-420e99f8cf5d"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="e448480f-56f7-45ac-b173-fe98126ee646"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="6b662731-45c5-4795-ac14-58b8dd5c55f0"
-            isDerived="false"
-            sourceEndRoleName="AvailableResponse"
-            targetEndRoleName="QuestionId"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-              LastKnownName="Int64"
-              LastKnownLocation="Package2_1553.uml" />
-            <description>Property QuestionId references type Int64.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8104cbd3-a889-4232-bb3e-821eec57d696"
-                  name="AvailableResponse"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="d0855e19-dbb1-4a11-8a3b-6ae46c99ca5e"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="81e8f583-6c9f-4ae5-a4ce-44ac45ad892e"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="db8e5f28-dee3-4d7a-b5ba-36dec53664aa"
-                  name="QuestionId"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="3e08ba6f-5cd1-4f84-9e5c-54d2b047556f"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="c89cdb12-56ea-425d-9966-11a7580a3730"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -3651,7 +3081,7 @@
             <referencesInternal>
               <reference
                 Id="3a798551-c78c-432d-89a0-a928ae931a3a"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3731,7 +3161,7 @@
             <referencesInternal>
               <reference
                 Id="3cf69530-0989-4fc5-8dfd-fa7553bba577"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DLikertScaleNumber"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DLikertScaleNumber"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3811,7 +3241,7 @@
             <referencesInternal>
               <reference
                 Id="a59a3833-a632-4d43-8a38-c1bcc38c060a"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DQuestion"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DQuestion"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3891,7 +3321,7 @@
             <referencesInternal>
               <reference
                 Id="1faa7c5a-0a2b-4a24-ab86-828b12472ac6"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DText"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DText"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3952,96 +3382,16 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-                LastKnownName="Int64"
-                LastKnownLocation="Package2_1553.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="397127b9-31fc-46e0-ad48-269cb4cdc415"
-            name="QuestionId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="1ea159df-2bcc-457c-bc7c-0c193df3b61a"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3DQuestionId"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="30ce05d8-3a5b-4c0d-a9ea-99753345f345"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="158fa842-7312-40ce-ac6a-3df7b14c7c58">
-                    <propertyInstance
-                      Id="61c6dab4-1dd0-43a8-8767-d61407bea3db"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="05015112-653b-4444-9bcd-3f7a3ea781d4">
-                    <propertyInstance
-                      Id="e8b778c8-7401-45d3-b5cc-63a505729fb6"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6470887a-4f56-4a02-b3c0-ef896d6e62cd">
-                    <propertyInstance
-                      Id="bd28d603-6ce4-448b-b1ee-967af5f7cb76"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7cf9bace-c065-468d-9e1e-eb478d9a826c">
-                    <propertyInstance
-                      Id="e9ec0a87-7a7b-47a9-b3e3-2114a2013c5d"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1b7b838d-d1cf-4c16-936b-4d82fa59421f">
-                    <propertyInstance
-                      Id="53d36a4f-7ddc-4cd5-81a8-323c03696866"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c103b4df-294a-400f-9308-2a3077988eec">
-                    <propertyInstance
-                      Id="cd0d70e3-b115-4063-ad0c-68c669bd6231"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3488835e-f854-4d3c-ae9f-0539b500d675">
-                    <propertyInstance
-                      Id="eae478be-cedd-4203-b8b1-c581769942ab"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-                LastKnownName="Int64"
-                LastKnownLocation="Package2_1553.uml" />
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelsAndDocuments.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="cd182d76-6a8c-47ff-a195-39bb7fb84bfb"
+            Id="320e17f6-821e-41fb-ab4e-ef230f8097d2"
             name="AvailableResponse"
             isLeaf="false"
             isStatic="false"
@@ -4050,54 +3400,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="eab3f17f-6bef-451f-914a-2d77c267ac63"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3D.ctor"
+                Id="6ab55a4c-36df-49df-942d-744e1fdfec78"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DAvailableResponse Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="d862c7b5-eaad-48a3-88b5-1806184c3b71"
+                Id="035df5f5-fae4-4ba7-9cd9-9126607daaf4"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1db1e5e5-4583-4042-82f7-4c310045fc36">
+                    Id="44c6465a-d8ec-41ac-a352-963f1d401bf9">
                     <propertyInstance
-                      Id="8d488927-19ac-4af7-9b40-1d7b3a6c63f6"
+                      Id="fddad793-8d3c-4f45-b891-feb3b126e5a5"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="05c15739-7ae2-4f22-84cc-00f6d6a823d1">
+                    Id="8aeb7977-4274-4988-9426-5a437826c6fc">
                     <propertyInstance
-                      Id="aa40aa75-6161-4a27-ac6b-e60888f75374"
+                      Id="c474e6dc-9b6f-4e36-acd0-3c8dfc01ab77"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="99576745-d7fd-46f0-805e-a75dab8a90c3">
+                    Id="f739b45c-3a6c-4444-a648-948b39b64564">
                     <propertyInstance
-                      Id="ce0b030f-fd2d-4d43-8fcb-96301bc68615"
+                      Id="6cd715f7-a6da-4221-bb4a-aacde6bcdba5"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="705483b8-cc98-4e42-bf82-41d62c4fb5e8">
+                    Id="14a4f437-4039-4a72-93b7-0deb1e9ec934">
                     <propertyInstance
-                      Id="c905b253-5d03-4835-a081-80c001c58b6b"
+                      Id="f96f2f1b-a60d-4a5e-a0ad-7ab0a69667e1"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5d87c24b-114c-4304-be83-d679ba6a39d3">
+                    Id="a892cfea-e2b1-474c-a767-c47576be0248">
                     <propertyInstance
-                      Id="224521fd-2372-46bf-88b9-1618796f0df0"
+                      Id="8c9e4c33-170b-44d9-9d41-394455215a3c"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="99357e9d-804a-4b16-a148-bfa66d8c25f5">
+                    Id="dc9e07b9-7228-485c-9b85-8a3476f1ce1c">
                     <propertyInstance
-                      Id="07bf2449-cf40-43d3-80c6-a8ef43d67bd1"
+                      Id="7e7f11ce-3b2f-41c8-ae28-1993fad37d47"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -4118,7 +3468,7 @@
         <referencesInternal>
           <reference
             Id="0607ad5c-1182-4aa2-9242-a2fdc60e44db"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -4165,138 +3515,6 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <targetEnds>
-          <association
-            Id="f21c6837-32e3-4394-bdb8-43c9f2efb3f1"
-            isDerived="false"
-            sourceEndRoleName="Survey"
-            targetEndRoleName="Questions"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="6711a047-4230-4c42-8567-16ecd7bb8243"
-              LastKnownName="ICollection&lt;Question‎&gt;"
-              LastKnownLocation="Package1_1554.uml" />
-            <description>Property Questions references type ICollection&lt;Question‎&gt;.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="fa4d4202-2225-4be7-b2ca-7db1394099f5"
-                  name="Survey"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="f796a721-7808-45db-b970-421fa343bfef"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="2cb2be20-ce6a-4359-bbdc-c69e6f0a79cb"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="18b09725-5f40-4801-ad75-296167a6856c"
-                  name="Questions"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="0c5b0ecb-aa03-4038-8aea-d5986397f934"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="fed8c740-d375-4d58-8298-fe2ad8fd1e46"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="8917ab0b-47d3-4710-b19b-05f1752fb6fc"
-            isDerived="false"
-            sourceEndRoleName="Survey"
-            targetEndRoleName="Respondents"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="df0d2d95-e4d5-4741-9c8c-191b4006b368"
-              LastKnownName="ICollection&lt;Respondent‎&gt;"
-              LastKnownLocation="Package1_1554.uml" />
-            <description>Property Respondents references type ICollection&lt;Respondent‎&gt;.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b546d6a5-52cd-43cf-acf3-6a97b586a7f7"
-                  name="Survey"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="0c699bd0-06be-41d1-a969-471905455ae1"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="572e3aed-3a1e-4362-beb6-8184b044c43c"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b12fe8f4-8062-4533-a4da-1dd45274c5fd"
-                  name="Respondents"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="a7562652-19e9-49c9-96cf-f6ca6b7a91f1"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="77797218-936a-44d2-b6a5-9a0909746f21"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="91756945-2e48-409e-bff6-e9f5761079b1"
             isDerived="false"
@@ -4495,6 +3713,204 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="2f7ed7c4-832d-4967-a9f0-81110b982ebf"
+            isDerived="false"
+            sourceEndRoleName="Survey"
+            targetEndRoleName="User"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="75492762-845c-43d3-8d4f-3e222c34894a"
+              LastKnownName="UserProfile"
+              LastKnownLocation="Package1_1553.uml" />
+            <description>Property User references type UserProfile.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="33b13208-4c40-4ba9-93a6-08a5e766f397"
+                  name="Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ce4ebd3c-bdd7-47ce-b423-d72c2bc189b2"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fd543b0f-4fe7-450d-a2d2-f8b3cd686376"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12373252-4109-4820-9139-5c64a35fe235"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9880a71b-ca00-420d-8476-d2e0b81a98ab"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8c07d90d-f526-4664-8978-fc2de101b001"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="75d289fb-e6f5-4c44-82f8-6663569aba88"
+            isDerived="false"
+            sourceEndRoleName="Survey"
+            targetEndRoleName="Questions"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="6711a047-4230-4c42-8567-16ecd7bb8243"
+              LastKnownName="ICollection&lt;Question‎&gt;"
+              LastKnownLocation="Package1_1554.uml" />
+            <description>Property Questions references type ICollection&lt;Question‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="06062102-e360-4df2-8ffc-04a4511ed269"
+                  name="Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6d65ef01-31d1-4c29-a2e1-b0f3ed431f18"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="572f4870-b3d4-4ac4-a3ae-c6fd431e717b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="80f6834e-331b-4e96-8787-37c9d90d6a4f"
+                  name="Questions"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9b9bb581-476a-4422-9d16-37acecb8d4ce"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e4da5e5b-6a35-4430-838c-66a57b5876dc"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5a099533-5a4a-41ec-a271-40d4bd4814e1"
+            isDerived="false"
+            sourceEndRoleName="Survey"
+            targetEndRoleName="Respondents"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="df0d2d95-e4d5-4741-9c8c-191b4006b368"
+              LastKnownName="ICollection&lt;Respondent‎&gt;"
+              LastKnownLocation="Package1_1554.uml" />
+            <description>Property Respondents references type ICollection&lt;Respondent‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a53ced11-af4b-4108-a1d6-a1b7ef6b1696"
+                  name="Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="56404438-9c10-406e-8198-c2c02f4d5a14"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="79566dd3-b0d5-45b6-b165-6f2a6875b253"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="907f1e7d-6b45-4377-be99-63456fb70c6a"
+                  name="Respondents"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="25a13c6e-093d-4943-88e2-9440ed394515"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6f5b826e-ba61-4329-ba6f-8f84493dc5c2"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -4510,7 +3926,7 @@
             <referencesInternal>
               <reference
                 Id="6caa9099-d7a9-472b-aa55-b5b6346142b6"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DIsTemplate"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DIsTemplate"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -4578,166 +3994,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="2ef32942-a4af-45cd-bf0d-414508f57721"
-            name="Questions"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="96ef49c6-3048-4218-bf8e-1dfb662bd68f"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DQuestions"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="ea40fbe2-2d1e-446e-8f5b-0b292642abed"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a368883f-bfbd-4e7b-8521-e35831d17d0f">
-                    <propertyInstance
-                      Id="f740ef7d-4833-4d97-86ad-b25494a5d2a6"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ada9a17d-4148-4c1d-a8d0-f3ebde352d51">
-                    <propertyInstance
-                      Id="1122ca0c-0715-469a-8391-7823dfd3fb2c"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="aec2b3f7-220c-4182-b206-c78fb66200cc">
-                    <propertyInstance
-                      Id="187935b3-d336-47ab-8191-bc3c5d9376d3"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5e3bdcf5-dd2f-4b39-8c18-b3a16dd4e128">
-                    <propertyInstance
-                      Id="83da3fa7-4680-4819-89fc-77ffa15570c1"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="817ffc9a-ea9c-4994-9895-732ed319cab9">
-                    <propertyInstance
-                      Id="bbc41cae-9987-488d-957c-49816a0257aa"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1800de7e-c04a-46c7-b53f-690a37816184">
-                    <propertyInstance
-                      Id="c92ae67d-cbbe-436e-976f-749a3baba8b0"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="41c0a8e1-52e0-4845-a1fd-d70ebd88747a">
-                    <propertyInstance
-                      Id="34be2b8e-519e-4fd7-ba4f-a0807f9016db"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="6711a047-4230-4c42-8567-16ecd7bb8243"
-                LastKnownName="ICollection&lt;Question‎&gt;"
-                LastKnownLocation="Package1_1554.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="ee07b707-7287-4d88-ae25-0570c1a7165b"
-            name="Respondents"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="36f63814-76ac-4423-8a7e-b1066ae688ba"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DRespondents"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="fb0e1c88-45ed-40bb-9ed5-e34386035eef"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d8ae08db-1073-489a-be7c-ec5e0c8e4b50">
-                    <propertyInstance
-                      Id="b7e16302-02cf-47b7-9e55-e1024c09ac34"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e42d3ef2-4773-4d3d-9312-2ee71b22dad7">
-                    <propertyInstance
-                      Id="00a15df8-e6de-435e-87f3-2b820977dca1"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="cbbb2c5c-d18e-4e39-a6ff-7680fe5d233a">
-                    <propertyInstance
-                      Id="7ae3234a-ce8c-4999-9516-e8c9e9a3fc87"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d641b23f-ccbd-476b-844e-600d087501c2">
-                    <propertyInstance
-                      Id="50518d15-4ea5-480a-b8ba-b5d0d13a2584"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="97603f63-8eb3-4ef9-9e1d-25435daf00ff">
-                    <propertyInstance
-                      Id="2ca2730f-2147-454e-af0d-d6dfad30b66a"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="519ee355-8396-41bd-9508-7348ebd65f47">
-                    <propertyInstance
-                      Id="02659505-54c7-4bf3-8f84-124e90501873"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b99a99a0-678f-429c-8755-5769bad41c53">
-                    <propertyInstance
-                      Id="8531451c-3828-4dac-8f71-10806c01470d"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="df0d2d95-e4d5-4741-9c8c-191b4006b368"
-                LastKnownName="ICollection&lt;Respondent‎&gt;"
-                LastKnownLocation="Package1_1554.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="4ef0b5ab-9437-47e5-8da1-2ac499673782"
             name="Status"
             isLeaf="false"
@@ -4750,7 +4006,7 @@
             <referencesInternal>
               <reference
                 Id="9b83bde6-aa25-4918-bce7-1d53802fd247"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DStatus"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DStatus"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -4830,7 +4086,7 @@
             <referencesInternal>
               <reference
                 Id="3047575b-df7d-4d38-8dfa-27c4a94e55db"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DStatusDate"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DStatusDate"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -4910,7 +4166,7 @@
             <referencesInternal>
               <reference
                 Id="851741e5-6c5f-4a43-87d0-ebf93e50353e"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DTitle"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DTitle"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -4978,86 +4234,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="b3db31bf-975e-47ed-92b9-6e316d083765"
-            name="CategoryId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="3a424bf9-9020-4ac2-bf22-5b48540d04a5"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DCategoryId"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="04d40b68-bd56-410e-add5-041f9e1f985a"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9ae6b369-26e8-446c-a49c-f5930cadab8d">
-                    <propertyInstance
-                      Id="76079d38-c49f-437d-bf27-61f215a1694a"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e70f8efa-74f5-48cc-ba8f-43ff4a58b374">
-                    <propertyInstance
-                      Id="12fd0fac-d0ae-4da1-8d99-ae7bf920484c"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8b62829a-e24a-4678-946b-4d36d066dbe1">
-                    <propertyInstance
-                      Id="aea94e53-bf45-4fc3-b289-58889d78f4dc"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b0f0897a-9b1c-4b4a-b431-4430e8abaa59">
-                    <propertyInstance
-                      Id="667acb1c-32bd-4cad-b9ec-6cb368ce7dde"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b34a7324-502e-416e-8403-c2d08be98b5a">
-                    <propertyInstance
-                      Id="f8c2c37a-7c21-4c19-be39-ca8ac78c4d2b"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="cc4d22e4-df2e-491f-b871-e9273fc16bd1">
-                    <propertyInstance
-                      Id="d5c65a17-9f5b-45a1-b229-9fa12afa6a30"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="61cab8f9-79b3-47fd-916d-48c37e75f389">
-                    <propertyInstance
-                      Id="96ab32dc-f521-4109-8af9-681507db7c3c"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
-                LastKnownLocation="ModelsAndDocuments.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="f6ef51f8-2b24-406c-8969-e0f8df88a8de"
             name="Category"
             isLeaf="false"
@@ -5070,7 +4246,7 @@
             <referencesInternal>
               <reference
                 Id="a35aad13-e56e-47b6-ac74-d096c100795c"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DCategory"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DCategory"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5138,86 +4314,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="9d9e6ca6-77b4-4be4-82be-160e0830b7fc"
-            name="UserId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="a26da597-b0b9-4d31-9157-157b37abdb58"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DUserId"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="75233c1f-0cb9-46f4-86b9-9bcc3ff8d196"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ba421baf-6837-4003-9499-6cced51e7892">
-                    <propertyInstance
-                      Id="6fe7bcd8-9202-45df-babe-c64e4f803d0f"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="20a152e6-4009-4dda-b012-ad811709d2eb">
-                    <propertyInstance
-                      Id="4f4bed91-b61b-45f6-b1e8-83d8135bd82a"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="88b3ce8e-a64d-4b1a-8c44-f98473c16f65">
-                    <propertyInstance
-                      Id="3d07b897-a527-45dc-bdce-514e60fbed70"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="59180494-ccd9-464b-86f7-b74d3ba50c25">
-                    <propertyInstance
-                      Id="1c645e3c-9dfe-423e-87ba-6a9d1b3599b6"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9408182d-781e-436c-8bef-c91036705af9">
-                    <propertyInstance
-                      Id="cef1b007-c7f3-4669-a3fe-b31fa0683391"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e78b21e2-6c98-449b-b26c-02c8b9034b4c">
-                    <propertyInstance
-                      Id="9ae29526-0ad1-47e0-b6ba-6b42a92844a8"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9f75103b-a664-4700-bc58-717a49930900">
-                    <propertyInstance
-                      Id="81153141-3265-487b-b1ad-e15881527d4f"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
-                LastKnownLocation="ModelsAndDocuments.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="88997180-9ff7-434d-9271-93061d02970e"
             name="SurveyId"
             isLeaf="false"
@@ -5230,7 +4326,7 @@
             <referencesInternal>
               <reference
                 Id="0648485e-5ba5-4b8b-9a90-db140571dbc9"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DSurveyId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DSurveyId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5297,10 +4393,250 @@
                 LastKnownLocation="Package2_1553.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="c1661c48-6717-470d-b0d1-690245b67391"
+            name="User"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0a728da2-9007-4ea3-aa49-c5140dc9b7c7"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DUser"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ecf7f34a-694e-478b-bed5-1a0c4fcea601"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e881397d-1b5f-45c8-90c4-34b72e37964f">
+                    <propertyInstance
+                      Id="9c4ef36c-fd58-40c5-b19d-6d5e9bb7026c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0170eb3d-d547-412d-952b-a35aa6f56ca6">
+                    <propertyInstance
+                      Id="51afa0b5-2473-4f30-acf5-9e7d8c9c8e7b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87483da5-dbd4-49be-9a5d-b6ddee3399ac">
+                    <propertyInstance
+                      Id="7af5031e-c97b-4588-b827-032b7e431401"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38da0f37-72e2-411e-87d3-2a6f32104794">
+                    <propertyInstance
+                      Id="55ff6604-9c91-454a-aa5c-16f6c60a9841"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71894359-b962-466f-b49a-2c29ff37e557">
+                    <propertyInstance
+                      Id="7fe1b4f0-a5c7-47f7-ae93-876decd25317"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a943bc3-6981-4d47-9741-134150a0795c">
+                    <propertyInstance
+                      Id="0ddf69aa-33e3-4771-a844-1bb5a71c9f43"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9afe926e-4103-430e-ad6c-f4f49148a7fd">
+                    <propertyInstance
+                      Id="ed59daf0-2bea-4675-8d9e-c68860e64062"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="75492762-845c-43d3-8d4f-3e222c34894a"
+                LastKnownName="UserProfile"
+                LastKnownLocation="Package1_1553.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9cef0bf5-f4a9-4036-86e8-e24adea1691b"
+            name="Questions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="55db6e09-dab9-4163-8aae-fd229ad6654e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DQuestions"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="786e035d-a01f-45d0-8723-58811f0c1d02"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62716e58-c568-4dac-bc71-6d7788e550e9">
+                    <propertyInstance
+                      Id="f3003cef-d575-4ce4-bf1b-814bfec834cf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70bd23dd-dc76-455c-bf52-83a445a5f1e5">
+                    <propertyInstance
+                      Id="3a4ccd6d-735b-4064-93fa-e1a884394214"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af516b36-936e-41b2-9833-f415b14110b3">
+                    <propertyInstance
+                      Id="a3a043d0-f62c-4360-a1cc-4748244f202c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a50506ad-609b-46c9-baa8-e969f781aaa1">
+                    <propertyInstance
+                      Id="4f625444-c399-4b0f-bc6c-e5419f2ac5e5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1702fa9a-ac79-41e1-b432-c155d31010c1">
+                    <propertyInstance
+                      Id="c8178dae-8a48-46b6-bfcf-28c7b6d6eba1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8038256-9472-47a3-b342-872205be344a">
+                    <propertyInstance
+                      Id="baf9204e-b047-4f01-907a-3d7a03746b0a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ffd701be-ec10-425f-a558-e88dd0f763f7">
+                    <propertyInstance
+                      Id="65abf24b-aef2-4b52-9969-1a9a075e83b3"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="6711a047-4230-4c42-8567-16ecd7bb8243"
+                LastKnownName="ICollection&lt;Question‎&gt;"
+                LastKnownLocation="Package1_1554.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bc4a56fe-91b5-4250-903b-eee82f527471"
+            name="Respondents"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3e735bc8-c56b-4f73-8165-3ae3f84c4d3f"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3DRespondents"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f8758272-2f56-4d58-957c-acfc16cb261d"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c307122-5eec-4e2a-9a88-f50b092391d3">
+                    <propertyInstance
+                      Id="f965e908-1622-49d2-b99d-3f3d37a45489"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5ebb14e-0479-4f87-bdca-68671eb9b527">
+                    <propertyInstance
+                      Id="85771f05-25bf-4dd0-a03b-322eae1abe8e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1c4635e-b76f-415f-ac3c-c90e032fdb27">
+                    <propertyInstance
+                      Id="2b86a647-db21-4c11-baca-5977298370c2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6d5b655-2d05-4923-8b7a-2c1fe6d23af1">
+                    <propertyInstance
+                      Id="f5810afc-1550-4a2e-bd52-992968210c14"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68ca1eff-3cae-4917-9202-7b03a3a360cb">
+                    <propertyInstance
+                      Id="ed17d985-70bf-4a97-bc2d-09780f15d72c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65925db7-adc4-458e-a818-4085aaf1ebd5">
+                    <propertyInstance
+                      Id="d15dc4dd-af2a-47e1-8729-523f2ce52753"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c11f4f63-ea93-4a23-a2ea-1ce6b017f1f6">
+                    <propertyInstance
+                      Id="5ed9d06f-0a73-4e47-8523-1549214f4f97"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="df0d2d95-e4d5-4741-9c8c-191b4006b368"
+                LastKnownName="ICollection&lt;Respondent‎&gt;"
+                LastKnownLocation="Package1_1554.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="982ee9ce-0d1f-46c4-85ed-9a2cc1ce2625"
+            Id="5f0d0c63-a5d3-4130-976a-1ba9032c3088"
             name="Survey"
             isLeaf="false"
             isStatic="false"
@@ -5309,54 +4645,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="f3a34af7-4b35-4507-bd13-7bb4f9f83a46"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3D.ctor"
+                Id="9bbfb15c-8abe-4d90-baec-7f4c1eb1e3cb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DSurvey Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="b6a047de-d508-4c5b-a617-e6fe7003dca5"
+                Id="1f4bea32-9911-414f-bc94-572630879e6f"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="97896d6b-3afd-4751-8e7f-335402527185">
+                    Id="8a1bfff8-2e9b-4e86-a64c-8e0dfe7af624">
                     <propertyInstance
-                      Id="8dd13752-36ef-4eac-a0ee-96f6615e6988"
+                      Id="14450803-38bc-4695-ba97-089978a949b6"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c595c56d-2c23-41d0-b351-430f1b894f10">
+                    Id="51b6a204-45e8-4bc1-a819-ac5b2d0c245c">
                     <propertyInstance
-                      Id="2518422d-666a-4da4-b968-128636a20e1b"
+                      Id="24a80c7d-1cfc-43de-94b4-6cc806b20276"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="104420d4-a556-4c3d-a425-69859cbe12df">
+                    Id="49283af0-0721-42c3-b766-cb0900e6cca5">
                     <propertyInstance
-                      Id="be2f2907-1cf1-4a88-8bfe-a24f912dc186"
+                      Id="6b13b3ce-6777-4042-90ee-3df62bb791d8"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6e9c717a-40ab-4d54-a376-19a39ca8ca1a">
+                    Id="e1b20cef-4760-4ee9-bee0-88a140465b2b">
                     <propertyInstance
-                      Id="3e3bee52-6963-4024-9815-3724b069aa9b"
+                      Id="b9312eff-5ece-47a5-93c3-a345c1bd535a"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1df964d0-17d5-45f7-9256-1feb082e8415">
+                    Id="696032f2-5656-4f22-8f79-64b90aaaad54">
                     <propertyInstance
-                      Id="ba10ff96-0318-4168-baa0-8af6ece34b4f"
+                      Id="5d1b78d7-63ed-4818-af61-ac8c88ad48b1"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1007638a-4879-4fba-aad5-11e331f27c6a">
+                    Id="dc145fe5-541b-4620-b013-1627b7eac406">
                     <propertyInstance
-                      Id="59661be4-a968-4cbd-bf57-ddd9b4bf4762"
+                      Id="c6301cdd-b761-4386-9d94-d659563f6778"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -5377,7 +4713,7 @@
         <referencesInternal>
           <reference
             Id="3c925001-9c7e-4259-ba79-317930cc3edd"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -5483,72 +4819,6 @@
                   <upperValueInternal>
                     <literalString
                       Id="b2f99fb5-2639-4a9f-b2e8-20e057f97f80"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="00117a1d-8fe2-4198-b95d-da147e1df8c2"
-            isDerived="false"
-            sourceEndRoleName="Respondent"
-            targetEndRoleName="Responses"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="34dbb687-1fd7-4f8a-9316-a4334f593eb8"
-              LastKnownName="ICollection&lt;ActualResponse‎&gt;"
-              LastKnownLocation="Package1_1554.uml" />
-            <description>Property Responses references type ICollection&lt;ActualResponse‎&gt;.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="44aed12d-c2a0-4d3b-bfa6-42cadd51f38d"
-                  name="Respondent"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="3e8d8f58-e8ec-4cc9-b425-906660e16265"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="43772bbd-7668-48d8-90ed-4962e42c3d16"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="f65e96c0-a6ae-4766-922e-547f120da30d"
-                  name="Responses"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="950b520e-84d7-42a2-b135-360a74946967"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="aa5b3b1e-4c49-4c02-b52b-240607fa9a1e"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -5689,21 +4959,21 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="943c2ed5-a048-471d-b0a9-345f59f782d7"
+            Id="5c1cc793-6d73-4b35-913b-c530418f718c"
             isDerived="false"
             sourceEndRoleName="Respondent"
-            targetEndRoleName="SurveyId"
+            targetEndRoleName="Responses"
             isLeaf="false"
             isAbstract="false">
-            <classMoniker
-              Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-              LastKnownName="Int64"
-              LastKnownLocation="Package2_1553.uml" />
-            <description>Property SurveyId references type Int64.</description>
+            <interfaceMoniker
+              Id="34dbb687-1fd7-4f8a-9316-a4334f593eb8"
+              LastKnownName="ICollection&lt;ActualResponse‎&gt;"
+              LastKnownLocation="Package1_1554.uml" />
+            <description>Property Responses references type ICollection&lt;ActualResponse‎&gt;.</description>
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="f9869787-1cde-4f4e-bf2a-c68222a63560"
+                  Id="aa4c9ebb-4a89-4c42-9157-dbd76e6fb5ac"
                   name="Respondent"
                   isLeaf="false"
                   isStatic="false"
@@ -5715,13 +4985,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="6ff80bcc-5114-45ae-980c-f4eb61ee234a"
+                      Id="28027de0-fcae-4bbb-8281-f3a332ceed4a"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="ed304126-6fcf-4ffa-8966-83eced2b9d79"
+                      Id="5473d697-fb01-4d2a-a0c1-63ee3279e09a"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -5729,8 +4999,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="af202fb7-be21-43fd-9dd0-96325d953505"
-                  name="SurveyId"
+                  Id="897e009c-dbc2-4a39-ba4c-7ddfb61114fa"
+                  name="Responses"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -5740,13 +5010,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="bea5cf2c-b284-4adf-a4a4-45bae59946d8"
+                      Id="25218826-9b5c-461a-b74f-8fba5c9acfc3"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="805443be-071e-417d-9116-894b2c3f41b1"
+                      Id="4979c950-167b-4802-919f-367f3907fd9b"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -5769,7 +5039,7 @@
             <referencesInternal>
               <reference
                 Id="3075591d-533e-454e-982b-900688b462e7"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DDateTaken"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DDateTaken"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5837,86 +5107,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="d717f27f-73c2-4db5-9950-b2e6a1eeedac"
-            name="Responses"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="16ba57e6-c893-4e42-a543-ab51a7d23882"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DResponses"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="8c56db13-53b3-4cf8-b3ee-a3b7d3d16041"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1c1d9a7e-735d-467c-ad14-d1e3d2d1965c">
-                    <propertyInstance
-                      Id="afb94ee1-8b36-455f-92be-391a2f0a4c4e"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d99d831d-5649-4e06-a888-9c1f3daad89c">
-                    <propertyInstance
-                      Id="ff2c2003-1297-475a-83f6-d8485ea29b53"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b1a3092a-e86c-4ff7-833a-fbf3fd742b4d">
-                    <propertyInstance
-                      Id="fa5a4466-d436-4817-ae23-bf4bd11bda1f"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d7fedf4e-1579-4804-9d1e-f1bd43c200ba">
-                    <propertyInstance
-                      Id="b60a5958-463d-4f7e-b197-dfec1519ad2f"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4d0d8325-f76b-44a6-8a90-871fcd281359">
-                    <propertyInstance
-                      Id="f6530289-939b-48c5-86f4-87609a46522f"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a404d397-05cd-47ef-9355-d9b965d047fc">
-                    <propertyInstance
-                      Id="7f3cb734-b3f9-4e58-8db7-e8e96505a303"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c3dcea94-3c57-49c1-be9b-c5198159eaa2">
-                    <propertyInstance
-                      Id="10bf7d93-cef5-49cb-aca6-3da7ab1de0d2"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="34dbb687-1fd7-4f8a-9316-a4334f593eb8"
-                LastKnownName="ICollection&lt;ActualResponse‎&gt;"
-                LastKnownLocation="Package1_1554.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="57624d6b-b250-4ee9-ac96-f37be47b365c"
             name="Survey"
             isLeaf="false"
@@ -5929,7 +5119,7 @@
             <referencesInternal>
               <reference
                 Id="ff2c720b-559b-499c-b5e2-cb409517596a"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DSurvey"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DSurvey"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -6009,7 +5199,7 @@
             <referencesInternal>
               <reference
                 Id="b8762c79-2d98-4122-9219-2e2cf430a348"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DRespondentId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DRespondentId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -6077,8 +5267,8 @@
             </type_NamedElement>
           </property>
           <property
-            Id="94d57969-73df-4a7d-9a91-ca9ec03c98fd"
-            name="SurveyId"
+            Id="4cdaa94a-24f6-40f1-bfbe-d9080d5fdd52"
+            name="Responses"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -6088,61 +5278,61 @@
             isComposite="false">
             <referencesInternal>
               <reference
-                Id="438d14c5-bc1e-4d8e-bb03-4888b01d786d"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DSurveyId"
+                Id="0fdba986-9b98-483d-b2a6-ccac44e5d00c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3DResponses"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="82a3b273-84e9-485e-ab3e-d08db807bc86"
+                Id="d3fa4751-63b6-41c7-ba6e-fed4724b2260"
                 name="property"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6ee36864-add9-41f3-90b5-74caedecef7c">
+                    Id="8ee068d2-007b-4319-ad9e-64706ffe9f40">
                     <propertyInstance
-                      Id="bee1476d-6742-4a2a-95aa-5fd9840b246d"
+                      Id="bcf94530-7c08-4172-9b7f-c5b3970c1ec4"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="922e7497-e53f-4363-8d87-d578d2c3eef0">
+                    Id="80d7a84b-04cb-4b01-b79c-1970799b54fd">
                     <propertyInstance
-                      Id="b77b063c-1941-4f72-9006-44d2e7638c4c"
+                      Id="9c0d1f0d-e7aa-4643-9f30-3516437dd0d9"
                       name="Get"
                       value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="538b624f-1fbe-44fe-853c-b066383d2e5d">
+                    Id="4ea970d0-56e2-4a04-90ea-96d36c061b9c">
                     <propertyInstance
-                      Id="a996d838-85eb-4dc8-b8ad-5a96ab7babf9"
+                      Id="04e75757-6a40-4e43-a7f6-6a274308ac6a"
                       name="HasBody"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d5e561ff-190b-4699-a9ee-0b4f53e6e8ea">
+                    Id="6f985aeb-30c1-4a04-b931-286d449138ac">
                     <propertyInstance
-                      Id="955542da-8569-4fec-81a9-8bebb257d1f3"
+                      Id="dde3b4f0-9f67-4f22-8eeb-4704ea386e69"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="96f13069-6e76-49cd-b339-8b978ebc4bf8">
+                    Id="41a5ee0e-dba7-4a87-a9bc-58d03201db49">
                     <propertyInstance
-                      Id="9ae82b1b-eebc-47b5-a36a-df3582199f85"
+                      Id="33f22225-b680-40ec-b382-64a65d43a3ba"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="652396e1-7382-4d7f-9b8f-385ba08d6581">
+                    Id="898883f8-034e-49bc-8cd7-cef76a76b9b5">
                     <propertyInstance
-                      Id="577b7395-57cb-4626-8b0a-92d5f723b9fd"
+                      Id="538674d0-c437-4c7a-92bc-c69255289a48"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ff2213a9-f14d-4474-b38e-08510d103ace">
+                    Id="d46fe8c2-6b16-46d0-b821-a80092c73b40">
                     <propertyInstance
-                      Id="45f10491-f132-46ea-9028-5c42853a2d25"
+                      Id="a70db95e-6856-415b-9c69-b671e0ed891d"
                       name="Set"
                       value="public" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6150,16 +5340,16 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="621bba26-0842-40fa-9f69-5f2d1cf535be"
-                LastKnownName="Int64"
-                LastKnownLocation="Package2_1553.uml" />
+              <interfaceMoniker
+                Id="34dbb687-1fd7-4f8a-9316-a4334f593eb8"
+                LastKnownName="ICollection&lt;ActualResponse‎&gt;"
+                LastKnownLocation="Package1_1554.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="ee653e92-b7bc-4a4f-88e8-7c79842b0cf0"
+            Id="0a8496ea-f235-4fb8-bfcb-2be36a8829b3"
             name="Respondent"
             isLeaf="false"
             isStatic="false"
@@ -6168,54 +5358,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="35543036-b496-49fb-b9ef-485cb7d74054"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3D.ctor"
+                Id="a900f773-bb9e-428a-a384-05405bb0e4d9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DRespondent Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="15362f64-4a53-4835-8995-e5fdfbf8802c"
+                Id="25ebcfd0-df6d-4c2b-8460-64e9bde035d6"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7171ef21-0a07-4160-ad45-5b52d7981104">
+                    Id="aafc7fba-518b-4629-b319-edd8c40114e5">
                     <propertyInstance
-                      Id="9f4fbc93-2a08-4e17-b3ce-a74ca5204c9d"
+                      Id="9b6053df-8390-4684-ae35-db3a664822af"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4086cbac-9bcb-45b9-be36-6962aae2b970">
+                    Id="951d078f-b5c4-4d4e-bb9b-624edc8f9e1c">
                     <propertyInstance
-                      Id="ec952937-30c0-4546-b036-451a1c0e3897"
+                      Id="5ba1f826-cdba-4a07-9b20-eb804cd8380d"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="dff0ae13-b4fa-45a9-8247-1e3c64f4c82e">
+                    Id="ee2655a1-cac4-47bd-8cc5-c75063354a3d">
                     <propertyInstance
-                      Id="61f2020d-80f6-4f7f-8c03-b3efd0e27d83"
+                      Id="a9c3f10d-eb6a-4c9b-b24c-2ebcefff673f"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="22aa6861-010d-48d0-9b7d-a7752fb03b4b">
+                    Id="86fc85cc-4ada-4e6d-97cc-442d4bb75139">
                     <propertyInstance
-                      Id="6021cf08-1ca2-4b1b-b8bf-b19a7157a340"
+                      Id="15181f67-3255-41d8-aedb-6f6f63b169a8"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="42378a52-2561-460d-ba45-6b4575cfe0bb">
+                    Id="cfae9750-ceb0-41fe-8e7e-da81b7f0e615">
                     <propertyInstance
-                      Id="b8d9255c-7361-4bc8-a943-f24288d83f5a"
+                      Id="fd422743-33a2-4837-8776-cd161e85ac4a"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1a4ac66d-d8a5-4dc5-95f9-18512021f1ae">
+                    Id="012a9fa3-788c-4867-821b-1b35149dcfd6">
                     <propertyInstance
-                      Id="4301a520-0e62-4134-b068-efa1aac3516a"
+                      Id="ef39f314-345c-4f76-b517-70c3ff7590b0"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6236,7 +5426,7 @@
         <referencesInternal>
           <reference
             Id="e271a20e-b690-4b66-ab5d-49e6856a8d2c"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -6364,7 +5554,7 @@
             <referencesInternal>
               <reference
                 Id="a6aa6b02-a016-4b8a-b322-16cc8bc3c717"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3DDescription"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3DDescription"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -6444,7 +5634,7 @@
             <referencesInternal>
               <reference
                 Id="3f14d21b-834c-4d5a-ab0c-a6afd3979a20"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3DSurveys"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3DSurveys"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -6524,7 +5714,7 @@
             <referencesInternal>
               <reference
                 Id="c66da6bb-88ba-4b3b-b46e-205d53c3a23f"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3DCategoryId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3DCategoryId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -6594,7 +5784,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="7c4464ed-45d9-4ac8-9ae9-2a5309c9a1c5"
+            Id="a9b9d7ac-e81b-4244-be5a-50c06caebed4"
             name="Category"
             isLeaf="false"
             isStatic="false"
@@ -6603,54 +5793,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="4fe3f113-2ed9-4cd5-9f25-b1a239bf11a8"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3D.ctor"
+                Id="f291f5c3-e9ca-4e7e-961f-b912f55746f0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DCategory Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="5174e64c-af9f-4fcb-aea7-e3695a0c28b6"
+                Id="6db594a1-e23a-4ceb-86e3-926b69536ee2"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4f259539-a92a-41a1-baf7-0802940ec489">
+                    Id="e240d0b4-84ac-46d1-932f-abe895e11824">
                     <propertyInstance
-                      Id="d12bd780-e3ac-49af-a9e6-0bd2be49c2f8"
+                      Id="469bf8ef-d8c2-4674-972a-75fb2fbfdfd5"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="173d00bf-0a5c-46e4-b778-1fbdaac81a7c">
+                    Id="fc39e5d2-e452-4740-81b6-7c98f1d53ad5">
                     <propertyInstance
-                      Id="10584b30-da48-45c8-b911-f19bb20317ca"
+                      Id="ca274b3d-c556-4d4d-8f05-2d9eaecaf98f"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="85cdf93b-0f51-476e-9dc9-b1667b48f24d">
+                    Id="87bb5b93-b73d-4373-b3a9-98e99e138718">
                     <propertyInstance
-                      Id="fe44348b-f574-46e3-8850-24c22f9f56ea"
+                      Id="a2f92dfb-8f0f-4445-8401-bd2735b69d1d"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2da26eed-f6da-4dd1-9435-4062cd9fe835">
+                    Id="a02f745b-863b-4bfa-97ec-f2aeec06f98a">
                     <propertyInstance
-                      Id="9924c9de-7989-4c67-8cf8-0c9f3480ba51"
+                      Id="c9dca19b-576c-4ad1-bab7-ea3f11f6e309"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="45814b28-01fd-4aa8-a7ba-b2016b3d7037">
+                    Id="2d6a5d33-edaf-4e50-9394-fa0212c28569">
                     <propertyInstance
-                      Id="d42d1378-159d-4bfd-a701-2ef781cab9e9"
+                      Id="d987cb93-13e5-455b-9c67-ba9c0745bd21"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6e584cfc-d7df-4655-90b8-d9c9f28114f0">
+                    Id="896c5146-4105-48ed-9cc5-56cbedb9f04c">
                     <propertyInstance
-                      Id="cf11ceda-213d-4ef1-b6cf-61518edef393"
+                      Id="f9bea42a-4dcc-41a1-899f-737c9180f186"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6746,7 +5936,7 @@
         <referencesInternal>
           <reference
             Id="4274f463-f074-4418-a65d-411e7aecf127"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -6806,7 +5996,7 @@
             <referencesInternal>
               <reference
                 Id="f7d42ed5-f5d7-4fcc-98cb-903db8a9bb18"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile Member%3DUserId"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile Member%3DUserId"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -6886,7 +6076,7 @@
             <referencesInternal>
               <reference
                 Id="b2755660-73d1-433f-a2fa-0df3373b4444"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile Member%3DUserName"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile Member%3DUserName"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -6956,7 +6146,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="a5d466c5-3dab-444e-868c-773d5b2c072b"
+            Id="ac2ab091-eff0-4b4f-a2fb-4166243f0296"
             name="UserProfile"
             isLeaf="false"
             isStatic="false"
@@ -6965,54 +6155,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="aace6e82-70e6-4650-bd03-8e4f0f27b4a2"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FMy Documents%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile Member%3D.ctor"
+                Id="19239c28-5517-44a9-b962-3ec40edffb42"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FUsers%2FTim.CAULDSTANES%2FDocuments%2FVisual Studio 2012%2FProjects%2FMSc%2FCourseworkYr2%2FTHSurveys%2FCore%2Fbin%2FDebug%2FCore.dll&quot; Namespace%3DCore.Model Type%3DUserProfile Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="d30cdde0-c8b6-4036-85e7-e2a796bfb0cc"
+                Id="bf57bec1-17c1-4b66-ab1b-6b2ac9712ae4"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ab6fe315-5301-421d-9651-f39286d646c0">
+                    Id="892140fd-652f-4c8b-bdf0-061e2d1719b9">
                     <propertyInstance
-                      Id="4afd213b-2ac7-420a-a6e2-3a9d68324dad"
+                      Id="6d7b51ea-d199-41d7-ac0d-b71f82e699f3"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d3c657a8-9e10-4115-898b-f72ac0a41ddb">
+                    Id="073c5160-9fc5-4173-9fce-5bfa9ddea535">
                     <propertyInstance
-                      Id="16ad31e7-8f56-4d4e-ba11-044a7ea74a78"
+                      Id="10e67e97-3766-499b-89be-cc769b1af238"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6305dd8c-3ffc-4cdb-b99e-7ade7db80556">
+                    Id="6614c1d3-6b59-451a-b8e8-a8ca936de015">
                     <propertyInstance
-                      Id="9b23ea08-a518-46b0-a4b5-45093f434f0b"
+                      Id="97122cc1-02f8-4e43-9a3e-21f590da5877"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="dfe62498-5d7e-43b3-8919-504002952ff5">
+                    Id="76c46caa-a44b-4c1e-97ee-0d859a49aab5">
                     <propertyInstance
-                      Id="55f74aea-e49d-4dcb-80b5-af3417ee2466"
+                      Id="1d536c49-4eb0-4068-b717-c60b0e11e748"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="76416478-e1ef-4b12-8c8e-3ab4d1408ff9">
+                    Id="058129fe-f654-457a-85c1-fdaa2a6c200d">
                     <propertyInstance
-                      Id="2d242399-14d6-421e-b028-6dcd2f0cfacd"
+                      Id="f4e6576a-02f6-4331-8596-307eaee28d8a"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="897aa791-8530-4e18-b961-ca79edbf5cfd">
+                    Id="0f49b253-98e2-4e81-aa4a-4fe34eb58bb5">
                     <propertyInstance
-                      Id="b8f4584c-d4f4-472d-9092-e2423b1a578d"
+                      Id="c0b3614d-dee0-47d7-a80e-abf9a07e1e25"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

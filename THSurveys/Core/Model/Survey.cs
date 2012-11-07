@@ -12,7 +12,7 @@ namespace Core.Model
     /// <summary>
     /// Class <c>Survey</c> contains the information for a survey
     /// </summary>
-    public class Survey
+    public abstract class Survey
     {
         /// <summary>
         /// Gets or sets the unique ID of the survey.
@@ -33,16 +33,23 @@ namespace Core.Model
         /// <remarks>
         /// Only the owner of the survey can make changes to it.
         /// </remarks>
-        [DisplayName("Owner")]
-        [Required(ErrorMessage = "The Owner of the Survey cannot be left blank.")]
-        public int UserId { get; set; }
+        //[DisplayName("Owner")]
+        //[Required(ErrorMessage = "The Owner of the Survey cannot be left blank.")]
+        //public int UserId { get; set; }
+
+        public virtual UserProfile User { get; set; }
 
         /// <summary>
         /// Gets or sets the Category the survey belongs to.
         /// </summary>
-        [DisplayName("Category")]
-        [Required(ErrorMessage="The survey must belong to a Category.  It cannot be left blank")]
-        public int CategoryId { get; set; }
+        //[DisplayName("Category")]
+        //[Required(ErrorMessage = "The survey must belong to a Category.  It cannot be left blank")]
+        //public int CategoryId { get; set; }
+
+        /// <summary>
+        /// Navigation property for CategoryId
+        /// </summary>
+        public virtual Category Category { get; set; }
 
         /// <summary>
         /// Gets or sets the current status of the survey
@@ -77,9 +84,27 @@ namespace Core.Model
         public virtual ICollection<Respondent> Respondents { get; set; }
 
         /// <summary>
-        /// Navigation property for CategoryId
+        /// Changes the status to Awaiting Approval for the survey
+        /// You can only submit a survey that is currently 'incomplete'
         /// </summary>
-        public virtual Category Category { get; set; }
+        /// <returns>Returns TRUE if status has been changed.  otherwise returns FALSE.</returns>
+        public bool SubmitForApproval()
+        {
+            if (!(this.Status == (int)SurveyStatusEnum.Incomplete))
+                return false;
+            this.Status = (int)SurveyStatusEnum.Approval;
+            this.StatusDate = DateTime.Now;
+            return true;
+        }
+
+        public bool Approve()
+        {
+            if (!(this.Status == (int)SurveyStatusEnum.Approval))
+                return false;
+            this.Status = (int)SurveyStatusEnum.Live;
+            this.StatusDate = DateTime.Now;
+            return true;
+        }
 
     }
 }

@@ -11,14 +11,14 @@ namespace Core.Model
         [Key]
         public long Id { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Id of the Question the Answer relates to.
-        /// </summary>
-        /// <remarks>
-        /// This will allow EF to generate a foreign key between the availabe Response
-        /// and the parent question.
-        /// </remarks>
-        public long QuestionId { get; set; }
+        ///// <summary>
+        ///// Gets or sets the Id of the Question the Answer relates to.
+        ///// </summary>
+        ///// <remarks>
+        ///// This will allow EF to generate a foreign key between the availabe Response
+        ///// and the parent question.
+        ///// </remarks>
+        //public long QuestionId { get; set; }
 
         /// <summary>
         /// Gets or sets the sequence number of the question within the survey.  
@@ -37,7 +37,7 @@ namespace Core.Model
         /// </summary>
         [DisplayName("Response Text")]
         [Required(ErrorMessage="The text of the response cannot be left blank.")]
-        public long Text { get; set; }
+        public string Text { get; set; }
 
         /// <summary>
         /// Navigation property to related Question

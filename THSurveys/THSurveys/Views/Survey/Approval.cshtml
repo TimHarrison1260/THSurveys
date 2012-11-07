@@ -1,0 +1,66 @@
+﻿@model IEnumerable<THSurveys.Models.Survey.ApprovalListViewModel>
+
+@{
+    ViewBag.Title = "ApprovalList";
+}
+
+<h2>Surveys awaiting approval</h2>
+
+
+<form action="@Url.Action("Approval","Survey")" method="post">
+
+    <fieldset>
+        <legend>Check Approve to approve surveys</legend>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.StatusDate)
+                    </td>
+                    <td>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayNameFor(model => model.CategoryDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Input.Approve)
+                    </td>
+                </tr>
+            </thead>
+
+        @{int index = 0;}
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m => item.StatusDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.CategoryDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Title)
+                    </td>
+                    <td>
+                        @Html.CheckBox("Input[" + index + "].Approve", item.Input.Approve)
+						<input type="hidden" value="@item.Input.SurveyId" name="@("Input[" + index + "].SurveyId")" value="@item.Input.SurveyId"  />
+                    </td>
+                </tr>
+            </tbody>
+            index++;
+        }
+        </table>
+
+        <button name="submit">Approve Surveys</button>
+    
+    </fieldset>
+</form>

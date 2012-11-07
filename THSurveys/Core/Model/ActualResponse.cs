@@ -40,10 +40,5 @@ namespace Core.Model
         /// Navigation property to the Respondent taking the survey
         /// </summary>
         public virtual Respondent Respondent { get; set; }
-
-        /// <summary>
-        /// Navigation property to the question the response relates to.
-        /// </summary>
-        //public virtual Question Question { get; set; }
     }
 }

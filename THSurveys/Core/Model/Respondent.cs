@@ -36,19 +36,20 @@ namespace Core.Model
         public DateTime DateTaken {get; set;}
 
         /// <summary>
-        /// Foreign key to the Survey, this respondent is taking
+        /// Navigation property to the Survey this response relates to. 
         /// </summary>
-        [Required(ErrorMessage="The Respondent must select a Survey")]
-        public long SurveyId { get; set; }
+        public virtual Survey Survey { get; set; }
+
+        ///// <summary>
+        ///// Foreign key to the Survey, this respondent is taking
+        ///// </summary>
+        //[Required(ErrorMessage="The Respondent must select a Survey")]
+        //public long SurveyId { get; set; }
 
         /// <summary>
         /// Gets or sets the actual responses to a particular survey response.
         /// </summary>
         public virtual ICollection<ActualResponse> Responses { get; set; }
 
-        /// <summary>
-        /// Navigation property to the Survey this response relates to. 
-        /// </summary>
-        public virtual Survey Survey { get; set; }
     }
 }

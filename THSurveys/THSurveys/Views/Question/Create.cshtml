@@ -1,0 +1,162 @@
+﻿@model THSurveys.Models.Question.AddQuestionsViewModel
+
+@{
+    ViewBag.Title = "Add Questions to your survey.";
+}
+
+<h2>
+
+    @Html.HiddenFor(model => model.SurveyId)
+    @Html.DisplayFor(model => model.Title)
+    (
+    @Html.DisplayFor(model => model.CategoryDescription)
+    )
+
+</h2>
+
+@using (Html.BeginForm()) {
+    
+    <fieldset>
+        <legend>Add questions to Survey</legend>
+
+        <div style="border:none; border-radius: 10px; padding:5px; background-color:lightcyan">
+
+            @Html.ValidationSummary(true)
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.Text)
+                        </td>
+                        <td>
+                            @Html.LabelFor(model => model.LikertId)
+                        </td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.EditorFor(model => model.Text)
+                        </td>
+                        <td>
+                            @Html.DropDownListFor(model => model.LikertId, Model.LikertTemplates, "Please Select a template...")
+                        </td>
+                        <td>
+                            <input type="submit" value="Add Question." />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.ValidationMessageFor(model => model.Text)
+                        </td>
+                        <td>
+                            @Html.ValidationMessageFor(model => model.LikertId)
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div id="responseList"></div>
+                        </td>
+                        <td>
+                            <input type="button" id="submitForApproval" value="Submit for Approval" />
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+
+        </div>
+
+    </fieldset>
+}
+
+<div id="questionList">
+
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#LikertId').change(function() {
+            /*
+            *   $.load dosn't work as a POST request is needed.  Therefore use Ajax method directly.
+            */
+            var selValue = this.selectedIndex;
+            var selItem = this[selValue].value;
+            var urlAction = '@Url.Action("GetLikertResponses", "Question", new { id = "PLACEHOLDER" })'
+            var url = urlAction.replace("PLACEHOLDER", selItem);
+            $.ajax({
+                url: url,
+                type: 'POST',
+                success: function (result) {
+                    //  Load the result intothe summaryList element.
+                    $("#responseList").html(result);
+                }
+            });
+        })
+
+
+        $('#submitForApproval').click(function () {
+            /*
+            *   Put up a confirmation dialog, and only call the metho
+            *   if the response is afirmative.
+            */
+            if (confirm("Are you sure all questions have been entered?\r\n\r\nPress 'OK' to submit the survey for approval, otherwise press 'cancel' to return to editing.")) {
+                //  call the server action method to Submit for Approval.
+                var surveyId = $('#SurveyId').val();
+                var urlaction = '@Url.Action("Submit","Survey", new { surveyId = "PLACEHOLDER" })';
+                var url = urlaction.replace("PLACEHOLDER", surveyId);
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    success: function (result) {
+                        if (result === 'OK') {
+                            //  Display confirmation dialog
+                            alert("Survey has successfully been submitted for approval.");
+                            //  Route to the Index for survey for this user.
+                            var url = '@Url.Action("Index", "Survey")';
+                            window.location.href = url;
+                        }
+                        else {
+                            alert("There were problems submitting the survey.  Please try again later.");
+                        }
+                    }
+                });
+            }
+        })
+
+        //  load any existing questions.
+        loadQuestions();
+
+    });
+
+    function loadQuestions() {
+        var surveyId = $('#SurveyId').val();
+        var urlAction = '@Url.Action("GetQuestionsForSurvey", "Question", new { id = "PLACEHOLDER" })' 
+        var url = urlAction.replace("PLACEHOLDER", surveyId);
+        $.ajax({
+            url: url,
+            type: 'POST',
+            success: function (result) {
+                //  Load the result intothe summaryList element.
+                $("#questionList").html(result);
+            }
+        });
+    }
+
+</script>
+
+

@@ -11,14 +11,14 @@ namespace Core.Model
         [Key]
         public long Id { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Id of the Likert Template this response relates to.
-        /// </summary>
-        /// <remarks>
-        /// This allows EF to generate a Foreign key between this
-        /// template response and its parent LikertTemplate.
-        /// </remarks>
-        public long LikertId { get; set; }
+        ///// <summary>
+        ///// Gets or sets the Id of the Likert Template this response relates to.
+        ///// </summary>
+        ///// <remarks>
+        ///// This allows EF to generate a Foreign key between this
+        ///// template response and its parent LikertTemplate.
+        ///// </remarks>
+        //public long LikertId { get; set; }
 
         /// <summary>
         /// Gets or sets the sequence number of the question within the survey.  

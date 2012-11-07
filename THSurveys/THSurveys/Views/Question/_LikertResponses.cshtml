@@ -1,0 +1,28 @@
+﻿@model IEnumerable<THSurveys.Models.Question.LikertResponseViewModel>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LikertScaleNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+    </tr>
+
+@foreach (var item in Model) 
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LikertScaleNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.Text)
+        </td>
+    </tr>
+}
+
+</table>
+
+
+

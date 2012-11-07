@@ -18,7 +18,7 @@ namespace THSurveys.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController(new MockSurveyRepository());
+            HomeController controller = new HomeController(new MockSurveyRepository(), new MockCategoryRepository());
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -31,7 +31,7 @@ namespace THSurveys.Tests.Controllers
         public void About()
         {
             // Arrange
-            HomeController controller = new HomeController(new MockSurveyRepository());
+            HomeController controller = new HomeController(new MockSurveyRepository(), new MockCategoryRepository());
 
             // Act
             ViewResult result = controller.About() as ViewResult;
@@ -44,7 +44,7 @@ namespace THSurveys.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            HomeController controller = new HomeController(new MockSurveyRepository());
+            HomeController controller = new HomeController(new MockSurveyRepository(),new MockCategoryRepository());
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;
@@ -77,12 +77,36 @@ namespace THSurveys.Tests.Controllers
             throw new NotImplementedException();
         }
 
-        public void CreateSurvey(Core.Model.Survey survey)
+        public long CreateSurvey(Core.Model.Survey survey)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<Core.Model.Survey > GetSurveysForCategory( long categoryId)
         {
             throw new NotImplementedException();
         }
     }
 
+
+    public class MockCategoryRepository : ICategoryRepository
+    {
+
+        public IQueryable<Core.Model.Category> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Core.Model.Category GetCategory(long Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add(Core.Model.Category category)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 
 

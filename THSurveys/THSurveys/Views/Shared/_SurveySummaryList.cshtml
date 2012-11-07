@@ -27,7 +27,14 @@
     <tr>
         <td>
             @Html.HiddenFor(modelitem => item.SurveyId)
-            @Html.DisplayFor(modelItem => item.Title)
+            @if (User.Identity.IsAuthenticated)
+            {
+                @Html.ActionLink(item.Title, "Create", "Question", new { SurveyId = item.SurveyId }, new {@title="Click to add questions to the survey" })
+            }
+            else
+            {
+                @Html.ActionLink(item.Title, "TakeSurvey", "Home", new { id = item.SurveyId }, new {@title="Click to take the survey" })
+            }
         </td>
         <td>
             @Html.DisplayFor(modelitem => item.Category)

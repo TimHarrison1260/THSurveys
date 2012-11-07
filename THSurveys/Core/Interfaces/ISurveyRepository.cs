@@ -16,12 +16,20 @@ namespace Core.Interfaces
     {
         IQueryable<Survey> GetTopTenSurveys();
 
+        IQueryable<Survey> GetSurveysForCategory(long categoryId);
+
+        IQueryable<Survey> GetSurveysForUser(string userName);
+
         IQueryable<Survey> GetAvailableSurveys();
+
+        IQueryable<Survey> GetSurveysForApproval();
 
         IQueryable<Survey> GetAllSurveys();
 
         Survey GetSurvey(long id);
 
-        void CreateSurvey(Survey survey);
+        long CreateSurvey(Survey survey);
+
+        void UpdateSurveys(IList<Survey> survey);
     }
 }

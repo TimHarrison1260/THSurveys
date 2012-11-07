@@ -47,10 +47,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\QuestionRepository.cs" />
     <Compile Include="Repositories\SurveyRepository.cs" />
     <Compile Include="Migrations\THSurveyMigrations.cs" />
     <Compile Include="Data\THSurveysContext.cs" />
     <Compile Include="Migrations\THSurveysInitialiser.cs" />
+    <Compile Include="Repositories\TemplateRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

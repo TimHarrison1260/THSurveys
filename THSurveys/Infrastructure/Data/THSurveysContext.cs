@@ -7,22 +7,28 @@ using System.Threading.Tasks;
 using System.Data.Entity;           //  Accesss to Entity Framework
 using Core.Model;                   //  Access to the business entities.
 
+using Core.Interfaces;
+
 namespace Infrastructure
 {
-    public class THSurveysContext : DbContext
+    public class THSurveysContext : DbContext, IUnitOfWork
     {
+        private int instanceCount = 0;
+
         /// <summary>
         /// ctor: ensure the THSurveysContext is used as the connection string.
         /// </summary>
         public THSurveysContext()
             : base("THSurveysContext")
         {
+            this.Configuration.LazyLoadingEnabled = true;
+            instanceCount++;
         }
 
         /// <summary>
         /// SimpleMembership, UserProfiles table.
         /// </summary>
-        //public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
 
         /// <summary>
         /// Entity Framework, Code First.
