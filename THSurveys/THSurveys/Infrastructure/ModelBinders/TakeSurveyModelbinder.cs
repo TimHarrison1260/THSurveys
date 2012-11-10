@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 using THSurveys.Models.Home;
@@ -14,43 +12,41 @@ namespace THSurveys.Infrastructure.ModelBinders
         {
             //  Create a new model if it's not already defined.
             TakeSurveyViewModel model = (TakeSurveyViewModel)bindingContext.Model ?? new TakeSurveyViewModel();
-            //  retrieve this information if it's there.  The view should always place a HiddenFor field containing
-            //  any displayable data that must be displayed should the modelState be invalid.
-            model.SurveyId = Convert.ToInt64(controllerContext.HttpContext.Request["SurveyId"]);
-            model.Title = controllerContext.HttpContext.Request["Title"];
-            model.UserName = controllerContext.HttpContext.Request["UserName"];
-            model.StatusDate = controllerContext.HttpContext.Request["StatusDate"];
-            model.CategoryDescription = controllerContext.HttpContext.Request["CategoryDescription"];
 
+            //  retrieve the information from the view.
+            model.SurveyId = Convert.ToInt64(controllerContext.HttpContext.Request["SurveyId"]);
+
+            //  Set new questions model
             model.Questions = new List<SurveyQuestionsViewModel>();
 
-            var questions = controllerContext.HttpContext.Request["item.QuestionId"];
-            string[] qs = questions.Split(',');
-            foreach (var q in qs)
+            //  Process each quetion in the survey
+            foreach (string qs in (controllerContext.HttpContext.Request["item.QId_SeqNo"]).Split(','))
             {
+                //  Split questionId and SequenceNumber from input field.
+                string[] str = qs.Split('_');
+                string q = str[0];
+                string s = str[1];
+                //  Instantiate the question in the viewModel
                 SurveyQuestionsViewModel question = new SurveyQuestionsViewModel();
-                question.QuestionId = Convert.ToInt64(q);
-                question.Text = controllerContext.HttpContext.Request["Text"]
-                var responsename = "LikertScaleNumber_" + q;
-                var response = controllerContext.HttpContext.Request[responsename];
+                question.QId_SeqNo = qs;
+
+                //  Find the selected response
+                var response = controllerContext.HttpContext.Request["LikertScaleNumber_" + qs];
                 if (response == null)
                 {
-                    bindingContext.ModelState.AddModelError("", string.Format("You have not answered question {0}", q));
-                    
+                    //  It's not there, so add error to modelstate: the user hasn't answered the question.
+                    bindingContext.ModelState.AddModelError("", string.Format("You have not answered question {0}", s));
+                    bindingContext.ModelState.SetModelValue(bindingContext.ModelName, bindingContext.ValueProvider.GetValue("LikertScaleNumber_" + qs));
+                    question.Answer = "";
                 }
                 else
                 {
-
+                    //  Add the answer to the question viewModel.
+                    question.Answer = response;
                 }
-                
-
-
-
-
-
+                //  Add the question to the survey
+                model.Questions.Add(question);
             }
-
-
             return model;
         }
     }

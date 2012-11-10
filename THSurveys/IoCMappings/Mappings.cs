@@ -48,6 +48,8 @@ namespace IoCMappings
             kernel.Bind<Core.Interfaces.ITemplateRepository>().To<Infrastructure.Repositories.TemplateRepository>();
             //  Bind the IQuestionRepository to its concrete implementation QuestionRepository
             kernel.Bind<Core.Interfaces.IQuestionRepository>().To<Infrastructure.Repositories.QuestionRepository>();
+            //  Bind the IRespondentRepository to its concrete implementation RespondentRepository.
+            kernel.Bind<Core.Interfaces.IRespondentRepository>().To<Infrastructure.Repositories.RespondentRepository>();
         }
     }
 }

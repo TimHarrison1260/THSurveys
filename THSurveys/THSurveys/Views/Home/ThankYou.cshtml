@@ -1,0 +1,53 @@
+﻿@model THSurveys.Models.Shared.SurveyResultsViewModel
+
+@*@{
+    @Layout;
+}*@
+
+<h1>@Html.DisplayFor(model => model.Title)</h1>
+
+<h2>Thank you for taking our survey, your time is very much appreciated.  Your answers are shown below.</h2>
+
+@using (Html.BeginForm("List","Home")) {
+
+    foreach (var item in Model.Results)
+    {
+        <p>
+            Taken on:
+            @Html.DisplayFor(modelItem => item.DateTaken)
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <h5>
+                            Questions
+                        </h5>
+                    </td>
+                    <td>
+                        <h5>
+                            Answers
+                        </h5>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var answer in item.Answers)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(ans => answer.QuestionNumber)
+                            @Html.DisplayFor(ans => answer.QuestionText)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(ans => answer.AnswerText)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+       
+        </table>
+    }
+    
+    <input id="submit" type="submit" value="Close Survey" />
+}

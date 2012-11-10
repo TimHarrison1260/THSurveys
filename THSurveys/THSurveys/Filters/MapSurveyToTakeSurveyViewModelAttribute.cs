@@ -9,11 +9,8 @@ using THSurveys.Models.Home;
 
 namespace THSurveys.Filters
 {
-    public class MapSurveyTopTakeSurveyViewModelAttribute : ActionFilterAttribute
+    public class MapSurveyToTakeSurveyViewModelAttribute : ActionFilterAttribute
     {
-        //  inject a reference to the Questions Repository (Ninject Dependency resolver);
-        private IQuestionRepository _questionRepository = (IQuestionRepository) DependencyResolver.Current.GetService(typeof(IQuestionRepository));
-
         /// <summary>
         /// Map the Survey to the TakeSurveyViewModel.
         /// </summary>
@@ -42,21 +39,18 @@ namespace THSurveys.Filters
             foreach (Core.Model.Question q in survey.Questions)
             {
                 SurveyQuestionsViewModel questionViewModel = new SurveyQuestionsViewModel();
-                questionViewModel.QuestionId = q.QuestionId;
+                questionViewModel.QId_SeqNo = q.QuestionId.ToString() + "_" + q.SequenceNumber.ToString();
                 questionViewModel.SequenceNumber = q.SequenceNumber;
                 questionViewModel.Text = q.Text;
 
                 //  Map the responses to the question
                 questionViewModel.Responses = new List<SurveyResponsesViewModel>();
-                //  this causes a DBContext Disposed error if it's visited a 2nd time.
-                foreach (Core.Model.AvailableResponse r in _questionRepository.GetResponsesForQuestion(q.QuestionId))
+                foreach (Core.Model.AvailableResponse r in q.AvailableResponses)
                 {
                     SurveyResponsesViewModel responsesViewModel = new SurveyResponsesViewModel();
-                    //responsesViewModel.SurveyId = survey.SurveyId;
-                    responsesViewModel.Id = q.QuestionId;
+                    responsesViewModel.QId_SeqNo = questionViewModel.QId_SeqNo;
                     responsesViewModel.LikertScaleNumber = r.LikertScaleNumber;
                     responsesViewModel.Text = r.Text;
-                    //responsesViewModel.Selected = false;
                     questionViewModel.Responses.Add(responsesViewModel);
                 }
                 viewModel.Questions.Add(questionViewModel);

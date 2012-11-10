@@ -7,19 +7,12 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @*@Html.HiddenFor(modelitem => item.SurveyId)*@
-            @Html.HiddenFor(modelitem => item.Id)
-            @*@Html.HiddenFor(modelitem => item.LikertScaleNumber)*@        @* give us the response Id in the vm *@
-            @*@Html.RadioButtonFor(modelitem => item.LikertScaleNumber, item.LikertScaleNumber)*@
             @*Custom Html Helper Class to inject a groupId into the name attribute of the rendered radio button, so
                 multiple groups of radio buttons can be displayed on the form*@
-            @Html.RadioButtonListFor(modelitem => item.LikertScaleNumber, item.LikertScaleNumber, item.Id.ToString(), null)
+            @Html.RadioButtonListFor(modelitem => item.LikertScaleNumber, item.LikertScaleNumber, item.QId_SeqNo.ToString(), item.Answer, null)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Text)
-        </td>
-        <td>
-            @*@Html.HiddenFor(modelItem => item.Selected)*@
         </td>
 
     </tr>

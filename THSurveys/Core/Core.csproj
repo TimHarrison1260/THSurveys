@@ -40,10 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\ActualResponseFactory.cs" />
     <Compile Include="Factories\QuestionFactory.cs" />
+    <Compile Include="Factories\RespondentFactory.cs" />
     <Compile Include="Factories\SurveyFactory.cs" />
     <Compile Include="Interfaces\ICategoryRepository.cs" />
     <Compile Include="Interfaces\IQuestionRepository.cs" />
+    <Compile Include="Interfaces\IRespondentRepository.cs" />
     <Compile Include="Interfaces\ISurveyRepository.cs" />
     <Compile Include="Interfaces\ITemplateRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
@@ -51,7 +54,9 @@
     <Compile Include="Model\ActualResponse.cs" />
     <Compile Include="Model\AvailableResponse.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\ConcreteActualResponse.cs" />
     <Compile Include="Model\ConcreteQuestion.cs" />
+    <Compile Include="Model\ConcreteRespondent.cs" />
     <Compile Include="Model\ConcreteSurvey.cs" />
     <Compile Include="Model\LikertTemplate.cs" />
     <Compile Include="Model\Question.cs" />

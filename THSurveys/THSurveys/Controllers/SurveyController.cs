@@ -42,7 +42,6 @@ namespace THSurveys.Controllers
         //
         // GET: /Survey/
 
-        //[AllowAnonymous]
         [Authorize(Roles="Users")]
         [MapSurveyToSurveySummary]
         public ActionResult Index()
@@ -52,14 +51,6 @@ namespace THSurveys.Controllers
             var surveys = _surveyRepository.GetSurveysForUser(User.Identity.Name).ToArray();
             return View(surveys);
         } 
-
-        //
-        // GET: /Survey/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
         //
         // GET: /Survey/Create
@@ -156,57 +147,5 @@ namespace THSurveys.Controllers
             }
         }
 
-
-        //
-        // GET: /Survey/Edit/5
-
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Survey/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /Survey/Delete/5
-
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Survey/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data.Entity;           //  give access to the lambd expression version of .Include for eager loading (EF)
+
 using Core.Model;
 using Core.Interfaces;
 
@@ -69,9 +71,11 @@ namespace Infrastructure.Repositories
         /// <returns></returns>
         public IQueryable<Survey> GetAvailableSurveys()
         {
-            var surveys = (from s in _unitOfWork.Surveys
-                           where s.Status == 2 && s.IsTemplate == false
-                           select s);
+            //var surveys = (from s in _unitOfWork.Surveys
+            //               where s.Status == 2 && s.IsTemplate == false
+            //               select s);
+            var surveys = _unitOfWork.Surveys
+                .Where(s => s.Status == 2 && !s.IsTemplate);
             return surveys;
         }
 
@@ -89,14 +93,12 @@ namespace Infrastructure.Repositories
 
 
         /// <summary>
-        /// Get all surveys defined, regardless of status.
-        
+        /// Get all surveys defined, regardless of status.        
         /// <returns></returns>
         public IQueryable<Survey> GetAllSurveys()
         {
-            var surveys = (from s in _unitOfWork.Surveys
-                           where s.IsTemplate == false
-                           select s);
+            var surveys = _unitOfWork.Surveys
+                .Where(s => !s.IsTemplate);
             return surveys;
         }
 
@@ -107,11 +109,19 @@ namespace Infrastructure.Repositories
         /// <returns></returns>
         public Survey GetSurvey(long id)
         {
-            var survey = (from s in _unitOfWork.Surveys
-                          where s.SurveyId == id && s.IsTemplate == false
-                          select s).FirstOrDefault();
+            //  Eager load from the context to ensure all required information
+            //  is available and it's done as efficiently as possible using a 
+            //  single SQL statement.
+            var survey = _unitOfWork.Surveys
+                .Include(s => s.Questions)
+                .Include(s => s.Questions.Select(r => r.AvailableResponses))
+                .Include(s => s.Respondents)
+//                .Include("Questions")
+//                .Include("Questions.AvailableResponses")
+                .FirstOrDefault(s => s.SurveyId == id && !s.IsTemplate);
             return survey;
         }
+
 
         /// <summary>
         /// Create a survey, Add it to the DbContext, for persisting 

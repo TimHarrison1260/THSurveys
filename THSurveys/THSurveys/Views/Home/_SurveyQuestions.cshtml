@@ -5,13 +5,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.HiddenFor(modelItem => item.QuestionId)
+            @Html.HiddenFor(modelItem => item.QId_SeqNo)
+            @Html.HiddenFor(modelitem => item.Answer)       @* receives the selected response *@
             @Html.DisplayFor(modelItem => item.SequenceNumber)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Text)
         </td>
-
     </tr>
     <tr>
         <td></td>

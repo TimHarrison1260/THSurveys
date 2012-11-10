@@ -15,7 +15,7 @@ namespace THSurveys.Helpers
         /// page, and they don't interfere with each other.
         /// </summary>
         /// <returns>MvcHtmlString containing the markup for the radio button.</returns>
-        public static MvcHtmlString RadioButtonListFor<TModel, TProperty>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TProperty>> expression, object value, string groupId, object htmlAttributes)
+        public static MvcHtmlString RadioButtonListFor<TModel, TProperty>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TProperty>> expression, object value, string groupId, string checkedValue, object htmlAttributes)
         {
             var member = (MemberExpression)expression.Body;
 
@@ -30,7 +30,13 @@ namespace THSurveys.Helpers
             string valueAttr = value.ToString();
 
             TagBuilder tag = new TagBuilder("input");
-//            tag.Attributes.Add("checked", "checked");
+
+            //  Mark the radio button as checked if the answer (checkedValue) is the same as the value
+            //  supplied.  This allows the selected readio button to be reinstated when redisplaying 
+            //  the control.
+            if ((checkedValue != null)  && (checkedValue == value.ToString()))
+                tag.Attributes.Add("checked", "checked");
+
             tag.Attributes.Add("id", idAttr);
             tag.Attributes.Add("name", nameAttr);
             tag.Attributes.Add("type", "radio");

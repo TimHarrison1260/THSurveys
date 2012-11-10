@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace Core.Model
 {
-    public class ActualResponse
+    public abstract class ActualResponse
     {
         /// <summary>
         /// Gets or sets the unique ID for the response
@@ -21,10 +21,6 @@ namespace Core.Model
         /// <summary>
         /// Gets or sets the Id of the Question the Answer relates to.
         /// </summary>
-        ///// <remarks>
-        ///// This will allow EF to generate a foreign key relationship between
-        ///// this actual response and the parent question.
-        ///// </remarks>
         [DisplayName("Question")]
         public long Question { get; set; }
 

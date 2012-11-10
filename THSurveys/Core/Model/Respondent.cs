@@ -15,7 +15,7 @@ namespace Core.Model
     /// and should the same respondent take more than one survye, 
     /// another instance will be created.
     /// </summary>
-    public class Respondent
+    public abstract class Respondent
     {
         /// <summary>
         /// Gets or sets the Id of the Respondent

@@ -12,6 +12,8 @@ namespace Core.Interfaces
     {
         IQueryable<Question> GetQuestionsForSurvey(long SurveyId);
         IQueryable<AvailableResponse> GetResponsesForQuestion(long questionId);
+        Question GetQuestion(long questionId);
+        string[] GetQuestionAndAnswerDescriptions(long questionId, long response);
         long AddQuestion(Question question);
         long GetLastSequenceNumber(long surveyId);
     }

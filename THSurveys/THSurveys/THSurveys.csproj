@@ -187,7 +187,7 @@
     <Compile Include="Filters\MapResponseTemplateToResponsesViewModelAttribute.cs" />
     <Compile Include="Filters\MapSurveyToApprovalListViewModelAttribute.cs" />
     <Compile Include="Filters\MapSurveyToHomeSurveyListVMAttribute.cs" />
-    <Compile Include="Filters\MapSurveyTopTakeSurveyViewModelAttribute.cs" />
+    <Compile Include="Filters\MapSurveyToTakeSurveyViewModelAttribute.cs" />
     <Compile Include="Filters\MapSurveyToSurveySummaryAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,11 +197,15 @@
     <Compile Include="Infrastructure\ModelBinders\SurveyApprovalModelbinder.cs" />
     <Compile Include="Infrastructure\ModelBinders\TakeSurveyModelbinder.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Mappings\MapSurveyToSurveyResults.cs" />
+    <Compile Include="Mappings\MapTakeSurveyViewModelToSurvey.cs" />
+    <Compile Include="Mappings\ReinstateTakeSurveyViewModel.cs" />
     <Compile Include="Models\Account\AccountModels.cs" />
     <Compile Include="Models\Home\HomeListViewModel.cs" />
     <Compile Include="Models\Question\AddQuestionsListViewModel.cs" />
     <Compile Include="Models\Question\AddQuestionsViewModel.cs" />
     <Compile Include="Models\Question\LikertResponsesViewModel.cs" />
+    <Compile Include="Models\Shared\SurveyResultsViewModel.cs" />
     <Compile Include="Models\Survey\ApprovalListViewModel.cs" />
     <Compile Include="Models\Survey\CreateSurveyViewModel.cs" />
     <Compile Include="Models\Shared\SurveySummaryViewModel.cs" />
@@ -332,6 +336,7 @@
     <Content Include="Views\Home\TakeSurvey.cshtml" />
     <Content Include="Views\Home\_SurveyQuestions.cshtml" />
     <Content Include="Views\Home\_QuestionResponses.cshtml" />
+    <Content Include="Views\Home\ThankYou.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

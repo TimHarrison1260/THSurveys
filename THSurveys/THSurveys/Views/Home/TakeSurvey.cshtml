@@ -9,12 +9,9 @@
 @using (Html.BeginForm()) {
 <fieldset>
     <legend>TakeSurveyViewModel</legend>
+    @Html.ValidationSummary(false)
     <h5>
         @Html.HiddenFor(m => m.SurveyId)
-        @Html.HiddenFor(m => m.Title)
-        @Html.HiddenFor(m => m.CategoryDescription)
-        @Html.HiddenFor(m => m.UserName)
-        @Html.HiddenFor(m => m.StatusDate)
         <p>
             @Html.DisplayFor(m => m.Title)
             (

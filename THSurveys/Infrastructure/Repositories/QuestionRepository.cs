@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 using Core.Interfaces;
 using Core.Model;
@@ -34,6 +35,26 @@ namespace Infrastructure.Repositories
                              where r.Question.QuestionId == questionId
                              select r);
             return responses;
+        }
+
+
+        public Question GetQuestion(long questionId)
+        {
+            var question = _unitOfWork.Questions
+                .Include(q => q.AvailableResponses)
+                .FirstOrDefault(q => q.QuestionId == questionId);
+            return (Question)question;
+        }
+
+
+        public string[] GetQuestionAndAnswerDescriptions(long questionId, long response)
+        {
+            var d = _unitOfWork.AvailableResponses
+                .Where(r => r.Question.QuestionId == questionId && r.LikertScaleNumber == response)
+                .Select(r => new {number = r.Question.SequenceNumber, question = r.Question.Text, answer = r.Text })
+                .First();
+            string[] descriptions = new string[] {d.number.ToString(), d.question, d.answer };
+            return new string[] {d.number.ToString(), d.question, d.answer };
         }
 
 
