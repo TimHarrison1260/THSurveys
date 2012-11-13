@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace THSurveys.Infrastructure.ModelBinders
 {
+    //[Obsolete("Do not require to use this",true)]
     public class SurveyApprovalModelbinder : DefaultModelBinder
     {
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)

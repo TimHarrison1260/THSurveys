@@ -42,7 +42,7 @@ namespace THSurveys.Controllers
         //
         // GET: /Survey/
 
-        [Authorize(Roles="Users")]
+        [Authorize(Roles="User")]
         [MapSurveyToSurveySummary]
         public ActionResult Index()
         {
@@ -55,7 +55,7 @@ namespace THSurveys.Controllers
         //
         // GET: /Survey/Create
         [HttpGet]
-        [Authorize(Roles = "Users")]
+        [Authorize(Roles = "User")]
         public ActionResult Create()
         {
             CreateSurveyViewModel survey = new CreateSurveyViewModel();
@@ -67,7 +67,7 @@ namespace THSurveys.Controllers
         //
         // POST: /Survey/Create
         [HttpPost]
-        [Authorize(Roles = "Users")]
+        [Authorize(Roles = "User")]
         public ActionResult Create(CreateSurveyViewModel survey)
         {
             if (ModelState.IsValid)
@@ -86,7 +86,7 @@ namespace THSurveys.Controllers
                 //  Add the new survey to the model, and retrieve its key so we can progress to the Add Questions
                 long id = _surveyRepository.CreateSurvey(newSurvey);
 
-                return RedirectToAction("Create", "Question", new { surveyId = id });               //  Go back to the Survey index page.
+                return RedirectToAction("Create", "Question", new { surveyId = id });
             }
             else
             {
@@ -112,7 +112,7 @@ namespace THSurveys.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        [Authorize(Roles="Administrators")]
+        [Authorize(Roles="Administrator")]
         [MapSurveyToApprovalListViewModel]
         public ActionResult Approval()
         {
@@ -122,7 +122,7 @@ namespace THSurveys.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles="Administrators")]
+        [Authorize(Roles="Administrator")]
         public ActionResult Approval(IEnumerable<ApprovalListViewModel.ApprovalInputViewModel> Input)
         {
             if (ModelState.IsValid)

@@ -1,0 +1,124 @@
+﻿@model THSurveys.Models.Analysis.SurveyAnalysisViewModel
+
+@{
+    ViewBag.Title = "Analysis of Survey Responses";
+}
+
+<h2>Survey</h2>
+<h5>
+    @Html.HiddenFor(m => m.SurveyId)
+    @Html.DisplayFor(m => m.Title)
+</h5>
+<h5>
+    Analysis of 
+    @Html.DisplayFor(m => m.NumberOfRespondents)
+    response(s) taken between:
+    @Html.DisplayFor(m => m.FirstResponseDate)
+    and 
+    @Html.DisplayFor(m => m.LastResponseDate)
+</h5>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">
+                Question
+            </th>
+            <th>
+                Responses
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+        
+
+    @foreach (var item in Model.Questions)
+    {
+        <tbody>
+            <tr>
+                <th>
+                    @Html.HiddenFor(modelItem => item.QuestionId)
+                    @Html.DisplayFor(modelItem => item.SequenceNumber)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelIten => item.Text)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.NumberOfResponses)
+                </th>
+                <th>
+                    <input type="button" value="Show Chart" 
+                        id="chartButton"        @*_@Html.DisplayFor(modelItem => item.QuestionId)" *@
+                        title="Show results on a bar chart" 
+                        name="@Html.DisplayFor(modelItem => item.QuestionId)"  />
+                </th>
+            </tr>
+            <tr id="questionAnalysis_@Html.DisplayFor(modelItem => item.QuestionId)"> 
+                    <td></td>
+                    <td colspan="2">
+                        <div id="questionAnalysis" >
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Response
+                                        </td>
+                                        <td>
+                                            Total
+                                        </td>
+                                        <td>
+                                            %age
+                                        </td>
+                                    </tr>
+                            @foreach (var response in item.Analysis)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.HiddenFor(r => response.LikertScaleNumber)
+                                        @Html.DisplayFor(r => response.Text)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(r => response.NumberOfResponses)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(r => response.Percentage)%
+                                    </td>
+                                </tr>
+                            }
+
+                                </table>
+                        </div>
+                        <div id="showChart_@Html.DisplayFor(modelItem => item.QuestionId)">
+                        </div>
+                    </td>
+            <tr> 
+        </tbody>
+    }
+</table>
+
+
+<script>
+    $(document).ready(function () {
+        //  Assign the handler to the click even for all 'Show Chart' buttons.
+        $('input[id="chartButton"]').click(function(event) {
+            //  get the value of the surveyId being displayed
+            var surveyId = $('#SurveyId').val();
+            //  Get the questionId of the button clicked.
+            var questionId = $(this).attr("name");
+
+            //  generate the url for the <img src>
+            var actionUrl = '@Url.Action("GetSurveyChart", "Analysis", new { id = "PLACEHOLDER_SurveyId", questionId = "PLACEHOLDER_QuestionId" })'
+            //  Replace the PLACEHOLDERS with the correct values.
+            var tempUrl = actionUrl.replace('PLACEHOLDER_SurveyId', surveyId);
+            var srcUrl = tempUrl.replace('PLACEHOLDER_QuestionId', questionId);
+
+            //  generate the <img> tag
+            var tag = '<img src="' + srcUrl + '" alt="Asp.Net Charting generated image" style="width:450px;height:300px;border-width:0px;" />' 
+
+            //  Add the <img> tag to the dom, inside the <div> for displaying the chart,
+            //  Adding this element to the DOM causes the browser to execute the SRC to 
+            //  load the image, which points to the Chart method in the controller.
+            $('#showChart_' + questionId).html(tag);
+        });
+    });
+
+</script>

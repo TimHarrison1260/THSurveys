@@ -86,6 +86,22 @@ namespace THSurveys.Tests.Controllers
         {
             throw new NotImplementedException();
         }
+
+
+        public IQueryable<Core.Model.Survey> GetSurveysForUser(string userName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<Core.Model.Survey> GetSurveysForApproval()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateSurveys(IList<Core.Model.Survey> survey)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

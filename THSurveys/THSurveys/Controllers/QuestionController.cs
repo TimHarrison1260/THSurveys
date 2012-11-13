@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using System.Web.UI.DataVisualization.Charting;
+
 using THSurveys.Models.Question;
 using THSurveys.Models;             //  Access Survey and Categories
 using Core.Interfaces;
@@ -47,7 +49,7 @@ namespace THSurveys.Controllers
 
 
         [HttpGet]
-        [Authorize(Roles = "Users")]
+        [Authorize(Roles = "User")]
         public ActionResult Create(long surveyId)
         {
             //  TODO:   Create a Factory to create the AddQuestionViewModel taking in a surveyId.
@@ -74,7 +76,7 @@ namespace THSurveys.Controllers
         /// will still work
         /// </remarks>
         [HttpPost]
-        [Authorize(Roles = "Users")]
+        [Authorize(Roles = "User")]
         public ActionResult Create(AddQuestionsViewModel question)
         {
             if (ModelState.IsValid)

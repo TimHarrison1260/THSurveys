@@ -47,7 +47,7 @@ namespace THSurveys.Models
         /// <summary>
         /// Gets or sets the number of responses to the survey
         /// </summary>
-        [DisplayName("Number of Responses")]
+        [DisplayName("Responses")]
         public int Responses { get; set; }
 
         /// <summary>

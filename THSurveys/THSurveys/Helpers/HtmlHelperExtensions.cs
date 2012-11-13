@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace THSurveys.Helpers
 {
-    public static class RadioButtonExtensions
+    public static class HtmlHelperExtensions
     {
         /// <summary>
         /// Extension method to inject an index number into the name attribute
@@ -44,5 +44,6 @@ namespace THSurveys.Helpers
             MvcHtmlString result = new MvcHtmlString(tag.ToString());
             return result;
         }
+
     }
 }

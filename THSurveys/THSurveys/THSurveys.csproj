@@ -56,6 +56,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -178,6 +180,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnalysisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
@@ -192,19 +195,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\RadioButtonExtensions.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
+    <Compile Include="Infrastructure\Factories\MVCChartFactory.cs" />
+    <Compile Include="Infrastructure\Factories\SurveyChartFactory.cs" />
     <Compile Include="Infrastructure\ModelBinders\CreateSurveyModelBinder.cs" />
     <Compile Include="Infrastructure\ModelBinders\SurveyApprovalModelbinder.cs" />
     <Compile Include="Infrastructure\ModelBinders\TakeSurveyModelbinder.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Mappings\MapSurveyToSurveyAnalysisViewModel.cs" />
+    <Compile Include="Mappings\MapSurveyToSurveyChart.cs" />
     <Compile Include="Mappings\MapSurveyToSurveyResults.cs" />
     <Compile Include="Mappings\MapTakeSurveyViewModelToSurvey.cs" />
     <Compile Include="Mappings\ReinstateTakeSurveyViewModel.cs" />
     <Compile Include="Models\Account\AccountModels.cs" />
+    <Compile Include="Models\Analysis\ChartData.cs" />
+    <Compile Include="Models\Analysis\SurveyQuestionChart.cs" />
+    <Compile Include="Models\Analysis\MVCChart.cs" />
     <Compile Include="Models\Home\HomeListViewModel.cs" />
     <Compile Include="Models\Question\AddQuestionsListViewModel.cs" />
     <Compile Include="Models\Question\AddQuestionsViewModel.cs" />
     <Compile Include="Models\Question\LikertResponsesViewModel.cs" />
+    <Compile Include="Models\Analysis\SurveyAnalysisViewModel.cs" />
     <Compile Include="Models\Shared\SurveyResultsViewModel.cs" />
     <Compile Include="Models\Survey\ApprovalListViewModel.cs" />
     <Compile Include="Models\Survey\CreateSurveyViewModel.cs" />
@@ -337,6 +348,7 @@
     <Content Include="Views\Home\_SurveyQuestions.cshtml" />
     <Content Include="Views\Home\_QuestionResponses.cshtml" />
     <Content Include="Views\Home\ThankYou.cshtml" />
+    <Content Include="Views\Analysis\QuestionList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
