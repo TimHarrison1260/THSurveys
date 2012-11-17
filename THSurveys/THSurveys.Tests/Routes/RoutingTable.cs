@@ -83,6 +83,16 @@ namespace THSurveys.Tests.Routes
                 constraints: new { controller = "^Home$|^Survey$", action = "^Index$|^About$|^Contact$|^List$|^Create$|^Approve$" }
                 );
 
+
+            //  MVC Default route
+            routes.MapRoute(
+                 name: "Default",
+                 url: "{controller}/{action}/{id}",
+                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+             );
+
+
+
             //  Catchall    Route to HttpNotFound page
             routes.MapRoute(
                 name: "catchall",

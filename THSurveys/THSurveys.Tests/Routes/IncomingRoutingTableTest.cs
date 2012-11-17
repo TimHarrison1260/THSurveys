@@ -51,7 +51,7 @@ namespace THSurveys.Tests.Routes
         [TestMethod]
         public void In_Url_Get_Analysis_Chart_Maps_To_Analysis_Controller()
         {
-            TestIncomingRouteOK("~/Analysis/GetSurveyChart/5", "Analysis", "GetSurveyChart", new { id = 5 });
+            TestIncomingRouteOK("~/Analysis/GetSurveyChart/5?questionId=4", "Analysis", "GetSurveyChart", new { id = 5, questionId = 4 });
         }
 
 
