@@ -17,6 +17,7 @@ using AutoMapper;
 namespace THSurveys.Controllers
 {
     [Authorize]
+    [HandleError]
     public class QuestionController : Controller
     {
         private readonly ISurveyRepository _surveyRepository;
@@ -50,6 +51,7 @@ namespace THSurveys.Controllers
 
         [HttpGet]
         [Authorize(Roles = "User")]
+        //[ChildActionOnly]
         public ActionResult Create(long surveyId)
         {
             //  TODO:   Create a Factory to create the AddQuestionViewModel taking in a surveyId.
@@ -77,6 +79,7 @@ namespace THSurveys.Controllers
         /// </remarks>
         [HttpPost]
         [Authorize(Roles = "User")]
+        //[ChildActionOnly]
         public ActionResult Create(AddQuestionsViewModel question)
         {
             if (ModelState.IsValid)

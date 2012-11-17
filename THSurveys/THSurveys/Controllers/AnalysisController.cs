@@ -10,6 +10,7 @@ using Core.Interfaces;
 using THSurveys.Mappings;
 using THSurveys.Models.Analysis;
 using THSurveys.Infrastructure.Factories;
+using THSurveys.Filters;
 
 namespace THSurveys.Controllers
 {
@@ -19,29 +20,16 @@ namespace THSurveys.Controllers
         /// Holds an instance of the Domain Model Repositories
         /// </summary>
         private readonly ISurveyRepository _surveyRepository;
-        //private readonly ICategoryRepository _categoryRepository;
-        //private readonly IQuestionRepository _questionRepository;
-        //private readonly IRespondentRepository _respondentRepository;
 
         /// <summary>
         /// AnalysisController Constructor which injects the instance of the Domain Model Repositories.
         /// </summary>
         /// <param name="repository">Instance of the Domain Model Repository</param>
-        public AnalysisController(ISurveyRepository surveyRepository) //, ICategoryRepository categoryRepository, IQuestionRepository questionRepository, IRespondentRepository respondentRepository)
+        public AnalysisController(ISurveyRepository surveyRepository) 
         {
             if (surveyRepository == null)
                 throw new ArgumentNullException("SurveyRepository", "No valid Survey repository supplied to AnalysisController");
-            //if (categoryRepository == null)
-            //    throw new ArgumentNullException("CategoryRepository","No valid Category repository supplied to AnalysisController");
-            //if (questionRepository == null)
-            //    throw new ArgumentNullException("QuestionRepository", "No valid Question repository supplied to AnalysisController");
-            //if (respondentRepository == null)
-            //    throw new ArgumentNullException("RespondentRepository", "No valid Respondent repository supplied to AnalysisController");
-
             _surveyRepository = surveyRepository;
-            //_categoryRepository = categoryRepository;
-            //_questionRepository = questionRepository;
-            //_respondentRepository = respondentRepository;
         }
 
         //
@@ -60,7 +48,8 @@ namespace THSurveys.Controllers
         }
 
         /// <summary>
-        /// An ajax call only.
+        /// This is NOT an Ajax call, but serviced by the src attribute
+        /// of the img tag.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="questionId"></param>

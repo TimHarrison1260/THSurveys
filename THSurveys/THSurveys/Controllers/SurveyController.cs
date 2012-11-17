@@ -13,6 +13,7 @@ using THSurveys.Filters;
 namespace THSurveys.Controllers
 {
     [Authorize]
+    [HandleError]
     public class SurveyController : Controller
     {
         private readonly ISurveyRepository _surveyRepository;
@@ -114,7 +115,7 @@ namespace THSurveys.Controllers
 
         [Authorize(Roles="Administrator")]
         [MapSurveyToApprovalListViewModel]
-        public ActionResult Approval()
+        public ActionResult Approve()
         {
             var surveys = _surveyRepository.GetSurveysForApproval();
             return View(surveys);
@@ -123,7 +124,7 @@ namespace THSurveys.Controllers
 
         [HttpPost]
         [Authorize(Roles="Administrator")]
-        public ActionResult Approval(IEnumerable<ApprovalListViewModel.ApprovalInputViewModel> Input)
+        public ActionResult Approve(IEnumerable<ApprovalListViewModel.ApprovalInputViewModel> Input)
         {
             if (ModelState.IsValid)
             {
@@ -139,7 +140,7 @@ namespace THSurveys.Controllers
                 }
                 _surveyRepository.UpdateSurveys(approvedSurveys);
                 //  Return to display to allow more surveys to be approved.
-                return RedirectToAction("Approval");
+                return RedirectToAction("Approve");
             }
             else
             {

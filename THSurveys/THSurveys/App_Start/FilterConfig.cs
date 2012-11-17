@@ -1,6 +1,8 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
+using THSurveys.Filters;
+
 namespace THSurveys
 {
     public class FilterConfig

@@ -6,8 +6,8 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using THSurveys;
 using THSurveys.Controllers;
-
 using Core.Interfaces;
+using Moq;
 
 namespace THSurveys.Tests.Controllers
 {
@@ -18,7 +18,12 @@ namespace THSurveys.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController(new MockSurveyRepository(), new MockCategoryRepository());
+            ISurveyRepository mockSurveyRepository = (ISurveyRepository)new Mock<ISurveyRepository>();
+            ICategoryRepository mockCategoryRepository = (ICategoryRepository)new Mock<ICategoryRepository>();
+            IQuestionRepository mockQuestionRepository = (IQuestionRepository)new Mock<IQuestionRepository>();
+            IRespondentRepository mockRespondentRepository = (IRespondentRepository)new Mock<IRespondentRepository>();
+
+            HomeController controller = new HomeController(mockSurveyRepository, mockCategoryRepository, mockQuestionRepository, mockRespondentRepository);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -31,7 +36,13 @@ namespace THSurveys.Tests.Controllers
         public void About()
         {
             // Arrange
-            HomeController controller = new HomeController(new MockSurveyRepository(), new MockCategoryRepository());
+            ISurveyRepository mockSurveyRepository = (ISurveyRepository)new Mock<ISurveyRepository>();
+            ICategoryRepository mockCategoryRepository = (ICategoryRepository)new Mock<ICategoryRepository>();
+            IQuestionRepository mockQuestionRepository = (IQuestionRepository)new Mock<IQuestionRepository>();
+            IRespondentRepository mockRespondentRepository = (IRespondentRepository)new Mock<IRespondentRepository>();
+
+            HomeController controller = new HomeController(mockSurveyRepository, mockCategoryRepository, mockQuestionRepository, mockRespondentRepository);
+
 
             // Act
             ViewResult result = controller.About() as ViewResult;
@@ -44,7 +55,13 @@ namespace THSurveys.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            HomeController controller = new HomeController(new MockSurveyRepository(),new MockCategoryRepository());
+            ISurveyRepository mockSurveyRepository = (ISurveyRepository)new Mock<ISurveyRepository>();
+            ICategoryRepository mockCategoryRepository = (ICategoryRepository)new Mock<ICategoryRepository>();
+            IQuestionRepository mockQuestionRepository = (IQuestionRepository)new Mock<IQuestionRepository>();
+            IRespondentRepository mockRespondentRepository = (IRespondentRepository)new Mock<IRespondentRepository>();
+
+            HomeController controller = new HomeController(mockSurveyRepository, mockCategoryRepository, mockQuestionRepository, mockRespondentRepository);
+
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;
@@ -53,77 +70,6 @@ namespace THSurveys.Tests.Controllers
             Assert.IsNotNull(result);
         }
     }
-
-    public class MockSurveyRepository : ISurveyRepository
-    {
-
-        public IQueryable<Core.Model.Survey> GetTopTenSurveys()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<Core.Model.Survey> GetAvailableSurveys()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<Core.Model.Survey> GetAllSurveys()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Core.Model.Survey GetSurvey(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public long CreateSurvey(Core.Model.Survey survey)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<Core.Model.Survey > GetSurveysForCategory( long categoryId)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public IQueryable<Core.Model.Survey> GetSurveysForUser(string userName)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<Core.Model.Survey> GetSurveysForApproval()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateSurveys(IList<Core.Model.Survey> survey)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-
-    public class MockCategoryRepository : ICategoryRepository
-    {
-
-        public IQueryable<Core.Model.Category> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Core.Model.Category GetCategory(long Id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Add(Core.Model.Category category)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
 
 
 }

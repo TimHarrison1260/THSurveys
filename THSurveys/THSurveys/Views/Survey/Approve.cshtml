@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<THSurveys.Models.Survey.ApprovalListViewModel>
 
 @{
-    ViewBag.Title = "ApprovalList";
+    ViewBag.Title = "Approval List";
 }
 
 <h2>Surveys awaiting approval</h2>
 
 
-<form action="@Url.Action("Approval","Survey")" method="post">
+<form action="@Url.Action("Approve","Survey")" method="post">
 
     <fieldset>
         <legend>Check Approve to approve surveys</legend>

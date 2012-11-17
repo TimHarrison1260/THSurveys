@@ -36,6 +36,9 @@
     <Content Include="Documents\Design\Development Notes.docx">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Documents\Design\RoutingTable.xlsx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Documents\Design\System Requirements.docx">
       <SubType>Content</SubType>
     </Content>

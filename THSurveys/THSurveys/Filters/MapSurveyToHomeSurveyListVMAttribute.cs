@@ -42,7 +42,7 @@ namespace THSurveys.Filters
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             //  create an instance of the viewmodel class and map the incomming data to it
-            HomeListViewModel viewModel = new HomeListViewModel();
+            HomeLChooseViewModel viewModel = new HomeLChooseViewModel();
             //  populate the viewModel
             viewModel.Categories = new SelectList(_categoryRepository.GetAll(), "CategoryId", "Description");
             //replace the viewData in the filterContext.

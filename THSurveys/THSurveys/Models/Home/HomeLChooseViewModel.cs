@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace THSurveys.Models.Home
 {
-    public class HomeListViewModel
+    public class HomeLChooseViewModel
     {
         //  holds the id of the selected category
         //  make it nullable so a blank value can be received

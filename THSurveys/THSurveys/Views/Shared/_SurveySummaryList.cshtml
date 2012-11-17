@@ -28,11 +28,30 @@
     <tr>
         <td>
             @Html.HiddenFor(modelitem => item.SurveyId)
+            @*
+                Set a different target to the link on the title depending on 
+                whether the user is logged on and which user group they 
+                belong to.
+             *@
             @if (User.Identity.IsAuthenticated)
             {
                 if (User.IsInRole("User"))
                 {
-                    @Html.ActionLink(item.Title, "Create", "Question", new { SurveyId = item.SurveyId }, new {@title="Click to add questions to the survey" })
+                    if (item.Status == Core.Model.SurveyStatusEnum.Incomplete.ToString())
+                    {
+                        @Html.ActionLink(item.Title, "Create", "Question", new { SurveyId = item.SurveyId }, new {@title="Click to add questions to the survey" })
+                    }
+                    else
+                    {
+                        if (item.Status == Core.Model.SurveyStatusEnum.Live.ToString())
+                        {
+                            @Html.ActionLink(item.Title, "QuestionList", "Analysis", new { id = item.SurveyId }, new {@title="Click to analyse the responses to the survey" })
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.Title)
+                        }
+                    }
                 }
                 else
                 {
@@ -41,7 +60,7 @@
             }
             else
             {
-                @Html.ActionLink(item.Title, "TakeSurvey", "Home", new { id = item.SurveyId }, new {@title="Click to take the survey" })
+                @Html.ActionLink(item.Title, "Take", "Home", new { id = item.SurveyId }, new {@title="Click to take the survey" })
             }
         </td>
         <td>
@@ -60,7 +79,7 @@
             @Html.DisplayFor(modelitem => item.Responses)
         </td>
         <td>
-            @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
+            @if (User.Identity.IsAuthenticated && User.IsInRole("User") && item.Status == Core.Model.SurveyStatusEnum.Live.ToString())
             {
                 @Html.ActionLink("View analysis","QuestionList","Analysis", new { id = item.SurveyId }, new {@title="Click to analyse the responses." })
             }

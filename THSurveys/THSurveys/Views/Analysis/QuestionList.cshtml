@@ -99,25 +99,36 @@
 <script>
     $(document).ready(function () {
         //  Assign the handler to the click even for all 'Show Chart' buttons.
-        $('input[id="chartButton"]').click(function(event) {
-            //  get the value of the surveyId being displayed
-            var surveyId = $('#SurveyId').val();
+        $('input[id="chartButton"]').click(function (event) {
             //  Get the questionId of the button clicked.
             var questionId = $(this).attr("name");
+            //  Check if the chart is being shown or hidden.
+            if ($(this).val() === 'Show Chart') {
+                //  get the value of the surveyId being displayed
+                var surveyId = $('#SurveyId').val();
 
-            //  generate the url for the <img src>
-            var actionUrl = '@Url.Action("GetSurveyChart", "Analysis", new { id = "PLACEHOLDER_SurveyId", questionId = "PLACEHOLDER_QuestionId" })'
-            //  Replace the PLACEHOLDERS with the correct values.
-            var tempUrl = actionUrl.replace('PLACEHOLDER_SurveyId', surveyId);
-            var srcUrl = tempUrl.replace('PLACEHOLDER_QuestionId', questionId);
+                //  generate the url for the <img src>
+                var actionUrl = '@Url.Action("GetSurveyChart", "Analysis", new { id = "PLACEHOLDER_SurveyId", questionId = "PLACEHOLDER_QuestionId" })'
+                //  Replace the PLACEHOLDERS with the correct values.
+                var tempUrl = actionUrl.replace('PLACEHOLDER_SurveyId', surveyId);
+                var srcUrl = tempUrl.replace('PLACEHOLDER_QuestionId', questionId);
 
-            //  generate the <img> tag
-            var tag = '<img src="' + srcUrl + '" alt="Asp.Net Charting generated image" style="width:450px;height:300px;border-width:0px;" />' 
+                //  generate the <img> tag
+                var tag = '<img src="' + srcUrl + '" alt="Asp.Net Charting generated image" style="width:450px;height:300px;border-width:0px;" />'
 
-            //  Add the <img> tag to the dom, inside the <div> for displaying the chart,
-            //  Adding this element to the DOM causes the browser to execute the SRC to 
-            //  load the image, which points to the Chart method in the controller.
-            $('#showChart_' + questionId).html(tag);
+                //  Add the <img> tag to the dom, inside the <div> for displaying the chart,
+                //  Adding this element to the DOM causes the browser to load the resource
+                //  in the 'src', the image, which points to the Chart method in the controller.
+                $('#showChart_' + questionId).html(tag);
+
+                //  Change the text on the button.
+                $(this).val('Hide Chart');
+            }
+            else {
+                //  Hide the chart.
+                $(this).val('Show Chart');
+                $('#showChart_' + questionId).html("");
+            }
         });
     });
 

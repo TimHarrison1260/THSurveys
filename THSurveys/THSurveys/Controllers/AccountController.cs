@@ -16,6 +16,7 @@ using Core.Model;
 namespace THSurveys.Controllers
 {
     [Authorize]
+    [HandleError]
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {

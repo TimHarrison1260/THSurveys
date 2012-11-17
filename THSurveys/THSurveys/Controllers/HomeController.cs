@@ -12,6 +12,7 @@ using THSurveys.Mappings;       //  for mapping survey results.
 
 namespace THSurveys.Controllers
 {
+    [HandleError]
     public class HomeController : Controller
     {
         /// <summary>
@@ -53,12 +54,12 @@ namespace THSurveys.Controllers
         }
 
 
-        public ActionResult List()
+        public ActionResult Choose()
         {
             ViewBag.Message = "Select a category to display the list of available surveys";
             ViewBag.Title = "Available Surveys";
             //  create an instance of the viewmodel class and map the incomming data to it
-            HomeListViewModel viewModel = new HomeListViewModel();
+            HomeLChooseViewModel viewModel = new HomeLChooseViewModel();
             //  populate the viewModel wth the categories
             viewModel.Categories = new SelectList(_categoryRepository.GetAll(), "CategoryId", "Description");
             //  Now pass the viewModel to the view, avoids sending the null to the view, which avoids the 
@@ -77,14 +78,14 @@ namespace THSurveys.Controllers
 
 
         [MapSurveyToTakeSurveyViewModel]
-        public ActionResult TakeSurvey(int id)
+        public ActionResult Take(int id)
         {
             var survey = _surveyRepository.GetSurvey(id);
             return View(survey);
         }
 
         [HttpPost]
-        public ActionResult TakeSurvey(TakeSurveyViewModel Responses)
+        public ActionResult Take(TakeSurveyViewModel Responses)
         {
             if (ModelState.IsValid)
             {
