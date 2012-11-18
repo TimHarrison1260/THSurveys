@@ -52,14 +52,14 @@ namespace THSurveys.Controllers
         [HttpGet]
         [Authorize(Roles = "User")]
         //[ChildActionOnly]
-        public ActionResult Create(long surveyId)
+        public ActionResult Create(long id)
         {
             //  TODO:   Create a Factory to create the AddQuestionViewModel taking in a surveyId.
             AddQuestionsViewModel question = new AddQuestionsViewModel();
-            question.SurveyId = surveyId;
+            question.id = id;
 
-            Survey relatedSurvey = _surveyRepository.GetSurvey(surveyId);
-            question.SurveyId = relatedSurvey.SurveyId;
+            Survey relatedSurvey = _surveyRepository.GetSurvey(id);
+            question.id = relatedSurvey.SurveyId;
             question.Title = relatedSurvey.Title;
             question.CategoryDescription = _categoryRepository.GetCategory(relatedSurvey.Category.CategoryId).Description;
 
@@ -88,27 +88,27 @@ namespace THSurveys.Controllers
                 Question newQuestion = Mapper.Map<AddQuestionsViewModel, Question>(question);
 
                 //  Add the related survey                                              (USER INPUT)
-                newQuestion.Survey = _surveyRepository.GetSurvey(question.SurveyId);
+                newQuestion.Survey = _surveyRepository.GetSurvey(question.id);
                 
                 //  Create the Available from the selected TemplateResponses.           (USER SELECTION)
                 var templateResponses = _templateRepository.GetLikertScaleResponses(question.LikertId).ToArray();
                 newQuestion.AvailableResponses = Mapper.Map<TemplateResponse[], AvailableResponse[]>(templateResponses);
 
                 //  Add the sequence number, unique within the survey                   (BUSINESS LOGIC)
-                long seqNo = _questionRepository.GetLastSequenceNumber(question.SurveyId);
+                long seqNo = _questionRepository.GetLastSequenceNumber(question.id);
                 newQuestion.SequenceNumber = ++seqNo;
 
                 //  add the question to the model
                 long id = _questionRepository.AddQuestion(newQuestion);
 
-                return RedirectToAction("Create", new { surveyId = question.SurveyId });
+                return RedirectToAction("Create", new { surveyId = question.id });
             }
             else
             {
                 //  TODO:   Create a Factory to create the AddQuestionViewModel taking in a surveyId.
                 //  Re-instate the reference values.
-                Survey relatedSurvey = _surveyRepository.GetSurvey(question.SurveyId);
-                question.SurveyId = relatedSurvey.SurveyId;
+                Survey relatedSurvey = _surveyRepository.GetSurvey(question.id);
+                question.id = relatedSurvey.SurveyId;
                 question.Title = relatedSurvey.Title;
                 question.CategoryDescription = _categoryRepository.GetCategory(relatedSurvey.Category.CategoryId).Description;
 

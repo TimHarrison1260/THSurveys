@@ -29,8 +29,8 @@
             */
             var selValue = this.selectedIndex;
             var selItem = this[selValue].value;
-            var urlAction = '@Url.Action("SurveyList", "Home", new { id = "PLACEHOLDER" })'
-            var url = urlAction.replace("PLACEHOLDER", selItem);
+            var urlAction = '@Url.Action("SurveyList", "Home", new { id = 9999 })'  // use a dummy numeric to resolve the url
+            var url = urlAction.replace(9999, selItem);
             $.ajax({
                 url: url,
                 type: 'POST',

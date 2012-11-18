@@ -39,7 +39,7 @@
                 {
                     if (item.Status == Core.Model.SurveyStatusEnum.Incomplete.ToString())
                     {
-                        @Html.ActionLink(item.Title, "Create", "Question", new { SurveyId = item.SurveyId }, new {@title="Click to add questions to the survey" })
+                        @Html.ActionLink(item.Title, "Create", "Question", new { id = item.SurveyId }, new {@title="Click to add questions to the survey" })
                     }
                     else
                     {

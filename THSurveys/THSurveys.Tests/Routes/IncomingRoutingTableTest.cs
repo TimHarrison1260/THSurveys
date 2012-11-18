@@ -51,7 +51,7 @@ namespace THSurveys.Tests.Routes
         [TestMethod]
         public void In_Url_Get_Analysis_Chart_Maps_To_Analysis_Controller()
         {
-            TestIncomingRouteOK("~/Analysis/GetSurveyChart/5?questionId=4", "Analysis", "GetSurveyChart", new { id = 5, questionId = 4 });
+            TestIncomingRouteOK("~/Analysis/GetSurveyChart/5?questionId=4", "Analysis", "GetSurveyChart", new { id = "5?questionId=4" });
         }
 
 
@@ -70,14 +70,34 @@ namespace THSurveys.Tests.Routes
         [TestMethod]
         public void Url_SurveyTakeSurveyId_numeric_Maps_To_HomeTake_PassingSurveyId()
         {
-            //  Arrange
-            TestIncomingRouteOK("~/Survey/Take/5", "Home", "Take", new { SurveyId = 5 });
+            TestIncomingRouteOK("~/Survey/Take/5", "Home", "Take", new { id = 5 });
+        }
+
+
+        [TestMethod]
+        public void Url_SurveyTakeSurveyResponses_Maps_To_HomeTake_POST()
+        {
+            TestIncomingRouteOK("~/Survey/Take/responses", "Home", "Take", new { id = "responses" }, "POST");
         }
 
         [TestMethod]
         public void Url_SurveyTakeSurveyId_AsString_Drops_Through_To_Catchall()
         {
             TestIncomingRouteDropsToCatchall("~/Survey/Take/asurveyId");
+        }
+
+        [TestMethod]
+        public void Url_SurveyThankYou_Maps_To_HomeThankyou()
+        {
+            //  Arrange
+            TestIncomingRouteOK("~/Survey/ThankYou/5", "Home", "ThankYou", new { id = 5 });
+        }
+
+        [TestMethod]
+        public void Url_SurveyCategories_With_id_Maps_To_HomeSurveyList()
+        {
+            //  Arrange
+            TestIncomingRouteOK("~/Survey/Categories/5", "Home", "SurveyList", new { id = 5 });
         }
 
         [TestMethod]
@@ -98,10 +118,24 @@ namespace THSurveys.Tests.Routes
             TestIncomingRouteOK("~/Survey/Create", "Survey", "Create");
         }
 
+
+        [TestMethod]
+        public void Url_SurveyCreateSurveyObject_Maps_To_SurveyCreate_On_POST()
+        {
+            TestIncomingRouteOK("~/Survey/Create/?survey", "Survey", "Create", new { id = "?survey" }, "POST");
+        }
+
+
         [TestMethod]
         public void Url_SurveyApprove_Maps_To_SurveyApprove()
         {
             TestIncomingRouteOK("~/Survey/Approve", "Survey", "Approve");
+        }
+
+        [TestMethod]
+        public void Url_SurveyApproveInputObject_Maps_To_SurveyApprove_On_POST()
+        {
+            TestIncomingRouteOK("~/Survey/Approve/?input", "Survey", "Approve", new { id = "?input" }, "POST");
         }
 
         [TestMethod]
@@ -138,6 +172,12 @@ namespace THSurveys.Tests.Routes
         public void Url_SurveyAnalyse_with_numeric_SurveyId_Maps_To_AnalyseQuestionList()
         {
             TestIncomingRouteOK("~/Survey/Analyse/5", "Analysis", "QuestionList", new { id = 5 });
+        }
+
+        [TestMethod]
+        public void Url_AccountLogin_Maps_To_AccountLogin()
+        {
+            TestIncomingRouteOK("~/Account/Login", "Account", "Login", null);
         }
 
 
@@ -242,7 +282,8 @@ namespace THSurveys.Tests.Routes
             //  so well copy the route table once they are tested and point this
             //  to the MVc app.  Meanwhile it points to the RoutingTable class within
             //  this test project.
-            THSurveys.Tests.Routes.RoutingTable.registerRoutes(routes);
+            //THSurveys.Tests.Routes.RoutingTable.registerRoutes(routes);
+            THSurveys.RouteConfig.RegisterRoutes(routes);
             return routes;
         }
 
@@ -264,51 +305,6 @@ namespace THSurveys.Tests.Routes
             //  Return the RequestContext
             return mockHttpRequest.Object;
         }
-
-
-        ///// <summary>
-        ///// Test if the result from the GetRoutedata returned expected
-        ///// results.  All components must match to return true for the
-        ///// method.  Therefore it is possible to test this result for
-        ///// TRUE to ensure a successful Route test.
-        ///// </summary>
-        ///// <param name="routeResult"></param>
-        ///// <param name="controller"></param>
-        ///// <param name="action"></param>
-        ///// <param name="properties"></param>
-        ///// <returns></returns>
-        ///// <remarks>
-        ///// Based upon Freeman and Sanderson,pp332 and lecture notes.  It's 
-        ///// coded slightly differently so that I can understand it easier.  
-        ///// </remarks>
-        //private bool TestIncomingRouteResult(RouteData routeResult, string controller, string action, object properties = null)
-        //{
-        //    //  Check the controller returned.
-        //    bool controllerResult = String.Equals(routeResult.Values["controller"].ToString(), controller,StringComparison.InvariantCultureIgnoreCase);
-        //    //  Check the action returned.
-        //    bool actionResult = String.Equals(routeResult.Values["action"].ToString(), action, StringComparison.InvariantCultureIgnoreCase);
-        //    //  check any properties supplied
-        //    bool propertiesResult = true;
-        //    if (properties == null)
-        //    {
-        //        //  Scan through the properties as they could contain other parms as well as any 'id' specified.
-        //        //  Use reflection to find out what properties are passed in.
-        //        PropertyInfo[] propertyInfo = properties.GetType().GetProperties();
-        //        foreach (var p in propertyInfo)
-        //        {
-        //            //  Check for any properties that don't match.
-        //            //  If the parameter is in the routeresult
-        //            if (routeResult.Values.ContainsKey(p.Name))
-        //            {
-        //                propertiesResult = String.Equals(routeResult.Values[p.Name].ToString(), p.GetValue(properties).ToString(), StringComparison.InvariantCultureIgnoreCase);
-        //                if (!propertiesResult)
-        //                    break;
-        //            }
-        //        }
-        //    }
-        //    //  All must be true 
-        //    return (controllerResult && actionResult && propertiesResult);
-        //}
 
     }
 }

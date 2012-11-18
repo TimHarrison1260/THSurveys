@@ -45,7 +45,7 @@ namespace THSurveys.Controllers
 
         [Authorize(Roles="User")]
         [MapSurveyToSurveySummary]
-        public ActionResult Index()
+        public ActionResult List()
         {
             ViewBag.Title = string.Format("List of Surveys for {0}", User.Identity.Name);
             ViewBag.Message = string.Empty;
@@ -100,10 +100,10 @@ namespace THSurveys.Controllers
 
         [HttpPost]
         [AjaxActionOnly]
-        public ActionResult Submit(long surveyId)
+        public ActionResult Submit(long id)
         {
             string result = "Failed";
-            var survey = _surveyRepository.GetSurvey(surveyId);
+            var survey = _surveyRepository.GetSurvey(id);
             if (survey.SubmitForApproval())
             {
                 Survey[] surveys = new Survey[] { survey };
@@ -126,7 +126,7 @@ namespace THSurveys.Controllers
         [Authorize(Roles="Administrator")]
         public ActionResult Approve(IEnumerable<ApprovalListViewModel.ApprovalInputViewModel> Input)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && (Input != null))
             {
                 IList<Survey> approvedSurveys = new List<Survey>();
                 foreach (var inputApproval in Input)

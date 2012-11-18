@@ -12,7 +12,8 @@ namespace THSurveys.Models.Question
     public class AddQuestionsViewModel
     {
         //  Survey Header information. (Display only)
-        public long SurveyId { get; set; }
+        public long id { get; set; }
+        //public long SurveyId { get; set; }
 
         [DisplayName("Survey Title")]
         public string Title { get; set; }

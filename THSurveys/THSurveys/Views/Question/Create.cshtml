@@ -6,7 +6,7 @@
 
 <h2>
 
-    @Html.HiddenFor(model => model.SurveyId)
+    @Html.HiddenFor(model => model.id)
     @Html.DisplayFor(model => model.Title)
     (
     @Html.DisplayFor(model => model.CategoryDescription)
@@ -83,7 +83,7 @@
 
 
 <div>
-    @Html.ActionLink("Back to List", "Index", "Survey")
+    @Html.ActionLink("Back to List", "List", "Survey")
 </div>
 
 
@@ -96,8 +96,8 @@
             */
             var selValue = this.selectedIndex;
             var selItem = this[selValue].value;
-            var urlAction = '@Url.Action("GetLikertResponses", "Question", new { id = "PLACEHOLDER" })'
-            var url = urlAction.replace("PLACEHOLDER", selItem);
+            var urlAction = '@Url.Action("GetLikertResponses", "Question", new { id = 9999 })'//    Use 9999 as dummy so the url will resolve.
+            var url = urlAction.replace(9999, selItem);
             $.ajax({
                 url: url,
                 type: 'POST',
@@ -116,9 +116,9 @@
             */
             if (confirm("Are you sure all questions have been entered?\r\n\r\nPress 'OK' to submit the survey for approval, otherwise press 'cancel' to return to editing.")) {
                 //  call the server action method to Submit for Approval.
-                var surveyId = $('#SurveyId').val();
-                var urlaction = '@Url.Action("Submit","Survey", new { surveyId = "PLACEHOLDER" })';
-                var url = urlaction.replace("PLACEHOLDER", surveyId);
+                var surveyId = $('#id').val();
+                var urlaction = '@Url.Action("Submit","Survey", new { id = 9999 })';        //  Use 9999 as dummy so that the url will resolve.
+                var url = urlaction.replace(9999, surveyId);
                 $.ajax({
                     url: url,
                     type: 'POST',
@@ -127,7 +127,7 @@
                             //  Display confirmation dialog
                             alert("Survey has successfully been submitted for approval.");
                             //  Route to the Index for survey for this user.
-                            var url = '@Url.Action("Index", "Survey")';
+                            var url = '@Url.Action("List", "Survey")';
                             window.location.href = url;
                         }
                         else {
@@ -144,9 +144,9 @@
     });
 
     function loadQuestions() {
-        var surveyId = $('#SurveyId').val();
-        var urlAction = '@Url.Action("GetQuestionsForSurvey", "Question", new { id = "PLACEHOLDER" })' 
-        var url = urlAction.replace("PLACEHOLDER", surveyId);
+        var surveyId = $('#id').val();
+        var urlAction = '@Url.Action("GetQuestionsForSurvey", "Question", new { id = 9999 })';  //  Use 9999 as dummy so url will resolve 
+        var url = urlAction.replace(9999, surveyId);
         $.ajax({
             url: url,
             type: 'POST',
