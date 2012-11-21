@@ -7,6 +7,9 @@
 <h2>TakeSurvey</h2>
 
 @using (Html.BeginForm()) {
+
+    @Html.AntiForgeryToken()
+
 <fieldset>
     <legend>TakeSurveyViewModel</legend>
     @Html.ValidationSummary(false)

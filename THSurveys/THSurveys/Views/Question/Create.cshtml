@@ -16,6 +16,8 @@
 
 @using (Html.BeginForm()) {
     
+    @Html.AntiForgeryToken()
+    
     <fieldset>
         <legend>Add questions to Survey</legend>
 

@@ -9,6 +9,8 @@
 
 <form action="@Url.Action("Approve","Survey")" method="post">
 
+    @Html.AntiForgeryToken()
+
     <fieldset>
         <legend>Check Approve to approve surveys</legend>
 

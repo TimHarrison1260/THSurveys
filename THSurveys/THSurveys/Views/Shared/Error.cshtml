@@ -1,10 +1,54 @@
 ﻿@model System.Web.Mvc.HandleErrorInfo
 
-@{
-    ViewBag.Title = "Error";
-}
-
 <hgroup class="title">
-    <h1 class="error">Error.</h1>
-    <h2 class="error">An error occurred while processing your request.</h2>
+    <h1 class="error">Oooops!!</h1>
 </hgroup>
+
+
+<h2 class="error">Something didn't work properly</h2>
+
+<p>
+    Please click 
+
+    @if (User.Identity.IsAuthenticated && User.IsInRole("user"))
+    {
+        @Html.ActionLink("here to return to your list of Surveys", "List", "Survey")
+    }
+    else
+    {
+        @Html.ActionLink("here to return to the Home page", "Index", "Home")
+    }
+    and try the operation again.
+</p>
+<p>
+    Click 
+    <a id="showException" href="#" >here, to see the details of the problem</a>.
+</p>
+
+<div id="exceptionInfo" >
+    <div>
+        @Html.DisplayNameFor(m => m.ControllerName)
+        @Html.DisplayFor(m => m.ControllerName)
+    </div>
+    <div>
+        @Html.DisplayNameFor(m => m.ActionName)
+        @Html.DisplayFor(m => m.ActionName)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(m => m.Exception)
+        @Html.DisplayFor(m => m.Exception)
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#showException").click(function () {
+            $("#exceptionInfo").show();
+        });
+        //  Hide the exception stuff.
+        $("#exceptionInfo").hide();
+    });
+</script>
+
+

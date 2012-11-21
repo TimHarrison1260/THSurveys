@@ -78,7 +78,16 @@ namespace THSurveys.Controllers
             return View(viewModel);
         }
 
+        
         //[ChildActionOnly]
+        /// <summary>
+        /// Responds to change in selection of categories.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// No AntiForgery stuff as nothing is updated.
+        /// </remarks>
         [HttpPost]
         [MapSurveyToSurveySummary]
         public ActionResult SurveyList(long? id)
@@ -95,7 +104,14 @@ namespace THSurveys.Controllers
             return View(survey);
         }
 
+        /// <summary>
+        /// Update the responses to a survey.
+        /// </summary>
+        /// <remarks>
+        /// Updates possible, so validate the AntiForgery stuff
+        /// </remarks>
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Take(TakeSurveyViewModel Responses)
         {
             if (ModelState.IsValid)
@@ -141,6 +157,13 @@ namespace THSurveys.Controllers
             return View();
         }
 
+
+        public ActionResult PageNotfound()
+        {
+            ViewBag.Title = "Sorry, an error has occurred";
+            ViewBag.Message = "The page you were looking for could not be found";
+            return View();
+        }
 
     }
 }

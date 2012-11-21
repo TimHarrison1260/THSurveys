@@ -18,6 +18,15 @@ namespace THSurveys.Infrastructure.ModelBinders
     /// CreateSurveyViewModel class to the Core.Model.Survey class for the
     /// Create Survey page.
     /// </summary>
+    /// <remarks>
+    /// 
+    /// Do NOT use repositories within a model binder.
+    /// When using the 'unit of work' pattern to 
+    /// inject the same instance of a repository into
+    /// various components of the mvc app, doing so
+    /// can lead to "DBContext has been disposed"
+    /// errors.  NOT good practice.
+    /// </remarks>
     [Obsolete("Do Not use this modelbinder", true)]
     public class CreateSurveyModelBinder : IModelBinder
     {

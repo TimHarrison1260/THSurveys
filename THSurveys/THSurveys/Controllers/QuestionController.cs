@@ -79,6 +79,7 @@ namespace THSurveys.Controllers
         /// </remarks>
         [HttpPost]
         [Authorize(Roles = "User")]
+        [ValidateAntiForgeryToken]
         //[ChildActionOnly]
         public ActionResult Create(AddQuestionsViewModel question)
         {

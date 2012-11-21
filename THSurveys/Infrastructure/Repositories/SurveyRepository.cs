@@ -37,10 +37,10 @@ namespace Infrastructure.Repositories
         /// <returns></returns>
         public IQueryable<Survey> GetTopTenSurveys()
         {
-            //  TODO:   Alter the linq to return the top 5, not all as this does
-            var surveys = (from s in _unitOfWork.Surveys
-                           where s.Status == 2 && s.IsTemplate == false
-                           select s);
+            var surveys = _unitOfWork.Surveys
+                .Where(s => s.Status == 2 && !s.IsTemplate)
+                .OrderByDescending(x => x.Respondents.Count())
+                .Take(5);
             return surveys;
         }
 
@@ -51,17 +51,18 @@ namespace Infrastructure.Repositories
         /// <returns></returns>
         public IQueryable<Survey> GetSurveysForCategory(long categoryId)
         {
-            var surveys = (from s in _unitOfWork.Surveys
-                           where s.Status == 2 && s.IsTemplate == false && s.Category.CategoryId == categoryId
-                           select s);
+            var surveys = _unitOfWork.Surveys
+                .Where(s => s.Status == 2 && !s.IsTemplate && s.Category.CategoryId == categoryId);
             return surveys;
         }
 
         public IQueryable<Survey> GetSurveysForUser(string userName)
         {
-            var surveys = (from s in _unitOfWork.Surveys
-                           where s.IsTemplate == false && s.User.UserName == userName
-                           select s);
+            //var surveys = (from s in _unitOfWork.Surveys
+            //               where s.IsTemplate == false && s.User.UserName == userName
+            //               select s);
+            var surveys = _unitOfWork.Surveys
+                .Where(s => !s.IsTemplate && s.User.UserName == userName);
             return surveys;
         }
 

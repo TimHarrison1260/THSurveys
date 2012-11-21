@@ -33,14 +33,11 @@ namespace THSurveys
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
 
-            //  Cleare out the default viewengines and register only the Razor view engine.
+            //  Clear out the default viewengines and register only the Razor view engine.
             //  This should cut down the response time for finding the view, as Tesco says: 
             //  "Every little helps".
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
-
-
-            //  TODO: configure a routine to populate the database.  (Possibly).
 
             //  Call automaper configuration
             Mappings.AutoMapperConfiguration.Configure();
@@ -48,8 +45,7 @@ namespace THSurveys
             //  Add the custom model binders.
             ModelBinders.Binders.Add(typeof(TakeSurveyViewModel),
                 new THSurveys.Infrastructure.ModelBinders.TakeSurveyModelbinder());
-            ModelBinders.Binders.Add(typeof(ApprovalListViewModel),
-                new THSurveys.Infrastructure.ModelBinders.SurveyApprovalModelbinder());
+
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿@model System.Web.Mvc.HandleErrorInfo
 
 <hgroup class="title">
-    <h1 class="error">Authentication Error</h1>
+    <h1 class="error">@ViewBag.Title</h1>
 </hgroup>
 
 
-<h2 class="error">You are not authorised to use this resource</h2>
+<h2 class="error">@ViewBag.Message</h2>
 
 <p>
     Please click 
@@ -18,11 +18,13 @@
     {
         @Html.ActionLink("here to return to the Home page", "Index", "Home")
     }
-    and try the operation again.
+    try again.
 </p>
 <p>
-    Click 
-    <a id="showException" href="#" >here, to see the details of the problem</a>.
+    Alternatively, click 
+    <a id="showException" href="#" >here, to see the details of the problem</a>
+    @*@Html.ActionLink("here, to see the details of the problem", "Index", "Home", null, null)*@
+    but go and get a coffee first and calm down, it's not quite the end of the world yet!
 </p>
 
 <div id="exceptionInfo" >
@@ -42,7 +44,7 @@
 </div>
 
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         $("#showException").click(function () {
             $("#exceptionInfo").show();
         });

@@ -69,6 +69,7 @@ namespace THSurveys.Controllers
         // POST: /Survey/Create
         [HttpPost]
         [Authorize(Roles = "User")]
+        [ValidateAntiForgeryToken]      //  Update, validate AntiForgery stuff.
         public ActionResult Create(CreateSurveyViewModel survey)
         {
             if (ModelState.IsValid)
@@ -85,9 +86,9 @@ namespace THSurveys.Controllers
                 newSurvey.Category = _categoryRepository.GetCategory(survey.CategoryId);
 
                 //  Add the new survey to the model, and retrieve its key so we can progress to the Add Questions
-                long id = _surveyRepository.CreateSurvey(newSurvey);
+                long newSurveyid = _surveyRepository.CreateSurvey(newSurvey);
 
-                return RedirectToAction("Create", "Question", new { surveyId = id });
+                return RedirectToAction("Create", "Question", new { id = newSurveyid });
             }
             else
             {
@@ -124,6 +125,7 @@ namespace THSurveys.Controllers
 
         [HttpPost]
         [Authorize(Roles="Administrator")]
+        [ValidateAntiForgeryToken]
         public ActionResult Approve(IEnumerable<ApprovalListViewModel.ApprovalInputViewModel> Input)
         {
             if (ModelState.IsValid && (Input != null))

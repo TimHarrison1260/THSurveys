@@ -6,7 +6,15 @@ using System.Web.Mvc;
 
 namespace THSurveys.Infrastructure.ModelBinders
 {
-    //[Obsolete("Do not require to use this",true)]
+    /// <summary>
+    /// This is not even started really.  Not the best solution
+    /// to the prolem.  
+    /// </summary>
+    /// <remarks>
+    /// Leave this here but NOTE, it is NOT part of the fuctioning
+    /// solution.
+    /// </remarks>
+    [Obsolete("Do not require to use this",true)]
     public class SurveyApprovalModelbinder : DefaultModelBinder
     {
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)

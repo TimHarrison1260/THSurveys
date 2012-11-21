@@ -356,7 +356,7 @@
     <Content Include="Views\Home\ThankYou.cshtml" />
     <Content Include="Views\Analysis\QuestionList.cshtml" />
     <Content Include="Views\Shared\ErrorNotAuthorised.cshtml" />
-    <Content Include="Views\Shared\ErrorNotFound.cshtml" />
+    <Content Include="Views\Shared\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
