@@ -50,6 +50,11 @@ namespace IoCMappings
             kernel.Bind<Core.Interfaces.IQuestionRepository>().To<Infrastructure.Repositories.QuestionRepository>();
             //  Bind the IRespondentRepository to its concrete implementation RespondentRepository.
             kernel.Bind<Core.Interfaces.IRespondentRepository>().To<Infrastructure.Repositories.RespondentRepository>();
+
+            //  Bind the abstract factory for Respondents.
+            kernel.Bind<Core.Factories.RespondentFactory>().To<Core.Factories.ConcreteResponentFactory>();
+            //  Bind the abstract factory for ActualResponses.
+            kernel.Bind<Core.Factories.ActualResponseFactory>().To<Core.Factories.ConcreteActualResponseFactory>();
         }
     }
 }

@@ -5,14 +5,29 @@ using System.Web;
 using Core.Model;
 using Core.Interfaces;
 using THSurveys.Models.Home;
+using THSurveys.Infrastructure.Interfaces;
 
 namespace THSurveys.Mappings
 {
-    public static class ReinstateTakeSurveyViewModel
+    public class ReinstateTakeSurveyViewModel : IReinstateTakeSurveyViewModel
     {
-        public static TakeSurveyViewModel Map(TakeSurveyViewModel responses, ISurveyRepository surveyRepository, IQuestionRepository questionRepository)
+        private readonly ISurveyRepository _surveyRepository;
+        private readonly IQuestionRepository _questionRepository;
+
+        public ReinstateTakeSurveyViewModel(ISurveyRepository surveyRepository, IQuestionRepository questionRepository)
         {
-            Survey survey = surveyRepository.GetSurvey(responses.SurveyId);
+            if (surveyRepository == null)
+                throw new ArgumentNullException("SurveyRepository", "No valid survey repository supplied.");
+            if (questionRepository == null)
+                throw new ArgumentNullException("QuestionRepository", "No valid question repository supplied.");
+
+            _surveyRepository = surveyRepository;
+            _questionRepository = questionRepository;
+        }
+
+        public TakeSurveyViewModel Map(TakeSurveyViewModel responses)
+        {
+            Survey survey = _surveyRepository.GetSurvey(responses.SurveyId);
 
             TakeSurveyViewModel viewModel = new TakeSurveyViewModel();
 
@@ -30,7 +45,7 @@ namespace THSurveys.Mappings
             foreach (SurveyQuestionsViewModel q in responses.Questions)
             {
                 //  Get the question and available responses from the repository.
-                Core.Model.Question questionInfo = questionRepository.GetQuestion(Convert.ToInt64(q.QId_SeqNo.Split('_')[0]));
+                Core.Model.Question questionInfo = _questionRepository.GetQuestion(Convert.ToInt64(q.QId_SeqNo.Split('_')[0]));
 
                 SurveyQuestionsViewModel questionViewModel = new SurveyQuestionsViewModel();
                 questionViewModel.QId_SeqNo = q.QId_SeqNo;

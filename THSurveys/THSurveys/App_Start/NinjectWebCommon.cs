@@ -77,9 +77,15 @@ namespace THSurveys.App_Start
             //  the UI.
             Mappings.RegisterServices(kernel);
 
-            ////  Bind the ISurveyRepository to its concrete implementation SurveyRepository.
-            //kernel.Bind<Core.Interfaces.ISurveyRepository>().To<Infrastructure.SurveyRepository>();
-        
+            //  Add additional binding stuff so that we can inject 
+            //  dependencies within the THSurveys project.  This is
+            //  avoids having to reference THSurveys project from 
+            //  within the IoC project, because a reference THSurveys
+            //  from there causes a circular reference, BAD!!!
+
+            //  Allow the instsance of the TakeSurveyViewModelToSurvey mapper class.
+            kernel.Bind<THSurveys.Infrastructure.Interfaces.IMapTakeSurveyViewModel>().To<THSurveys.Mappings.MapTakeSurveyViewModelToSurvey>();
+            kernel.Bind<THSurveys.Infrastructure.Interfaces.IReinstateTakeSurveyViewModel>().To<THSurveys.Mappings.ReinstateTakeSurveyViewModel>();
         }        
     }
 }

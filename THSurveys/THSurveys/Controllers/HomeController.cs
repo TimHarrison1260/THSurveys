@@ -9,6 +9,7 @@ using THSurveys.Filters;        //  Access to the mapping and other filters
 using THSurveys.Models.Home;    //  Access the viewmodels supporting the home controller and views
 using THSurveys.Models.Shared;  
 using THSurveys.Mappings;       //  for mapping survey results.
+using THSurveys.Infrastructure.Interfaces;
 
 namespace THSurveys.Controllers
 {
@@ -23,11 +24,15 @@ namespace THSurveys.Controllers
         private readonly IQuestionRepository _questionRepository;
         private readonly IRespondentRepository _respondentRepository;
 
+        private readonly IMapTakeSurveyViewModel _takeSurveyViewModelMapper;
+        private readonly IReinstateTakeSurveyViewModel _reinstateTakeWurveyViewModelMapper;
+
         /// <summary>
         /// HomeController Constructor which injects the instance of the Domain Model Repositories.
         /// </summary>
         /// <param name="repository">Instance of the Domain Model Repository</param>
-        public HomeController(ISurveyRepository surveyRepository, ICategoryRepository categoryRepository, IQuestionRepository questionRepository, IRespondentRepository respondentRepository)
+        public HomeController(ISurveyRepository surveyRepository, ICategoryRepository categoryRepository, IQuestionRepository questionRepository, IRespondentRepository respondentRepository
+            , IMapTakeSurveyViewModel takeSurveyViewModeMapper, IReinstateTakeSurveyViewModel reinstateTakeSurveyViewModelMapper)
         {
             if (surveyRepository == null)
                 throw new ArgumentNullException("repository", "No valid repository supplied to HomeController");
@@ -37,11 +42,17 @@ namespace THSurveys.Controllers
                 throw new ArgumentNullException("QuestionRepository", "No valid Question repository supplied to HomeController");
             if (respondentRepository == null)
                 throw new ArgumentNullException("RespondentRepository", "No valid Respondent repository supplied to HomeController");
+            if (takeSurveyViewModeMapper == null)
+                throw new ArgumentNullException("TakeSurveyviewModelMapper", "No valid mapper for TakeSurveyViewModel supplied to HomeController");
+            if (reinstateTakeSurveyViewModelMapper == null)
+                throw new ArgumentNullException("ReinstateTakeSurveyViewModelMapper", "No valie mapper for ReinstateTakeSurveyViewModel supplied to HomeController");
 
             _surveyRepository = surveyRepository;
             _categoryRepository = categoryRepository;
             _questionRepository = questionRepository;
             _respondentRepository = respondentRepository;
+            _takeSurveyViewModelMapper = takeSurveyViewModeMapper;
+            _reinstateTakeWurveyViewModelMapper = reinstateTakeSurveyViewModelMapper;
         }
 
         [MapSurveyToSurveySummary]
@@ -90,7 +101,7 @@ namespace THSurveys.Controllers
             if (ModelState.IsValid)
             {
                 //  Map the responses to the Survey.
-                Survey surveyWithResults = Mappings.MapTakeSurveyViewModelToSurvey.Map(Responses, _surveyRepository);
+                Survey surveyWithResults = _takeSurveyViewModelMapper.Map(Responses);
                 
                 //  Now update the DbContext
                 Survey[] surveys = new Survey[] { surveyWithResults };
@@ -101,7 +112,7 @@ namespace THSurveys.Controllers
             }
 
             //  An error, so reconstruct the survey details and return to the view
-            TakeSurveyViewModel viewModel = Mappings.ReinstateTakeSurveyViewModel.Map(Responses, _surveyRepository, _questionRepository);
+            TakeSurveyViewModel viewModel = _reinstateTakeWurveyViewModelMapper.Map(Responses);
 
             return View(viewModel);
         }

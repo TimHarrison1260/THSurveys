@@ -201,6 +201,8 @@
     <Compile Include="Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Infrastructure\Factories\MVCChartFactory.cs" />
     <Compile Include="Infrastructure\Factories\SurveyChartFactory.cs" />
+    <Compile Include="Infrastructure\Interfaces\IMapTakeSurveyViewModel.cs" />
+    <Compile Include="Infrastructure\Interfaces\IReinstateTakeSurveyViewModel.cs" />
     <Compile Include="Infrastructure\ModelBinders\CreateSurveyModelBinder.cs" />
     <Compile Include="Infrastructure\ModelBinders\SurveyApprovalModelbinder.cs" />
     <Compile Include="Infrastructure\ModelBinders\TakeSurveyModelbinder.cs" />

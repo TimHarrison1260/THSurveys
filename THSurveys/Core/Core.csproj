@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\ActualResponseFactory.cs" />
+    <Compile Include="Factories\ConcreteActualResponseFactory.cs" />
+    <Compile Include="Factories\ConcreteResponentFactory.cs" />
     <Compile Include="Factories\QuestionFactory.cs" />
     <Compile Include="Factories\RespondentFactory.cs" />
     <Compile Include="Factories\SurveyAnalysisServiceFactory.cs" />
