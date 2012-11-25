@@ -8,17 +8,16 @@
 <h2 class="error">Something didn't work properly</h2>
 
 <p>
-    Please click 
-
-    @if (User.Identity.IsAuthenticated && User.IsInRole("user"))
+    Please click <span id="exitLink" ></span> and try the operation again.
+@*    @if (User.Identity.IsAuthenticated && User.IsInRole("user"))
     {
         @Html.ActionLink("here to return to your list of Surveys", "List", "Survey")
     }
     else
     {
-        @Html.ActionLink("here to return to the Home page", "Index", "Home")
-    }
-    and try the operation again.
+        @Html.ActionLink("here to return to the Home page", "Logoff", "Account")
+    }*@
+    
 </p>
 <p>
     Click 
@@ -43,9 +42,20 @@
 
 <script>
     $(document).ready(function () {
+        //  Set up event handlers.
         $("#showException").click(function () {
             $("#exceptionInfo").show();
         });
+
+        //  Setup the link to exit this error page.
+        //  We're trying to avoid the WebSecurity related InvalidOperationExceptions 
+        //  because the localDB has timed out (I think this is the reason).
+        if ($('#logoutForm').length > 0) {
+            $('#exitLink').html('<a href="javascript:document.getElementById(\'logoutForm\').submit()">here to return to the Home page</a>');
+        } else {
+            $('#exitLink').html('@Html.ActionLink("here to return to the Home page", "Index", "Home")');
+        }
+
         //  Hide the exception stuff.
         $("#exceptionInfo").hide();
     });

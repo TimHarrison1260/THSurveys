@@ -79,7 +79,6 @@ namespace THSurveys.Controllers
         }
 
         
-        //[ChildActionOnly]
         /// <summary>
         /// Responds to change in selection of categories.
         /// </summary>
@@ -90,6 +89,7 @@ namespace THSurveys.Controllers
         /// </remarks>
         [HttpPost]
         [MapSurveyToSurveySummary]
+        [AjaxActionOnly]
         public ActionResult SurveyList(long? id)
         {
             var surveys = (id == null ? _surveyRepository.GetAvailableSurveys() : _surveyRepository.GetSurveysForCategory(Convert.ToInt64(id)));
@@ -146,13 +146,6 @@ namespace THSurveys.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }

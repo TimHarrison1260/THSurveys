@@ -51,10 +51,9 @@ namespace THSurveys.Controllers
 
         [HttpGet]
         [Authorize(Roles = "User")]
-        //[ChildActionOnly]
         public ActionResult Create(long id)
         {
-            //  TODO:   Create a Factory to create the AddQuestionViewModel taking in a surveyId.
+            //  TODO:   Refactor this to a Mapping class, probably not an Action Filter as there are repository calls required.
             AddQuestionsViewModel question = new AddQuestionsViewModel();
             question.id = id;
 
@@ -69,7 +68,7 @@ namespace THSurveys.Controllers
         }
 
         /// <summary>
-        /// Crates a Question and adds it to the related Survey.  The viewModel contains the SurveyId.
+        /// Creates a Question and adds it to the related Survey.  The viewModel contains the SurveyId.
         /// </summary>
         /// <param name="question">The AddQuestionsViewModel, containing the user input.</param>
         /// <returns>Returns to the AddQuestions view.</returns>
@@ -80,7 +79,6 @@ namespace THSurveys.Controllers
         [HttpPost]
         [Authorize(Roles = "User")]
         [ValidateAntiForgeryToken]
-        //[ChildActionOnly]
         public ActionResult Create(AddQuestionsViewModel question)
         {
             if (ModelState.IsValid)
@@ -106,7 +104,6 @@ namespace THSurveys.Controllers
             }
             else
             {
-                //  TODO:   Create a Factory to create the AddQuestionViewModel taking in a surveyId.
                 //  Re-instate the reference values.
                 Survey relatedSurvey = _surveyRepository.GetSurvey(question.id);
                 question.id = relatedSurvey.SurveyId;

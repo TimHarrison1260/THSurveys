@@ -3,16 +3,26 @@
 @{
     ViewBag.Title = "Add Questions to your survey.";
 }
-
-<h2>
-
-    @Html.HiddenFor(model => model.id)
-    @Html.DisplayFor(model => model.Title)
-    (
-    @Html.DisplayFor(model => model.CategoryDescription)
-    )
-
-</h2>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <div>
+                    <h1>@ViewBag.Title.</h1>
+                </div>
+                <div>
+                    <h2>
+                        @Html.HiddenFor(model => model.id)
+                        @Html.DisplayFor(model => model.Title)
+                        (
+                        @Html.DisplayFor(model => model.CategoryDescription)
+                        )
+                    </h2>
+                </div>
+            </hgroup>
+        </div>
+    </section>
+}
 
 @using (Html.BeginForm()) {
     
@@ -21,7 +31,7 @@
     <fieldset>
         <legend>Add questions to Survey</legend>
 
-        <div style="border:none; border-radius: 10px; padding:5px; background-color:lightcyan">
+        <div>  
 
             @Html.ValidationSummary(true)
 
@@ -45,8 +55,9 @@
                         <td>
                             @Html.DropDownListFor(model => model.LikertId, Model.LikertTemplates, "Please Select a template...")
                         </td>
-                        <td>
+                        <td style="width: 280px;">
                             <input type="submit" value="Add Question." />
+                            <input type="button" id="submitForApproval" value="Submit for Approval" />
                         </td>
                     </tr>
                     <tr>
@@ -62,20 +73,13 @@
                 <tfoot>
                     <tr>
                         <td></td>
-                        <td>
+                        <td colspan="2">
                             <div id="responseList"></div>
-                        </td>
-                        <td>
-                            <input type="button" id="submitForApproval" value="Submit for Approval" />
                         </td>
                     </tr>
                 </tfoot>
             </table>
-
-
-
         </div>
-
     </fieldset>
 }
 
@@ -83,8 +87,9 @@
 
 </div>
 
+<br />
 
-<div>
+<div class="linkButton">
     @Html.ActionLink("Back to List", "List", "Survey")
 </div>
 
@@ -92,22 +97,40 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        //  Add 'exists' function to return true if the selector is found.
+        //  See: http://stackoverflow.com/questions/4257906/jquery-determining-if-element-exists-on-page
+        //  Which offers a nice solution to checking if a DOM element exists, rather than just checking
+        //  the length of the object, which is not very readable.
+        jQuery.fn.exists = function () { return jQuery(this).length > 0; }
+
         $('#LikertId').change(function() {
             /*
             *   $.load dosn't work as a POST request is needed.  Therefore use Ajax method directly.
             */
             var selValue = this.selectedIndex;
-            var selItem = this[selValue].value;
-            var urlAction = '@Url.Action("GetLikertResponses", "Question", new { id = 9999 })'//    Use 9999 as dummy so the url will resolve.
-            var url = urlAction.replace(9999, selItem);
-            $.ajax({
-                url: url,
-                type: 'POST',
-                success: function (result) {
-                    //  Load the result intothe summaryList element.
-                    $("#responseList").html(result);
+            if (selValue != 0) {
+                var selItem = this[selValue].value;
+                var urlAction = '@Url.Action("GetLikertResponses", "Question", new { id = 9999 })'//    Use 9999 as dummy so the url will resolve.
+                var url = urlAction.replace(9999, selItem);
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    success: function (result) {
+                        //  Load the result intothe summaryList element.
+                        $("#responseList").html(result);
+                        //  Hide the Approval button.
+                        $("#submitForApproval").hide();
+                    }
+                });
+            } else {
+                $('#responseList').hide();
+                //  Check if the submit button should be hidden
+                if ($('#Text').val() == "") {
+                    $("#submitForApproval").show();
+                } else {
+                    $("#submitForApproval").hide();
                 }
-            });
+            }
         })
 
 
@@ -140,6 +163,31 @@
             }
         })
 
+        $('#Text').blur(function () {
+            if ($(this).val() != "") {
+                $("#submitForApproval").hide();
+            } else {
+                if ($('#LikertId').val() == "") {
+                    $("#submitForApproval").show();
+                } else {
+                    $("#submitForApproval").hide();
+                }
+            }
+        });
+        
+        $('#LikertId').blur(function () {
+            var selValue = $(this).val();
+            if (selValue != "") {
+                $("#submitForApproval").hide();
+            } else {
+                if ($('#Text').val() == "") {
+                    $("#submitForApproval").show();
+                } else {
+                    $("#submitForApproval").hide();
+                }
+            }
+        });
+
         //  load any existing questions.
         loadQuestions();
 
@@ -155,8 +203,23 @@
             success: function (result) {
                 //  Load the result intothe summaryList element.
                 $("#questionList").html(result);
+                //  The questions are updated now or the NoQuestions has been added
+                hideApprovalButton();
             }
         });
+    }
+
+    function hideApprovalButton() {
+        var AreThereNoQuestions = $("#NoQuestions").exists();
+        if (AreThereNoQuestions) {
+            $("#submitForApproval").hide();
+        }
+        else {
+            var testValue = $("#Text").val();
+            var selValue = $("#LikertId").selectedIndex;
+            if ((testValue != "") || (selValue != undefined))
+                $("#submitForApproval").hide();
+        }
     }
 
 </script>

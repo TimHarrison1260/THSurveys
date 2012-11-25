@@ -4,7 +4,12 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                    <h1>@ViewBag.Title.</h1>
+                <div>
+                <h1>@ViewBag.Title.</h1>
+                </div>
+                <div>
+                <h2>@ViewBag.Message</h2>
+                </div>
             </hgroup>
         </div>
     </section>
@@ -16,9 +21,8 @@
         </h5>
 </div>
 
-<div id="summaryList" />
-@*    @Html.Partial("_SurveySummaryList", Model.Surveys)*@
-@*</div>*@
+<div id="summaryList"></div>
+
 
 <script type="text/javascript">
     $(document).ready(function () {

@@ -15,16 +15,20 @@ body {
 }
 
 a {
-    color: #333;
+    color: blue;          /*#333;*/
     outline: none;
     padding-left: 3px;
     padding-right: 3px;
     text-decoration: underline;
 }
 
-    a:link, a:visited,
+    a:link,
     a:active, a:hover {
-        color: #333;
+        color: blue;  /*#333;*/
+    }
+
+    a:visited {
+        color: purple;
     }
 
     a:hover {
@@ -105,13 +109,13 @@ h5, h6 {
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
+        /*background: url("../Images/accent.png") no-repeat;*/  /*The semi-circle at the bottom of the featured section: background*/
         padding-left: 10px;
         padding-top: 30px;
     }
 
     .featured + .main-content {
-        background: url("../Images/heroAccent.png") no-repeat;
+        /*background: url("../Images/heroAccent.png") no-repeat;*/ /*The semi-circle at the bottom of the featured section: actual image*/
     }
 
 header .content-wrapper {
@@ -129,15 +133,17 @@ footer {
 /* site title
 ----------------------------------------------------------*/
 .site-title {
+    background: url("../Images/ThSurvey_Logo_Small.png") no-repeat;
     color: #c8c8c8;
     font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
     font-size: 2.3em;
-    margin: 0;
+    height: 65px;
+    margin: 0px;
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
-    background: none;
-    color: #c8c8c8;
+    background: inherit;
+    color: blue ;
     outline: none;
     text-decoration: none;
 }
@@ -153,7 +159,7 @@ footer {
 }
 
     #login a {
-        background-color: #d3dce0;
+        background-color: none;                   /* #d3dce0;*/
         margin-left: 10px;
         margin-right: 3px;
         padding: 2px 3px;
@@ -213,14 +219,16 @@ ul#menu {
 }
 
     .featured .content-wrapper {
-        background-color: #7ac0da;
-        background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
-        background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        color: #3e5667;
+        background-color:  darkgreen;                 /*    #7ac0da;*/ /*Think this is where the colour is changed in the background for the features section.*/
+        background-image: -ms-linear-gradient(top, blue 0%, lightblue 100%);                /*left, #7ac0da 0%, #a4d4e6 100%);*/
+        background-image: -o-linear-gradient(top, blue 0%, lightblue 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, blue), color-stop(1, lightblue));     /*(linear, left top, right top, color-stop(0, blue), color-stop(1, lightblue));*/
+        background-image: -webkit-linear-gradient(top, blue 0%, lightblue 100%);
+        background-image: linear-gradient(top, blue 0%, lightblue 100%);
+        color: darkblue;                             /*#3e5667;*/
         padding: 20px 40px 30px 40px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
         .featured hgroup.title h1, .featured hgroup.title h2 {
@@ -395,6 +403,27 @@ aside {
 }
 
 /* forms */
+.linkButton a {
+    background-color:  darkgreen;                 /*    #7ac0da;*/ /*Think this is where the colour is changed in the background for the features section.*/
+    background-image: -ms-linear-gradient(top, blue 0%, lightblue 100%);                /*left, #7ac0da 0%, #a4d4e6 100%);*/
+    background-image: -o-linear-gradient(top, blue 0%, lightblue 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, blue), color-stop(1, lightblue));     /*(linear, left top, right top, color-stop(0, blue), color-stop(1, lightblue));*/
+    background-image: -webkit-linear-gradient(top, blue 0%, light 100%);
+    background-image: linear-gradient(top, blue 0%, light 100%);
+    color: white;                             /*#3e5667;*/
+    border-radius: 5px;
+
+    /*background-color: #d3dce0;*/
+    /*border: 1px solid #787878;*/
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 7px 7px 7px;
+    margin: 5px;
+    width: auto;
+}
+
 fieldset {
     border: none;
     margin: 0;
@@ -452,8 +481,18 @@ textarea {
     input[type="submit"],
     input[type="button"],
     button {
-        background-color: #d3dce0;
-        border: 1px solid #787878;
+
+        background-color:  darkgreen;                 /*    #7ac0da;*/ /*Think this is where the colour is changed in the background for the features section.*/
+        background-image: -ms-linear-gradient(top, blue 0%, lightblue 100%);                /*left, #7ac0da 0%, #a4d4e6 100%);*/
+        background-image: -o-linear-gradient(top, blue 0%, lightblue 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, blue), color-stop(1, lightblue));     /*(linear, left top, right top, color-stop(0, blue), color-stop(1, lightblue));*/
+        background-image: -webkit-linear-gradient(top, blue 0%, light 100%);
+        background-image: linear-gradient(top, blue 0%, light 100%);
+        color: white;                             /*#3e5667;*/
+        border-radius: 5px;
+
+        /*background-color: #d3dce0;*/
+        /*border: 1px solid #787878;*/
         cursor: pointer;
         font-size: 1.2em;
         font-weight: 600;

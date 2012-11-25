@@ -3,12 +3,24 @@
 @{
     ViewBag.Title = "Analysis of Survey Responses";
 }
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <div>
+                    <h1>@ViewBag.Title.</h1>
+                </div>
+                <div>
+                    <h2>
+                        @Html.HiddenFor(m => m.SurveyId)
+                        @Html.DisplayFor(m => m.Title)
+                    </h2>
+                </div>
+            </hgroup>
+        </div>
+    </section>
+}
 
-<h2>Survey</h2>
-<h5>
-    @Html.HiddenFor(m => m.SurveyId)
-    @Html.DisplayFor(m => m.Title)
-</h5>
 <h5>
     Analysis of 
     @Html.DisplayFor(m => m.NumberOfRespondents)
@@ -55,8 +67,8 @@
             </tr>
             <tr id="questionAnalysis_@Html.DisplayFor(modelItem => item.QuestionId)"> 
                     <td></td>
-                    <td colspan="2">
-                        <div id="questionAnalysis" >
+                    <td colspan="3">
+                        <div id="questionAnalysis" style="float:left">
                                 <table>
                                     <tr>
                                         <td>
@@ -69,33 +81,36 @@
                                             %age
                                         </td>
                                     </tr>
-                            @foreach (var response in item.Analysis)
-                            {
-                                <tr>
-                                    <td>
-                                        @Html.HiddenFor(r => response.LikertScaleNumber)
-                                        @Html.DisplayFor(r => response.Text)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(r => response.NumberOfResponses)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(r => response.Percentage)%
-                                    </td>
-                                </tr>
-                            }
-
+                                        @foreach (var response in item.Analysis)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.HiddenFor(r => response.LikertScaleNumber)
+                                                    @Html.DisplayFor(r => response.Text)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(r => response.NumberOfResponses)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(r => response.Percentage)%
+                                                </td>
+                                            </tr>
+                                        }
                                 </table>
                         </div>
-                        <div id="showChart_@Html.DisplayFor(modelItem => item.QuestionId)">
+                        <div id="showChart_@Html.DisplayFor(modelItem => item.QuestionId)" style="float: right">
                         </div>
+                        <div style="clear: both;"></div>
                     </td>
             <tr> 
         </tbody>
     }
 </table>
 
-@Html.ActionLink("Back to surveys", "List", "Survey")
+<br />
+<div class="linkButton">
+    @Html.ActionLink("Back to surveys", "List", "Survey")
+</div>
 
 <script>
     $(document).ready(function () {

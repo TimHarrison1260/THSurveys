@@ -30,13 +30,16 @@
       <SubType>Content</SubType>
       <DependentUpon>Class diagrams\Surveys.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Documents\Analysis\Development Notes.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Documents\Analysis\Research Questions.docx">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Documents\Design\Development Notes.docx">
+    <Content Include="Documents\Design\RoutingTable.xlsx">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Documents\Design\RoutingTable.xlsx">
+    <Content Include="Documents\Design\System Design.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Documents\Design\System Requirements.docx">

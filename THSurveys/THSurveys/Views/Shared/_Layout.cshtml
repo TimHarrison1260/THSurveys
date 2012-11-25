@@ -13,19 +13,29 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("TH Surveys", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Participation", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Surveys","List","Survey")</li>
+                    <nav id="cssmenu">
+                        <ul>
+                            <li  id="home">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="has-sub">@Html.ActionLink("Participation", "Index", "Home")
+                                <ul>
+                                    <li>@Html.ActionLink("Top 5 Surveys","Index","Home")</li>
+                                    <li>@Html.ActionLink("Choose by Category", "Choose", "Home")</li>
+                                </ul>
+                            </li>
+                            <li class="has-sub">@Html.ActionLink("Surveys","List","Survey")
+                                <ul>
+                                    <li>@Html.ActionLink("List my Surveys", "List", "Survey")</li>
+                                    <li>@Html.ActionLink("Create", "Create", "Survey")</li>
+                                </ul>
+                            </li>
                             <li>@Html.ActionLink("Administration","Approve","Survey")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
                     </nav>
                 </div>
@@ -40,7 +50,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                    <p>&copy; @DateTime.Now.Year - THSurveys</p>
                 </div>
             </div>
         </footer>

@@ -1,34 +1,49 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Tim Harrison";
+    ViewBag.Message = "(Student: S1134700)";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <div>
+                    <h1>@ViewBag.Title.</h1>
+                </div>
+                <div>
+                    <h2>@ViewBag.Message</h2>
+                </div>
+            </hgroup>
+        </div>
+    </section>
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
-
 <article>
+    <h5>Plagiarism disclaimer</h5>
     <p>
-        Use this area to provide additional information.
+        I confirm that the code contained in this file (other than that provided, authorised or listed below in Acknowledgements) 
+        is all my own work and has not been submitted elsewhere in fulfilment of this or any other award.
     </p>
 
+    <h5>Acknowledgements</h5>
     <p>
-        Use this area to provide additional information.
+        Code to use the MVCChart tool on the Analysis page, is based upon code from 
+        <a href="http://www.codeproject.com/Articles/297677/Using-ASP-Net-Charting-with-Image-Map-in-MVC" >this CodeProject article</a>,
+        by <a href="http://www.codeproject.com/script/Membership/View.aspx?mid=5002996">Dr Song Li</a>.  Essentialy, the code is used to 
+        apply an excellent style to the chart produced, without having to endure a steep learning curve for this time constrained project.
+        <br />
+        I have confirmed with Dr. James Paterson (course lecturer) before submitting this coursework; that by including this acknowledgement, 
+        which is also included in the documentation; considering the small amount of code involved and it's purpose being to simply render 
+        an MVC Chart with particular syle, it does not constitute an infringement of the plagiarism rules governing this coursework.
     </p>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
 </article>
 
 <aside>
-    <h3>Aside Title</h3>
+    <h3>About Me</h3>
     <p>
-        Use this area to provide additional information.
+        My name is Tim Harrison. I'm currently studying for an MSc in Web Development at Glasgow Caledonian University.
     </p>
     <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Return to Home", "Index", "Home")</li>
     </ul>
 </aside>

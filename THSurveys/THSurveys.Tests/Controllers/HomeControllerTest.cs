@@ -120,18 +120,6 @@ namespace THSurveys.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = ArrangeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
 
 
 

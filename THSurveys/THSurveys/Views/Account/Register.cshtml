@@ -2,11 +2,20 @@
 @{
     ViewBag.Title = "Register";
 }
-
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
-</hgroup>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <div>
+                    <h1>@ViewBag.Title.</h1>
+                </div>
+                <div>
+                    <h2>Create a new account.</h2>
+                </div>
+            </hgroup>
+        </div>
+    </section>
+}
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()

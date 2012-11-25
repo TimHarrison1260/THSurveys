@@ -27,7 +27,10 @@ namespace THSurveys.App_Start
     //  Accepting this is how I'll code it, I'll try and do it in such a way as I can try and inject the mappings
     //  so that it makes it easier to swap DI and IoC frameworks. (IS THIS REALLY PRACTICAL, as the code within
     //  each IoC project would be specific to the IoC being used.  Through an Interface perhaps.  
-    //    using Infrastructure;               
+    
+    //  NB!!!!!!!!!
+    //  See note in RegisterRoutes method to see use of IoC within a separate project to bind those components
+    //  that require reference to both the Core and Infrastructure projects.
 
     public static class NinjectWebCommon 
     {

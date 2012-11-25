@@ -1,38 +1,46 @@
 ﻿@model THSurveys.Models.Home.TakeSurveyViewModel
 
 @{
-    ViewBag.Title = "TakeSurvey";
+    ViewBag.Title = "Take a survey";
 }
-
-<h2>TakeSurvey</h2>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <div>
+                    <h1>@ViewBag.Title.</h1>
+                </div>
+                <div>
+                    <h2>
+                        @Html.DisplayFor(m => m.Title)
+                        (
+                        @Html.DisplayFor(m => m.CategoryDescription)
+                        )
+                    </h2>
+                    <h5>
+                        Created by: 
+                        @Html.DisplayFor(m => m.UserName)
+                        Issued:
+                        @Html.DisplayFor(m => m.StatusDate)
+                    </h5>
+                </div>
+            </hgroup>
+        </div>
+    </section>
+}
 
 @using (Html.BeginForm()) {
 
     @Html.AntiForgeryToken()
 
-<fieldset>
-    <legend>TakeSurveyViewModel</legend>
     @Html.ValidationSummary(false)
-    <h5>
-        @Html.HiddenFor(m => m.SurveyId)
-        <p>
-            @Html.DisplayFor(m => m.Title)
-            (
-            @Html.DisplayFor(m => m.CategoryDescription)
-            )
-        </p>
-        <p>
-            Created by: 
-            @Html.DisplayFor(m => m.UserName)
-            Issued:
-            @Html.DisplayFor(m => m.StatusDate)
-        </p>
-    </h5>
+    @Html.HiddenFor(m => m.SurveyId)
 
     @Html.Partial("_SurveyQuestions", Model.Questions)
 
-    <input type="submit" value="Submit Survey" />
-    @Html.ActionLink("Quit Survey", "Index")
+    <div class="linkButton">
+        <input type="submit" value="Submit Survey" />
+        @Html.ActionLink("Quit Survey", "Index")
+    </div>
 
-</fieldset>
 }

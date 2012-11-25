@@ -3,8 +3,20 @@
 @*@{
     @Layout;
 }*@
-
-<h1>@Html.DisplayFor(model => model.Title)</h1>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <div>
+                    <h1>@Html.DisplayFor(model => model.Title)</h1>
+                </div>
+                <div>
+                    <h2></h2>
+                </div>
+            </hgroup>
+        </div>
+    </section>
+}
 
 <h2>Thank you for taking our survey, your time is very much appreciated.  Your answers are shown below.</h2>
 
