@@ -9,17 +9,6 @@
 
 <p>
     Please click <span id="exitLink" ></span> and try the operation again.
-@*    @if (Session["User"] != null)
-    {
-        if (User.Identity.IsAuthenticated && User.IsInRole("user"))
-        {
-            @Html.ActionLink("here to return to your list of Surveys", "List", "Survey")
-        }
-        else
-        {
-            @Html.ActionLink("here to return to the Home page", "Logoff", "Account")
-        }
-    }*@
 </p>
 <p>
     Alternatively, click 

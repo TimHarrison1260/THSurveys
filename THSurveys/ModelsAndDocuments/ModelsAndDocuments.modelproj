@@ -36,13 +36,13 @@
     <Content Include="Documents\Analysis\Research Questions.docx">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Documents\Design\Solution Evaluation.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Documents\Design\RoutingTable.xlsx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Documents\Design\System Design.docx">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Documents\Design\System Requirements.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package1_1553.uml">

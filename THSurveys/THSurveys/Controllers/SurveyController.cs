@@ -74,7 +74,7 @@ namespace THSurveys.Controllers
         {
             if (ModelState.IsValid)
             {
-                //var newSurvey = AutoMapper.Mapper.Map<CreateSurveyViewModel, Survey>(survey);
+                //  TODO: Refactor code to a mapper method (next 4 lines);
                 var newSurvey = Core.Factories.SurveyFactory.CreateSurvey();
 
                 //  Add the info enter by user
