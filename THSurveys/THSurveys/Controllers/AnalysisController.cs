@@ -14,6 +14,7 @@ using THSurveys.Filters;
 
 namespace THSurveys.Controllers
 {
+    [Authorize]
     public class AnalysisController : Controller
     {
         /// <summary>
@@ -34,7 +35,8 @@ namespace THSurveys.Controllers
 
         //
         // GET: /Analysis/
-
+        [Authorize(Roles="User")]
+        [AuthorisedForSurvey]
         public ActionResult QuestionList(long id)
         {
             //  Get the survey results
@@ -55,6 +57,8 @@ namespace THSurveys.Controllers
         /// <param name="questionId"></param>
         /// <returns></returns>
         [HttpGet]
+        [Authorize(Roles="User")]
+        [AuthorisedForSurvey]
         public FileResult GetSurveyChart(long id, long questionId)
         {
             //  TODO: New method on Survey

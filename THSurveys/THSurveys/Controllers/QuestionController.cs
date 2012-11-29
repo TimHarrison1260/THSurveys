@@ -51,6 +51,7 @@ namespace THSurveys.Controllers
 
         [HttpGet]
         [Authorize(Roles = "User")]
+        [AuthorisedForSurvey]
         public ActionResult Create(long id)
         {
             //  TODO:   Refactor this to a Mapping class, probably not an Action Filter as there are repository calls required.

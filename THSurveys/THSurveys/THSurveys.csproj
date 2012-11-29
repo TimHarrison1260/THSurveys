@@ -195,6 +195,7 @@
     <Compile Include="Filters\MapSurveyToHomeSurveyListVMAttribute.cs" />
     <Compile Include="Filters\MapSurveyToTakeSurveyViewModelAttribute.cs" />
     <Compile Include="Filters\MapSurveyToSurveySummaryAttribute.cs" />
+    <Compile Include="Filters\AuthorisedForSurveyAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

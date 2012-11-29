@@ -36,6 +36,9 @@
     <Content Include="Documents\Analysis\Research Questions.docx">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Documents\Design\ASPWD2_CW_1213.pdf">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Documents\Design\Solution Evaluation.docx">
       <SubType>Content</SubType>
     </Content>

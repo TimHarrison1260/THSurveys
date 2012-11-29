@@ -19,7 +19,10 @@ namespace THSurveys.Filters
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             if (!filterContext.HttpContext.Request.IsAjaxRequest())
-                filterContext.Result = new HttpNotFoundResult();
+                filterContext.Result = new ViewResult
+                {
+                    ViewName = "ErrorNotAuthorised"
+                };
         }
     }
 }

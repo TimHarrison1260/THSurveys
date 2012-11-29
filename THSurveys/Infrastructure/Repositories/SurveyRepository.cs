@@ -145,5 +145,13 @@ namespace Infrastructure.Repositories
         {
             _unitOfWork.SaveChanges();
         }
+
+        public bool IsMySurvey(string userName, long surveyId)
+        {
+            var survey = _unitOfWork.Surveys
+                .FirstOrDefault(s => s.SurveyId == surveyId && s.User.UserName == userName);
+            bool test = survey == null ? false : true;
+            return test;
+        }
     }
 }

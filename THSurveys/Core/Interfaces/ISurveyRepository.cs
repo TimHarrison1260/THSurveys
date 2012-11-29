@@ -31,5 +31,7 @@ namespace Core.Interfaces
         long CreateSurvey(Survey survey);
 
         void UpdateSurveys(IList<Survey> survey);
+
+        bool IsMySurvey(string userName, long surveyId);
     }
 }
